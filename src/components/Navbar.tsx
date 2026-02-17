@@ -22,11 +22,11 @@ const Navbar = () => {
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2">
           <div className="w-9 h-9 rounded-md bg-forest-gradient flex items-center justify-center">
-            <span className="text-primary-foreground font-serif text-lg font-bold">P</span>
+            <span className="text-primary-foreground font-serif text-lg font-bold">V</span>
           </div>
           <div className="leading-tight">
-            <span className="font-serif text-lg text-foreground block leading-none">Palampur</span>
-            <span className="text-xs text-muted-foreground tracking-wider uppercase">Constructions</span>
+            <span className="font-serif text-lg text-foreground block leading-none">Vidhima</span>
+            <span className="text-xs text-muted-foreground tracking-wider uppercase">Construction Pvt Ltd</span>
           </div>
         </Link>
 
