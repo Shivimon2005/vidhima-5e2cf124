@@ -9,15 +9,15 @@ const Footer = () => (
         <div>
           <div className="flex items-center gap-2 mb-4">
             <div className="w-9 h-9 rounded-md bg-accent flex items-center justify-center">
-              <span className="text-accent-foreground font-serif text-lg font-bold">P</span>
+              <span className="text-accent-foreground font-serif text-lg font-bold">V</span>
             </div>
             <div className="leading-tight">
-              <span className="font-serif text-lg block leading-none">Palampur</span>
-              <span className="text-xs opacity-70 tracking-wider uppercase">Constructions</span>
+              <span className="font-serif text-lg block leading-none">Vidhima</span>
+              <span className="text-xs opacity-70 tracking-wider uppercase">Construction Pvt Ltd</span>
             </div>
           </div>
           <p className="text-sm opacity-70 leading-relaxed">
-            Turnkey house and commercial construction on your plot in Palampur and across Kangra district, Himachal Pradesh.
+            Turnkey house and commercial construction on your plot in Palampur and across Kangra district, Himachal Pradesh. A unit of Vidhima Construction Private Limited.
           </p>
         </div>
 
@@ -59,9 +59,9 @@ const Footer = () => (
               <Phone className="w-4 h-4 shrink-0" />
               +91 98765 43210
             </a>
-            <a href="mailto:info@palampurconstructions.com" className="flex items-center gap-2 opacity-70 hover:opacity-100">
+            <a href="mailto:info@vidhimaconstruction.com" className="flex items-center gap-2 opacity-70 hover:opacity-100">
               <Mail className="w-4 h-4 shrink-0" />
-              info@palampurconstructions.com
+              info@vidhimaconstruction.com
             </a>
             <div className="flex items-start gap-2 opacity-70">
               <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
@@ -72,7 +72,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-primary-foreground/10 mt-12 pt-6 text-center text-sm opacity-50">
-        © {new Date().getFullYear()} Palampur Constructions. All rights reserved.
+        © {new Date().getFullYear()} Vidhima Construction Private Limited. All rights reserved.
       </div>
     </div>
   </footer>

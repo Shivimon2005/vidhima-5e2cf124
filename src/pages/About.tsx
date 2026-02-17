@@ -28,7 +28,7 @@ const About = () => (
           <div>
             <SectionHeading label="Our Story" title="Local Roots, Solid Foundations" center={false} />
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>Palampur Constructions started over two decades ago with a simple mission: help local families and landowners build quality structures on their own plots — without the stress, hidden costs, or uncertainty that typically comes with construction.</p>
+              <p>Vidhima Construction Private Limited started over two decades ago with a simple mission: help local families and landowners build quality structures on their own plots — without the stress, hidden costs, or uncertainty that typically comes with construction.</p>
               <p>We understand the unique challenges of building in hill regions — from unpredictable soil conditions and steep slopes to heavy monsoons and seismic considerations. We've built our processes around these realities.</p>
               <p>Today, we serve local families, NRIs, investors, and commercial property owners across Palampur and Kangra district. Our commitment to transparency, quality, and timely delivery hasn't changed.</p>
             </div>
