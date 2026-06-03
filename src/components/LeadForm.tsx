@@ -122,8 +122,8 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
         </>
       )}
 
-      <Button type="submit" size="lg" className="w-full">
-        Get My Rough Estimate
+      <Button type="submit" size="lg" className="w-full" disabled={submitting}>
+        {submitting ? "Sending…" : "Get My Rough Estimate"}
       </Button>
     </form>
   );
