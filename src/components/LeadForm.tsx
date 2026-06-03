@@ -21,7 +21,10 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
     description: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const CRM_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxKCv3-E1n2Ow8hMB2r0wLeZkbZX9F6LsKfFyoTezCMEjLhQ0G9ieysW_SmDprnPArO/exec";
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name.trim() || !formData.phone.trim()) {
       toast.error("Please fill in your name and phone number.");
@@ -31,8 +34,26 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
       toast.error("Please enter a valid 10-digit Indian phone number.");
       return;
     }
-    toast.success("Thank you! We'll call you within 24 hours with your rough estimate.");
-    setFormData({ name: "", phone: "", whatsappSame: true, ownsLand: "", plotLocation: "", projectType: "", budget: "", description: "" });
+    setSubmitting(true);
+    try {
+      await fetch(CRM_WEBHOOK_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({
+          ...formData,
+          source: "vidhimaconstruction.com",
+          page: typeof window !== "undefined" ? window.location.pathname : "",
+          submittedAt: new Date().toISOString(),
+        }),
+      });
+      toast.success("Thank you! We'll call you within 24 hours with your rough estimate.");
+      setFormData({ name: "", phone: "", whatsappSame: true, ownsLand: "", plotLocation: "", projectType: "", budget: "", description: "" });
+    } catch (err) {
+      toast.error("Something went wrong. Please try again or WhatsApp us.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (field: string, value: string | boolean) => {
