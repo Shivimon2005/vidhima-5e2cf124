@@ -46,13 +46,13 @@ const Contact = () => (
                     <p className="font-medium">+91 98765 43210</p>
                   </div>
                 </a>
-                <a href="mailto:info@vidhimaconstruction.com" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                <a href="mailto:vidhimaho@gmail.com" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                     <Mail className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <span className="text-xs text-muted-foreground">Email</span>
-                    <p className="font-medium">info@vidhimaconstruction.com</p>
+                    <p className="font-medium">vidhimaho@gmail.com</p>
                   </div>
                 </a>
               </div>
