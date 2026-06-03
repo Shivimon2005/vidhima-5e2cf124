@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -88,11 +88,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'DM Serif Display', serif;
+    @apply bg-gray-50 text-gray-900 font-sans;
+    font-family: 'Inter', sans-serif;
   }
 }
 
@@ -121,4 +118,7 @@
   .shadow-card-hover {
     box-shadow: 0 12px 40px -8px hsl(var(--forest) / 0.15), 0 4px 12px hsl(var(--forest) / 0.06);
   }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 }
