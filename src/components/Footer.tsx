@@ -59,9 +59,9 @@ const Footer = () => (
               <Phone className="w-4 h-4 shrink-0" />
               +91 98765 43210
             </a>
-            <a href="mailto:info@vidhimaconstruction.com" className="flex items-center gap-2 opacity-70 hover:opacity-100">
+            <a href="mailto:vidhimaho@gmail.com" className="flex items-center gap-2 opacity-70 hover:opacity-100">
               <Mail className="w-4 h-4 shrink-0" />
-              info@vidhimaconstruction.com
+              vidhimaho@gmail.com
             </a>
             <div className="flex items-start gap-2 opacity-70">
               <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
