@@ -20,7 +20,7 @@ const whoWeServe = [
   { icon: Home, label: "Local families building their first home" },
   { icon: Building2, label: "Investors building rental units" },
   { icon: Building2, label: "Commercial property owners" },
-  { icon: Users, label: "NRIs planning properties in Palampur" },
+  { icon: Users, label: "NRIs planning properties in Himachal Pradesh" },
 ];
 
 const featuredProjects = [
@@ -34,7 +34,7 @@ const features = [
   { icon: Shield, title: "Quality", desc: "Premium materials and rigorous quality checks at every stage" },
   { icon: Eye, title: "Transparency", desc: "Clear contracts, itemized costs, zero hidden charges" },
   { icon: Clock, title: "Timely Delivery", desc: "Milestone-based schedules we actually stick to" },
-  { icon: Mountain, title: "Local Experts", desc: "Deep understanding of Palampur terrain, weather, and regulations" },
+  { icon: Mountain, title: "Local Experts", desc: "Deep understanding of Himachal's terrain, weather, and regulations" },
   { icon: Wrench, title: "Turnkey", desc: "From plot survey to key handover — we handle everything" },
 ];
 
@@ -44,16 +44,16 @@ const Index = () => {
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="House construction in Palampur with Himalayan mountains" className="w-full h-full object-cover" />
+          <img src={heroImg} alt="House construction in Himachal Pradesh with Himalayan mountains" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-hero-overlay" />
         </div>
         <div className="container relative z-10 py-32">
           <div className="max-w-2xl">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-6 leading-tight animate-fade-in-up">
-              Turnkey House & Commercial Construction on Your Plot in Palampur
+              Turnkey House & Commercial Construction on Your Plot in Himachal Pradesh
             </h1>
             <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-              End-to-end construction — from design and approvals to finishing and handover. Built for Palampur's terrain, weather, and local regulations. Transparent pricing, stage-wise payments, and regular updates you can trust.
+              End-to-end construction — from design and approvals to finishing and handover. Built for Himachal's terrain, weather, and local regulations. Transparent pricing, stage-wise payments, and regular updates you can trust.
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               <Link to="/contact">
@@ -128,7 +128,7 @@ const Index = () => {
       {/* Featured Projects */}
       <section className="py-20 bg-muted/50">
         <div className="container">
-          <SectionHeading label="Our Work" title="Featured Projects" description="See how we've helped plot owners across Palampur turn their land into beautiful, functional buildings." />
+          <SectionHeading label="Our Work" title="Featured Projects" description="See how we've helped plot owners across Himachal Pradesh turn their land into beautiful, functional buildings." />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredProjects.map((p, i) => (
               <div key={i} className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 group">
@@ -159,7 +159,7 @@ const Index = () => {
       {/* Why Choose Us */}
       <section className="py-20">
         <div className="container">
-          <SectionHeading label="Why Us" title="Why Palampur Trusts Us" description="We're not just builders — we're your neighbours, invested in doing it right." />
+          <SectionHeading label="Why Us" title="Why Himachal Pradesh Trusts Us" description="We're not just builders — we're your neighbours, invested in doing it right." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {features.map((f, i) => (
               <div key={i} className="text-center">

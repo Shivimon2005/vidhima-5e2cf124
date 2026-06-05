@@ -4,7 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import { Users, Award, Mountain, Handshake, ArrowRight } from "lucide-react";
 
 const team = [
-  { name: "Rajesh Verma", role: "Founder & Managing Director", desc: "20+ years in civil construction across Himachal Pradesh. Born and raised in Palampur." },
+  { name: "Shivam Sharma", role: "Founder & Managing Director", desc: "20+ years in civil construction across Himachal Pradesh. Born and raised in Palampur." },
   { name: "Anita Sharma", role: "Project Manager", desc: "Oversees all residential and commercial projects. Known for on-time delivery and clear communication." },
   { name: "Vikram Singh", role: "Site Engineer", desc: "Structural engineering specialist with expertise in hill terrain construction and seismic-safe designs." },
   { name: "Priya Thakur", role: "Architect Collaborator", desc: "Designs homes and commercial spaces that blend modern aesthetics with mountain-region practicality." },
@@ -16,8 +16,8 @@ const About = () => (
       <div className="container">
         <div className="max-w-2xl">
           <span className="text-xs uppercase tracking-widest text-accent mb-3 block">About Us</span>
-          <h1 className="font-serif text-4xl md:text-5xl mb-4">Building Palampur's Future, One Plot at a Time</h1>
-          <p className="opacity-80 text-lg">We're a local construction company rooted in Palampur, with deep experience in building homes and commercial spaces on Himachal's unique terrain.</p>
+          <h1 className="font-serif text-4xl md:text-5xl mb-4">Building Himachal's Future, One Plot at a Time</h1>
+          <p className="opacity-80 text-lg">We're a construction company rooted in Himachal Pradesh, with deep experience in building homes and commercial spaces on the region's unique terrain.</p>
         </div>
       </div>
     </section>
@@ -30,7 +30,7 @@ const About = () => (
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>Vidhima Construction Private Limited started over two decades ago with a simple mission: help local families and landowners build quality structures on their own plots — without the stress, hidden costs, or uncertainty that typically comes with construction.</p>
               <p>We understand the unique challenges of building in hill regions — from unpredictable soil conditions and steep slopes to heavy monsoons and seismic considerations. We've built our processes around these realities.</p>
-              <p>Today, we serve local families, NRIs, investors, and commercial property owners across Palampur and Kangra district. Our commitment to transparency, quality, and timely delivery hasn't changed.</p>
+              <p>Today, we serve local families, NRIs, investors, and commercial property owners across Himachal Pradesh. Our commitment to transparency, quality, and timely delivery hasn't changed.</p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-6">

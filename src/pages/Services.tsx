@@ -35,8 +35,8 @@ const Services = () => (
       <div className="container">
         <div className="max-w-2xl">
           <span className="text-xs uppercase tracking-widest text-accent mb-3 block">Our Services</span>
-          <h1 className="font-serif text-4xl md:text-5xl mb-4">Construction Services in Palampur</h1>
-          <p className="opacity-80 text-lg">From your empty plot to a finished building — we handle design, approvals, and construction. Residential homes and commercial spaces, built for Palampur's unique terrain.</p>
+          <h1 className="font-serif text-4xl md:text-5xl mb-4">Construction Services in Himachal Pradesh</h1>
+          <p className="opacity-80 text-lg">From your empty plot to a finished building — we handle design, approvals, and construction. Residential homes and commercial spaces, built for Himachal's unique terrain.</p>
         </div>
       </div>
     </section>
@@ -54,7 +54,7 @@ const Services = () => (
           </div>
         </div>
         <p className="text-muted-foreground max-w-3xl mb-12">
-          We build turnkey homes on your plot in Palampur and nearby areas. "Turnkey" means you hand us your land and we handle everything — architectural drawings, structural design, government approvals, and the complete construction — until we hand you the keys. Choose from our packages below or go fully custom.
+          We build turnkey homes on your plot across Himachal Pradesh. "Turnkey" means you hand us your land and we handle everything — architectural drawings, structural design, government approvals, and the complete construction — until we hand you the keys. Choose from our packages below or go fully custom.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -105,7 +105,7 @@ const Services = () => (
           </div>
         </div>
         <p className="text-muted-foreground max-w-3xl mb-8">
-          Building shops, offices, small commercial complexes, or mixed-use buildings on your land? We handle the structural engineering, regulatory approvals, and construction for commercial projects of all sizes in and around Palampur.
+          Building shops, offices, small commercial complexes, or mixed-use buildings on your land? We handle the structural engineering, regulatory approvals, and construction for commercial projects of all sizes across Himachal Pradesh.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {[

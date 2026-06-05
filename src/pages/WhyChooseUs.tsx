@@ -4,7 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import { Shield, Eye, Clock, Mountain, Wrench, ArrowRight, CheckCircle2 } from "lucide-react";
 
 const features = [
-  { icon: Mountain, title: "Local Expertise", desc: "We know Palampur's terrain, soil conditions, bye-laws, and weather patterns inside out." },
+  { icon: Mountain, title: "Local Expertise", desc: "We know Himachal's terrain, soil conditions, bye-laws, and weather patterns inside out." },
   { icon: Eye, title: "Full Transparency", desc: "Itemized cost breakdowns, stage-wise payments, and no hidden charges — ever." },
   { icon: Shield, title: "Quality Assurance", desc: "Regular quality audits, branded materials, and engineered structural designs." },
   { icon: Clock, title: "On-Time Delivery", desc: "Milestone schedules with built-in buffers for hill-region variables." },
@@ -13,7 +13,7 @@ const features = [
 
 const processSteps = [
   { step: "01", title: "Initial Discussion", desc: "Call or WhatsApp us. We'll understand your requirements, timeline, and budget." },
-  { step: "02", title: "Site Visit", desc: "We visit your plot, assess terrain, soil, and access — free within 20 km of Palampur." },
+  { step: "02", title: "Site Visit", desc: "We visit your plot, assess terrain, soil, and access — free within 20 km of our office." },
   { step: "03", title: "Rough Estimate", desc: "Receive a detailed cost range based on your requirements and plot conditions." },
   { step: "04", title: "Design & Approvals", desc: "Architectural drawings, structural design, and all government approvals handled." },
   { step: "05", title: "Contract & Payments", desc: "Clear contract with milestone-based payments. No large upfront sum required." },
@@ -27,8 +27,8 @@ const WhyChooseUs = () => (
       <div className="container">
         <div className="max-w-2xl">
           <span className="text-xs uppercase tracking-widest text-accent mb-3 block">Why Choose Us</span>
-          <h1 className="font-serif text-4xl md:text-5xl mb-4">Why Palampur Trusts Us to Build</h1>
-          <p className="opacity-80 text-lg">We're local builders who understand your land, your climate, and your regulations. Here's how we make construction stress-free.</p>
+          <h1 className="font-serif text-4xl md:text-5xl mb-4">Why Himachal Pradesh Trusts Us to Build</h1>
+          <p className="opacity-80 text-lg">We're builders who understand Himachal's land, climate, and regulations. Here's how we make construction stress-free.</p>
         </div>
       </div>
     </section>

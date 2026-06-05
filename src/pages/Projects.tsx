@@ -30,7 +30,7 @@ const Projects = () => {
           <div className="max-w-2xl">
             <span className="text-xs uppercase tracking-widest text-accent mb-3 block">Portfolio</span>
             <h1 className="font-serif text-4xl md:text-5xl mb-4">Our Projects</h1>
-            <p className="opacity-80 text-lg">Real work, real results. Browse our residential and commercial projects in and around Palampur.</p>
+            <p className="opacity-80 text-lg">Real work, real results. Browse our residential and commercial projects across Himachal Pradesh.</p>
           </div>
         </div>
       </section>

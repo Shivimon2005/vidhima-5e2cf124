@@ -62,7 +62,7 @@ const Contact = () => (
               <h3 className="font-serif text-xl mb-4">Office Location</h3>
               <div className="flex items-start gap-3 text-muted-foreground text-sm mb-4">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span>Near Bus Stand, Palampur,<br />Kangra, Himachal Pradesh 176061</span>
+                <span>Near SSB Chowk, Palampur,<br />Kangra, Himachal Pradesh 176061</span>
               </div>
               <div className="flex items-start gap-3 text-muted-foreground text-sm">
                 <Clock className="w-5 h-5 text-primary shrink-0 mt-0.5" />
@@ -76,7 +76,7 @@ const Contact = () => (
 
             <div className="bg-muted rounded-xl p-6">
               <h4 className="font-serif text-lg mb-2">Service Area</h4>
-              <p className="text-sm text-muted-foreground">We serve Palampur and the broader Kangra district including Dharamshala, Baijnath, Bir, and surrounding areas. Site visits are free within 20 km of Palampur.</p>
+              <p className="text-sm text-muted-foreground">We serve Palampur, Kangra district, and clients across Himachal Pradesh. Site visits are arranged throughout the state, and are free within 20 km of our office.</p>
             </div>
           </div>
         </div>

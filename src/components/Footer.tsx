@@ -17,7 +17,7 @@ const Footer = () => (
             </div>
           </div>
           <p className="text-sm opacity-70 leading-relaxed">
-            Turnkey house and commercial construction on your plot in Palampur and across Kangra district, Himachal Pradesh. A unit of Vidhima Construction Private Limited.
+            Turnkey house and commercial construction on your plot across Himachal Pradesh. A unit of Vidhima Construction Private Limited.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ const Footer = () => (
             </a>
             <div className="flex items-start gap-2 opacity-70">
               <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
-              <span>Near Bus Stand, Palampur,<br />Kangra, Himachal Pradesh 176061</span>
+              <span>Near SSB Chowk, Palampur,<br />Kangra, Himachal Pradesh 176061</span>
             </div>
           </div>
         </div>
