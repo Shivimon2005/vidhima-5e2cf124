@@ -9,45 +9,45 @@ const leaders = [
     role: "Managing Director",
     initials: "US",
     experience: "15+ years",
-    bio: "Umesh co-founded Vidhima Construction with a clear mission: to deliver honest, quality construction that families in the region can trust and afford. Over 15 years, he has built the company from the ground up — establishing supplier relationships, setting quality benchmarks, and personally overseeing landmark projects across the area. His hands-on leadership style and commitment to transparency have earned Vidhima its reputation for integrity and reliability.",
+    bio: "A Bachelor of Engineering in Civil Engineering, Umesh co-founded Vidhima with a single goal: honest, quality construction that families can trust. Over 15 years he has built the company from the ground up — setting structural benchmarks, cultivating supplier relationships, and personally overseeing projects across the region. His hands-on style and commitment to transparency define Vidhima's reputation.",
     quote: "When a family entrusts us with their home, they are trusting us with their future. We never take that lightly.",
-    areas: ["Strategic direction", "Stakeholder relations", "Business development", "Quality assurance"],
+    areas: ["Strategic direction", "Structural oversight", "Stakeholder relations", "Quality assurance"],
   },
   {
     name: "Ritesh Sharma",
     role: "Managing Director",
     initials: "RS",
-    experience: "15+ years",
-    bio: "Ritesh co-leads Vidhima Construction with a focus on operational excellence and client satisfaction. With 15 years in the construction industry, he has cultivated deep expertise in project oversight, contractor management, and regulatory compliance. He drives the company's commitment to delivering projects on time and within budget — ensuring every client experiences the full value of Vidhima's promise.",
+    experience: "10+ years",
+    bio: "Ritesh holds an MBA in Finance — an unlikely fit for construction that turned out to be a decisive advantage. Over 10 years he immersed himself in civil construction alongside engineers and site supervisors, gaining field expertise to match his financial discipline. Today he co-leads Vidhima with a rare combination: the sharpness of a finance professional and the ground-up knowledge of a builder.",
     quote: "A construction company's real product is trust. Everything we build is an opportunity to earn more of it.",
-    areas: ["Operations management", "Contractor oversight", "Regulatory compliance", "Cost control"],
+    areas: ["Operations management", "Financial planning", "Contractor oversight", "Cost control"],
   },
   {
     name: "Pardeep Singh",
-    role: "Project Manager",
+    role: "Project Coordinator",
     initials: "PS",
     experience: "5+ years",
-    bio: "Pardeep manages the day-to-day execution of Vidhima's active projects — coordinating teams, tracking milestones, and resolving on-site challenges before they become delays. His methodical approach to scheduling and site coordination ensures that work progresses smoothly from foundation to finish. Clients working with Pardeep consistently note his responsiveness and clear communication throughout the build cycle.",
-    quote: "Good project management is invisible — when done right, all the client sees is their home taking shape on schedule.",
-    areas: ["Site coordination", "Milestone tracking", "Team management", "Client updates"],
+    bio: "Pardeep keeps Vidhima's active sites running — coordinating teams, tracking milestones, and resolving on-site challenges before they cause delays. Clients consistently note his clear communication and steady responsiveness throughout the build.",
+    quote: "Good coordination is invisible — when done right, all the client sees is their home taking shape on schedule.",
+    areas: ["Site coordination", "Milestone tracking", "Team alignment", "Client updates"],
   },
   {
     name: "Ajay",
     role: "Chief Financial Officer",
     initials: "AJ",
     experience: "7+ years",
-    bio: "Ajay brings financial discipline and strategic clarity to Vidhima's operations. With 7 years of experience across construction and real estate finance, he manages budgeting, cash flow, vendor payments, and financial reporting with meticulous precision. His transparent cost management practices underpin Vidhima's fixed-price project model — ensuring clients get accurate estimates and zero surprise billing.",
+    bio: "Ajay brings 7 years of construction finance experience to Vidhima's operations — managing budgets, cash flow, and vendor payments with precision. His cost discipline is what makes Vidhima's fixed-price model work: accurate estimates, no surprises.",
     quote: "Financial clarity is not just good accounting — it is the foundation of every client relationship we build.",
     areas: ["Financial planning", "Budget management", "Vendor payments", "Cost reporting"],
   },
   {
     name: "Shivam Sharma",
-    role: "Junior Business Developer",
+    role: "Business Developer",
     initials: "SS",
-    experience: "1 year",
-    bio: "Shivam is the newest member of Vidhima's leadership team, driving client outreach and business growth initiatives. He brings fresh energy and a digital-first approach to connecting Vidhima with prospective clients — from initial inquiries through site visits and proposal follow-ups. His enthusiasm for real estate and genuine interest in client needs make him a natural fit for building Vidhima's next chapter.",
+    experience: "5+ years",
+    bio: "A B.Tech in Computer Science, Shivam spent five years in business development within the family's hospitality business — building strong instincts for client relations and sales. He joined Vidhima Construction as Business Developer just over a year ago and has since driven client outreach and lead generation across all three business wings.",
     quote: "Every client I speak with is a chance to show them what Vidhima stands for. That is the opportunity I never want to waste.",
-    areas: ["Client outreach", "Lead generation", "Site visit coordination", "Market research"],
+    areas: ["Business development", "Client outreach", "Lead generation", "Market research"],
   },
 ];
 
@@ -68,7 +68,7 @@ const Leadership = () => (
         <SectionHeading
           label="Our People"
           title="Experience You Can Measure"
-          description="Five professionals with a combined 44+ years of experience in construction and real estate."
+          description="Five professionals with a combined 38+ years of experience in construction, finance, and business development."
         />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-14">
           {leaders.map((l) => (
