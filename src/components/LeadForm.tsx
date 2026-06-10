@@ -7,9 +7,36 @@ import { toast } from "sonner";
 
 interface LeadFormProps {
   compact?: boolean;
+  wing?: "realty" | "gov" | "sub" | "general";
 }
 
-const LeadForm = ({ compact = false }: LeadFormProps) => {
+// Configurable via VITE_CRM_ENDPOINT env var (see .env.example).
+// GAS endpoints require mode:"no-cors" — response is always opaque, so server
+// errors are invisible client-side. For confirmed delivery use a CORS proxy.
+const CRM_ENDPOINT: string =
+  (import.meta.env.VITE_CRM_ENDPOINT as string | undefined) ||
+  "https://script.google.com/macros/s/AKfycbxKCv3-E1n2Ow8hMB2r0wLeZkbZX9F6LsKfFyoTezCMEjLhQ0G9ieysW_SmDprnPArO/exec";
+
+const SUBMIT_TIMEOUT_MS = 8000;
+const WHATSAPP_FALLBACK = "https://wa.me/918628989364";
+
+async function submitToCrm(payload: object): Promise<void> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), SUBMIT_TIMEOUT_MS);
+  try {
+    await fetch(CRM_ENDPOINT, {
+      method: "POST",
+      mode: "no-cors",
+      signal: controller.signal,
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload),
+    });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+const LeadForm = ({ compact = false, wing = "realty" }: LeadFormProps) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -21,7 +48,6 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
     description: "",
   });
 
-  const CRM_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxKCv3-E1n2Ow8hMB2r0wLeZkbZX9F6LsKfFyoTezCMEjLhQ0G9ieysW_SmDprnPArO/exec";
   const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -36,21 +62,29 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
     }
     setSubmitting(true);
     try {
-      await fetch(CRM_WEBHOOK_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify({
-          ...formData,
-          source: "vidhimaconstruction.com",
-          page: typeof window !== "undefined" ? window.location.pathname : "",
-          submittedAt: new Date().toISOString(),
-        }),
+      await submitToCrm({
+        ...formData,
+        wing,
+        source: "vidhimaconstruction.com",
+        page: typeof window !== "undefined" ? window.location.pathname : "",
+        submittedAt: new Date().toISOString(),
       });
-      toast.success("Thank you! We'll call you within 24 hours with your rough estimate.");
+      // Response is opaque (no-cors) — server errors are undetectable.
+      // Success message includes fallback so user isn't stranded if CRM missed it.
+      toast.success(
+        "Request sent! We'll call you within 24 hours. If urgent, WhatsApp us.",
+        { duration: 6000 }
+      );
       setFormData({ name: "", phone: "", whatsappSame: true, ownsLand: "", plotLocation: "", projectType: "", budget: "", description: "" });
     } catch (err) {
-      toast.error("Something went wrong. Please try again or WhatsApp us.");
+      const isAbort = err instanceof DOMException && err.name === "AbortError";
+      const msg = isAbort
+        ? "Request timed out."
+        : "Network error — please check your connection.";
+      toast.error(
+        `${msg} Please WhatsApp us: ${WHATSAPP_FALLBACK}`,
+        { duration: 10000 }
+      );
     } finally {
       setSubmitting(false);
     }

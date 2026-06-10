@@ -78,6 +78,21 @@ const Contact = () => (
               <h4 className="font-serif text-lg mb-2">Service Area</h4>
               <p className="text-sm text-muted-foreground">We serve Palampur, Kangra district, and clients across Himachal Pradesh. Site visits are arranged throughout the state, and are free within 20 km of our office.</p>
             </div>
+
+            <div>
+              <h3 className="font-serif text-xl mb-4">Find Us on Map</h3>
+              <div className="rounded-xl overflow-hidden border border-border" style={{ height: "260px" }}>
+                <iframe
+                  title="Vidhima Construction office location — Palampur, Kangra"
+                  src="https://maps.google.com/maps?q=32.1160157,76.5254&output=embed&z=17"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

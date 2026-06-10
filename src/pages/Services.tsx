@@ -12,7 +12,7 @@ const residentialPackages = [
     excludes: ["Modular kitchen", "Luxury fittings", "Landscaping"],
   },
   {
-    name: "Premium",
+    name: "Standard",
     price: "₹1,800 – 2,200 / sq ft",
     desc: "Better finishes, more design flexibility — perfect for a comfortable family home.",
     includes: ["RCC structure", "Vitrified tile flooring", "Premium plumbing & CP fittings", "Aluminium/UPVC windows", "Interior-grade paint", "Modular kitchen ready", "Waterproofing"],
@@ -20,7 +20,7 @@ const residentialPackages = [
     popular: true,
   },
   {
-    name: "Custom / Luxury",
+    name: "Premium",
     price: "₹2,500+ / sq ft",
     desc: "Fully bespoke design and finishes — your dream home, exactly the way you want.",
     includes: ["Architect-designed layout", "Premium stone/wood cladding", "Imported fittings", "Home automation ready", "Landscaping included", "Full interior design support", "Extended warranty"],

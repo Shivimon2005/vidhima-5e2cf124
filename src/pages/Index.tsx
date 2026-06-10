@@ -1,24 +1,99 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import LeadForm from "@/components/LeadForm";
-import { 
-  Shield, 
-  Clock, 
-  Eye, 
-  Mountain, 
-  Wrench, 
-  Users, 
-  Home, 
-  Building2, 
-  ArrowRight, 
-  CheckCircle2, 
-  Star, 
+import AnimatedStat from "@/components/AnimatedStat";
+import ClientLogos from "@/components/ClientLogos";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+import {
+  Shield,
+  Clock,
+  Eye,
+  Mountain,
+  Wrench,
+  Users,
+  Home,
+  Building2,
+  ArrowRight,
+  CheckCircle2,
+  Star,
   Award,
   ChevronRight,
   TrendingUp,
-  FileCheck
+  FileCheck,
+  Landmark,
+  HardHat,
 } from "lucide-react";
+
+const wings = [
+  {
+    Icon: Landmark,
+    label: "Government Tenders",
+    to: "/government-tenders",
+    tagline: "Infrastructure for Himachal Pradesh",
+    desc: "HPPWD-empanelled Class-I contractor executing roads, government buildings, drainage, and slope protection works for state and central departments.",
+    points: [
+      "Class-I registered contractor",
+      "Empanelled with HPPWD & Rural Dev. Dept.",
+      "EMD & document-ready for any tender",
+    ],
+    cta: "View Tender Portfolio",
+    iconBg: "bg-blue-100",
+    iconColor: "text-blue-800",
+    accentBorder: "hover:border-blue-300",
+    ctaClass: "bg-blue-800 hover:bg-blue-900 text-white",
+    checkColor: "text-blue-700",
+    checkBg: "bg-blue-50",
+    labelColor: "text-blue-800",
+  },
+  {
+    Icon: Home,
+    label: "Real Estate Construction",
+    to: "/services",
+    tagline: "Turnkey Homes & Commercial Spaces",
+    desc: "From your empty plot to a finished building across Himachal Pradesh. Residential homes, commercial complexes, and hill-terrain construction with a 100% price-lock guarantee.",
+    points: [
+      "15+ turnkey hill projects delivered",
+      "100% price-lock contract guarantee",
+      "A-to-Z: design, NOC, build, handover",
+    ],
+    cta: "Explore Services",
+    iconBg: "bg-primary/10",
+    iconColor: "text-primary",
+    accentBorder: "hover:border-primary/40",
+    ctaClass: "bg-primary hover:bg-primary/90 text-primary-foreground",
+    checkColor: "text-primary",
+    checkBg: "bg-primary/10",
+    labelColor: "text-primary",
+    featured: true,
+  },
+  {
+    Icon: HardHat,
+    label: "Sub-Contracting",
+    to: "/sub-contracting",
+    tagline: "Civil Packages for Contractors",
+    desc: "Dependable civil sub-contractor for main contractors and developers. RCC, masonry, excavation, slope works — own equipment, experienced crew, delivered on your schedule.",
+    points: [
+      "Own JCB, transit mixers & tipper fleet",
+      "EPF/ESI compliant workforce",
+      "7 trade packages available",
+    ],
+    cta: "Discuss a Package",
+    iconBg: "bg-amber-100",
+    iconColor: "text-amber-800",
+    accentBorder: "hover:border-amber-300",
+    ctaClass: "bg-amber-700 hover:bg-amber-800 text-white",
+    checkColor: "text-amber-700",
+    checkBg: "bg-amber-50",
+    labelColor: "text-amber-800",
+  },
+];
 import heroImg from "@/assets/hero-construction.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
@@ -98,13 +173,68 @@ const testimonials = [
   }
 ];
 
+const TestimonialCarousel = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+    api.on("select", () => setCurrent(api.selectedScrollSnap()));
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+    const id = setInterval(() => api.scrollNext(), 4000);
+    return () => clearInterval(id);
+  }, [api]);
+
+  return (
+    <div className="mt-12">
+      <Carousel setApi={setApi} opts={{ loop: true }} className="w-full">
+        <CarouselContent className="-ml-4">
+          {testimonials.map((t, i) => (
+            <CarouselItem key={i} className="pl-4 md:basis-1/2 lg:basis-1/3">
+              <div className="bg-card rounded-xl p-6 md:p-8 border border-border shadow-card flex flex-col justify-between h-full">
+                <div>
+                  <div className="flex items-center gap-0.5 mb-4">
+                    {[...Array(t.rating)].map((_, si) => (
+                      <Star key={si} className="w-4 h-4 fill-accent text-accent" />
+                    ))}
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed italic mb-6">"{t.quote}"</p>
+                </div>
+                <div>
+                  <h4 className="font-serif text-base text-foreground leading-tight">{t.author}</h4>
+                  <span className="text-xs text-muted-foreground">{t.role}</span>
+                </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+      {/* Dot indicators */}
+      <div className="flex justify-center gap-2 mt-6">
+        {testimonials.map((_, i) => (
+          <span
+            key={i}
+            className={`block rounded-full transition-all duration-300 ${
+              current === i ? "w-6 h-2 bg-primary" : "w-2 h-2 bg-border"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const Index = () => {
   return (
     <main className="overflow-hidden">
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="House construction in Himachal Pradesh with Himalayan mountains" className="w-full h-full object-cover" />
+          <img src={heroImg} alt="House construction in Himachal Pradesh with Himalayan mountains" loading="eager" decoding="async" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-hero-overlay" />
         </div>
         <div className="container relative z-10 py-32">
@@ -139,9 +269,60 @@ const Index = () => {
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                   <s.icon className="w-5 h-5 text-primary" />
                 </div>
+                <AnimatedStat value={s.value} label={s.label} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Business Wings */}
+      <section className="py-20">
+        <div className="container">
+          <SectionHeading
+            label="Who We Are"
+            title="Three Business Wings, One Trusted Company"
+            description="Vidhima Construction Pvt Ltd operates across three distinct verticals. Find the wing that fits your need."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            {wings.map((wing, i) => (
+              <div
+                key={i}
+                className={`bg-card rounded-xl border ${
+                  wing.featured ? "border-primary/30 ring-2 ring-primary/10 shadow-card-hover" : "border-border/60"
+                } ${wing.accentBorder} p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-card-hover relative`}
+              >
+                {wing.featured && (
+                  <span className="absolute -top-3 left-6 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
+                    Most Enquired
+                  </span>
+                )}
                 <div>
-                  <span className="block text-2xl md:text-3xl font-bold text-foreground font-serif leading-none mb-1">{s.value}</span>
-                  <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider leading-tight block">{s.label}</span>
+                  <div className={`w-12 h-12 rounded-xl ${wing.iconBg} flex items-center justify-center mb-4`}>
+                    <wing.Icon className={`w-6 h-6 ${wing.iconColor}`} />
+                  </div>
+                  <span className={`text-xs font-semibold uppercase tracking-wider mb-1 block ${wing.labelColor}`}>
+                    {wing.label}
+                  </span>
+                  <h3 className="font-serif text-xl text-foreground mb-2">{wing.tagline}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">{wing.desc}</p>
+                  <ul className="space-y-2.5 pt-4 border-t border-border/40">
+                    {wing.points.map((pt, pi) => (
+                      <li key={pi} className="flex items-start gap-2.5 text-sm text-foreground">
+                        <div className={`w-5 h-5 rounded-full ${wing.checkBg} flex items-center justify-center shrink-0 mt-0.5`}>
+                          <CheckCircle2 className={`w-3.5 h-3.5 ${wing.checkColor}`} />
+                        </div>
+                        {pt}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-8">
+                  <Link to={wing.to}>
+                    <button className={`w-full py-2.5 px-4 rounded-lg text-sm font-semibold transition-colors ${wing.ctaClass}`}>
+                      {wing.cta} →
+                    </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -236,9 +417,15 @@ const Index = () => {
             title="How We Build Your Space" 
             description="We break down the complex construction process into four clear, stress-free stages."
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             {processSteps.map((p, i) => (
               <div key={i} className="bg-card rounded-xl p-6 border border-border/60 relative hover:shadow-card transition-shadow duration-300">
+                {/* Connector arrow — desktop only, not on last card */}
+                {i < processSteps.length - 1 && (
+                  <div className="hidden lg:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-10 justify-center">
+                    <ChevronRight className="w-5 h-5 text-accent/50" />
+                  </div>
+                )}
                 <span className="absolute -top-6 left-6 font-serif text-5xl text-accent/20 font-bold">{p.step}</span>
                 <h4 className="font-serif text-lg text-foreground mb-2 mt-4">{p.title}</h4>
                 <p className="text-xs text-muted-foreground leading-relaxed">{p.desc}</p>
@@ -273,7 +460,7 @@ const Index = () => {
             {featuredProjects.map((p, i) => (
               <div key={i} className="bg-card rounded-xl overflow-hidden border border-border/40 shadow-card hover:shadow-card-hover transition-all duration-300 group">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={p.img} alt={p.name} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-2">
@@ -299,29 +486,12 @@ const Index = () => {
       {/* Testimonials */}
       <section className="py-20 bg-sand-gradient">
         <div className="container">
-          <SectionHeading 
-            label="Testimonials" 
-            title="Real Stories, Real Trust" 
+          <SectionHeading
+            label="Testimonials"
+            title="Real Stories, Real Trust"
             description="Hear from home and commercial property owners who trusted Vidhima to build on their plots."
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-card rounded-xl p-6 md:p-8 border border-border shadow-card flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-0.5 mb-4">
-                    {[...Array(t.rating)].map((_, starIndex) => (
-                      <Star key={starIndex} className="w-4 h-4 fill-accent text-accent" />
-                    ))}
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed italic mb-6">"{t.quote}"</p>
-                </div>
-                <div>
-                  <h4 className="font-serif text-base text-foreground leading-tight">{t.author}</h4>
-                  <span className="text-xs text-muted-foreground">{t.role}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TestimonialCarousel />
         </div>
       </section>
 
@@ -342,6 +512,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Client Logos */}
+      <ClientLogos className="bg-muted/30 border-y border-border/40" />
 
       {/* Final CTA */}
       <section className="py-20 bg-forest-gradient text-primary-foreground">

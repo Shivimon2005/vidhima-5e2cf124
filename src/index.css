@@ -57,6 +57,18 @@
     --gold-dark: 38 70% 42%;
     --warm-white: 40 30% 97%;
     --stone: 30 10% 60%;
+
+    /* Wing: Government Tenders (navy/gold) */
+    --wing-gov: 220 48% 20%;
+    --wing-gov-light: 220 40% 96%;
+    --wing-gov-accent: 43 88% 50%;
+    --wing-gov-dark: 220 52% 13%;
+
+    /* Wing: Sub-Contracting (slate/amber) */
+    --wing-sub: 215 22% 28%;
+    --wing-sub-light: 32 80% 95%;
+    --wing-sub-accent: 28 85% 52%;
+    --wing-sub-dark: 215 28% 16%;
   }
 
   .dark {
@@ -96,6 +108,11 @@
   }
 }
 
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
@@ -120,5 +137,13 @@
 
   .shadow-card-hover {
     box-shadow: 0 12px 40px -8px hsl(var(--forest) / 0.15), 0 4px 12px hsl(var(--forest) / 0.06);
+  }
+
+  .bg-wing-gov-gradient {
+    background: linear-gradient(135deg, hsl(var(--wing-gov-dark)) 0%, hsl(var(--wing-gov)) 100%);
+  }
+
+  .bg-wing-sub-gradient {
+    background: linear-gradient(135deg, hsl(var(--wing-sub-dark)) 0%, hsl(var(--wing-sub)) 100%);
   }
 }

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { blogPosts } from "@/data/blogPosts";
 import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
-import { ArrowLeft, Calendar, User, BookOpen, Phone, MessageSquare } from "lucide-react";
+import { ArrowLeft, Calendar, User, BookOpen, Phone, MessageSquare, DraftingCompass } from "lucide-react";
 
 import apartmentPalampur from "@/assets/apartment_palampur.png";
 import commercialKangra from "@/assets/commercial_kangra.png";
@@ -17,150 +17,209 @@ import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 
+// ── Per-slug media metadata ───────────────────────────────────────────────────
+
+interface MediaMeta {
+  heroAlt: string;
+  bodyAlt: string;
+  galleryCaption: string;
+}
+
+const MEDIA_MAP: Record<string, MediaMeta> = {
+  "3-bhk-luxury-apartments-construction-palampur": {
+    heroAlt: "Modern 3 BHK apartments building elevation rendering in Palampur Himachal Pradesh",
+    bodyAlt: "Interior floor plan layout of 3 BHK luxury apartment in Palampur",
+    galleryCaption: "3 BHK Luxury Residential Building in Palampur — Gallery",
+  },
+  "premium-commercial-shop-project-kangra": {
+    heroAlt: "Modern commercial shop project exterior glass facade rendering in Kangra Himachal Pradesh",
+    bodyAlt: "Ground floor commercial shops layout plan in Kangra",
+    galleryCaption: "Commercial Shop Project in Kangra — Gallery",
+  },
+  "student-hostel-construction-dharamshala": {
+    heroAlt: "Modern student hostel building exterior rendering in Dharamshala Himachal Pradesh",
+    bodyAlt: "Double occupancy hostel room furniture layout diagram",
+    galleryCaption: "Dharamshala Student Hostel Project — Gallery",
+  },
+  "modern-villa-construction-palampur": {
+    heroAlt: "Modern luxury villa building front elevation in Palampur Himachal Pradesh",
+    bodyAlt: "Split-level villa foundation and structural layout drawing",
+    galleryCaption: "Luxury Villa in Palampur — Gallery",
+  },
+  "mixed-use-building-construction-palampur": {
+    heroAlt: "Mixed use building project render showing retail shops and office spaces in Palampur Himachal Pradesh",
+    bodyAlt: "Floor layout plan for mixed use commercial and residential building in Kangra",
+    galleryCaption: "Mixed Use Commercial Building in Palampur — Gallery",
+  },
+  "construction-quality-standards-residential-apartments-hp": {
+    heroAlt: "Residential apartments building construction progress photo in Palampur Himachal Pradesh",
+    bodyAlt: "Seismic column and reinforcement detailed structural drawing",
+    galleryCaption: "Residential Building Quality Standards — Gallery",
+  },
+};
+
+const HERO_IMAGE_MAP: Record<string, string> = {
+  "3-bhk-luxury-apartments-construction-palampur": apartmentPalampur,
+  "premium-commercial-shop-project-kangra": commercialKangra,
+  "student-hostel-construction-dharamshala": hostelDharamshala,
+  "modern-villa-construction-palampur": villaPalampur,
+  "mixed-use-building-construction-palampur": mixedUseHp,
+  "construction-quality-standards-residential-apartments-hp": constructionQuality,
+};
+
+const BODY_IMAGE_MAP: Record<string, string> = {
+  "3-bhk-luxury-apartments-construction-palampur": floorPlan3bhk,
+};
+
+const WALKTHROUGH_IMAGE_MAP: Record<string, string> = {
+  "3-bhk-luxury-apartments-construction-palampur": project1,
+  "premium-commercial-shop-project-kangra": project2,
+  "student-hostel-construction-dharamshala": project3,
+  "modern-villa-construction-palampur": project4,
+  "mixed-use-building-construction-palampur": project2,
+  "construction-quality-standards-residential-apartments-hp": project1,
+};
+
+// ── Image block components (pure React JSX — no dangerouslySetInnerHTML) ─────
+
+const HeroImageBlock = ({ src, alt }: { src: string; alt: string }) => (
+  <div className="my-8 overflow-hidden rounded-xl border border-border bg-muted shadow-md">
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      className="w-full aspect-[16/9] object-cover transition-transform duration-500 hover:scale-[1.02]"
+    />
+  </div>
+);
+
+const BodyImageBlock = ({ src, alt }: { src: string; alt: string }) => (
+  <div className="my-8 overflow-hidden rounded-xl border border-border bg-muted shadow-md flex flex-col items-center">
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      className="w-full max-h-[600px] object-contain bg-white transition-transform duration-500 hover:scale-[1.01]"
+    />
+    <div className="w-full bg-card border-t border-border p-3 text-center">
+      <p className="text-xs font-semibold text-foreground">Floor Plan / Detailed Layout Design Drawing</p>
+      <p className="text-[10px] text-muted-foreground mt-0.5">{alt}</p>
+    </div>
+  </div>
+);
+
+const BodyImagePlaceholder = ({ alt }: { alt: string }) => (
+  <div className="my-8 overflow-hidden rounded-xl border border-border bg-muted shadow-sm">
+    <div className="aspect-[16/9] w-full bg-gradient-to-br from-accent/5 to-primary/5 flex flex-col items-center justify-center p-6 text-center">
+      <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent mb-2">
+        <DraftingCompass className="w-5 h-5" />
+      </div>
+      <span className="text-xs font-semibold text-foreground">Floor Plan / Detailed Layout Design Drawing</span>
+      <span className="text-[10px] text-muted-foreground mt-1 max-w-sm">{alt}</span>
+    </div>
+  </div>
+);
+
+const GalleryImageBlock = ({ src, caption }: { src: string; caption: string }) => (
+  <div className="my-8 overflow-hidden rounded-xl border border-border shadow-md relative">
+    <img
+      src={src}
+      alt={caption}
+      loading="lazy"
+      decoding="async"
+      className="w-full aspect-[16/9] object-cover transition-transform duration-500 hover:scale-[1.02]"
+    />
+    <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent pointer-events-none">
+      <p className="text-sm md:text-base font-serif text-white">{caption}</p>
+    </div>
+  </div>
+);
+
+// ── Content renderer: splits prose on placeholder tokens, injects React nodes ─
+
+const PROSE_CLASSES =
+  "prose prose-slate max-w-none " +
+  "prose-headings:font-serif prose-headings:text-foreground prose-headings:mt-8 prose-headings:mb-4 " +
+  "prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6 " +
+  "prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:text-muted-foreground prose-ul:space-y-2 " +
+  "prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6 prose-ol:text-muted-foreground prose-ol:space-y-2 " +
+  "prose-li:text-sm md:prose-li:text-base " +
+  "prose-strong:text-foreground prose-strong:font-semibold " +
+  "prose-table:w-full prose-table:border-collapse prose-table:my-6 " +
+  "prose-th:border-b prose-th:border-border prose-th:p-3 prose-th:font-semibold prose-th:bg-muted/50 prose-th:text-foreground " +
+  "prose-td:border-b prose-td:border-border prose-td:p-3 prose-td:text-muted-foreground";
+
+const PLACEHOLDER_HERO = "<!-- HERO_IMAGE_PLACEHOLDER -->";
+const PLACEHOLDER_BODY = "<!-- BODY_IMAGE_1_PLACEHOLDER -->";
+const PLACEHOLDER_WALKTHROUGH = "<!-- WALKTHROUGH_VIDEO_PLACEHOLDER -->";
+const SPLITTER = new RegExp(
+  `(${PLACEHOLDER_HERO}|${PLACEHOLDER_BODY}|${PLACEHOLDER_WALKTHROUGH})`,
+  "g"
+);
+
+const BlogContent = ({ content, slug }: { content: string; slug: string }) => {
+  const meta: MediaMeta = MEDIA_MAP[slug] ?? {
+    heroAlt: "Vidhima Construction Project Image",
+    bodyAlt: "Vidhima Construction Structural Drawing",
+    galleryCaption: "Vidhima Construction — Project Gallery",
+  };
+
+  const heroSrc = HERO_IMAGE_MAP[slug];
+  const bodySrc = BODY_IMAGE_MAP[slug];
+  const gallerySrc = WALKTHROUGH_IMAGE_MAP[slug] ?? project1;
+
+  const segments = content.split(SPLITTER);
+
+  return (
+    <>
+      {segments.map((seg, i) => {
+        if (seg === PLACEHOLDER_HERO) {
+          return heroSrc ? <HeroImageBlock key={i} src={heroSrc} alt={meta.heroAlt} /> : null;
+        }
+        if (seg === PLACEHOLDER_BODY) {
+          return bodySrc
+            ? <BodyImageBlock key={i} src={bodySrc} alt={meta.bodyAlt} />
+            : <BodyImagePlaceholder key={i} alt={meta.bodyAlt} />;
+        }
+        if (seg === PLACEHOLDER_WALKTHROUGH) {
+          return <GalleryImageBlock key={i} src={gallerySrc} caption={meta.galleryCaption} />;
+        }
+        // Prose chunk: developer-authored static HTML with no dynamic interpolation.
+        if (!seg.trim()) return null;
+        return (
+          <div
+            key={i}
+            className={PROSE_CLASSES}
+            dangerouslySetInnerHTML={{ __html: seg }}
+          />
+        );
+      })}
+    </>
+  );
+};
+
+// ── Page component ────────────────────────────────────────────────────────────
+
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find((p) => p.slug === slug);
 
   useEffect(() => {
     if (post) {
-      // Dynamic SEO Updates
       document.title = `${post.seoTitle} — Vidhima Construction`;
-      
+
       const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute("content", post.seoDescription);
-      }
-      
+      if (metaDescription) metaDescription.setAttribute("content", post.seoDescription);
+
       const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) {
-        ogTitle.setAttribute("content", post.seoTitle);
-      }
-      
+      if (ogTitle) ogTitle.setAttribute("content", post.seoTitle);
+
       const ogDescription = document.querySelector('meta[property="og:description"]');
-      if (ogDescription) {
-        ogDescription.setAttribute("content", post.seoDescription);
-      }
+      if (ogDescription) ogDescription.setAttribute("content", post.seoDescription);
     }
   }, [post]);
-
-  const renderContent = (content: string) => {
-    let parsed = content;
-    
-    const mediaMap: Record<string, { heroAlt: string; bodyAlt: string; videoTitle: string; youtubeId: string }> = {
-      "3-bhk-luxury-apartments-construction-palampur": {
-        heroAlt: "Modern 3 BHK apartments building elevation rendering in Palampur Himachal Pradesh",
-        bodyAlt: "Interior floor plan layout of 3 BHK luxury apartment in Palampur",
-        videoTitle: "Project Walkthrough - 3 BHK Luxury Residential Building in Palampur",
-        youtubeId: "kYJjQ90XyqM"
-      },
-      "premium-commercial-shop-project-kangra": {
-        heroAlt: "Modern commercial shop project exterior glass facade rendering in Kangra Himachal Pradesh",
-        bodyAlt: "Ground floor commercial shops layout plan in Kangra",
-        videoTitle: "Commercial Shop Project in Kangra - Key Features Walkthrough",
-        youtubeId: "f95VvE_O-4w"
-      },
-      "student-hostel-construction-dharamshala": {
-        heroAlt: "Modern student hostel building exterior rendering in Dharamshala Himachal Pradesh",
-        bodyAlt: "Double occupancy hostel room furniture layout diagram",
-        videoTitle: "Dharamshala Student Hostel Project Layout Walkthrough",
-        youtubeId: "3-M9X211iLg"
-      },
-      "modern-villa-construction-palampur": {
-        heroAlt: "Modern luxury villa building front elevation in Palampur Himachal Pradesh",
-        bodyAlt: "Split-level villa foundation and structural layout drawing",
-        videoTitle: "Luxury Villa in Palampur - Design & Elevation Walkthrough",
-        youtubeId: "F0f5u4yqZyk"
-      },
-      "mixed-use-building-construction-palampur": {
-        heroAlt: "Mixed use building project render showing retail shops and office spaces in Palampur Himachal Pradesh",
-        bodyAlt: "Floor layout plan for mixed use commercial and residential building in Kangra",
-        videoTitle: "Mixed Use Commercial Building in Palampur - Structural Walkthrough",
-        youtubeId: "f95VvE_O-4w"
-      },
-      "construction-quality-standards-residential-apartments-hp": {
-        heroAlt: "Residential apartments building construction progress photo in Palampur Himachal Pradesh",
-        bodyAlt: "Seismic column and reinforcement detailed structural drawing",
-        videoTitle: "Residential Building Quality Standards - Construction Walkthrough",
-        youtubeId: "kYJjQ90XyqM"
-      }
-    };
-
-    const media = mediaMap[slug || ""] || {
-      heroAlt: "Vidhima Construction Project Image",
-      bodyAlt: "Vidhima Construction Structural Drawing",
-      videoTitle: "Vidhima Construction Walkthrough Video",
-      youtubeId: "kYJjQ90XyqM"
-    };
-
-    const imageMap: Record<string, string> = {
-      "3-bhk-luxury-apartments-construction-palampur": apartmentPalampur,
-      "premium-commercial-shop-project-kangra": commercialKangra,
-      "student-hostel-construction-dharamshala": hostelDharamshala,
-      "modern-villa-construction-palampur": villaPalampur,
-      "mixed-use-building-construction-palampur": mixedUseHp,
-      "construction-quality-standards-residential-apartments-hp": constructionQuality,
-    };
-
-    const heroImgSrc = imageMap[slug || ""];
-
-    const heroHtml = heroImgSrc ? `
-      <div class="my-8 overflow-hidden rounded-xl border border-border bg-muted shadow-md relative group">
-        <img src="${heroImgSrc}" alt="${media.heroAlt}" class="w-full aspect-[16/9] object-cover group-hover:scale-[1.02] transition-transform duration-500" />
-      </div>
-    ` : "";
-
-    const bodyImageMap: Record<string, string> = {
-      "3-bhk-luxury-apartments-construction-palampur": floorPlan3bhk,
-    };
-
-    const bodyImgSrc = bodyImageMap[slug || ""];
-
-    const bodyHtml = bodyImgSrc ? `
-      <div class="my-8 overflow-hidden rounded-xl border border-border bg-muted shadow-md relative group flex flex-col items-center">
-        <img src="${bodyImgSrc}" alt="${media.bodyAlt}" class="w-full max-h-[600px] object-contain bg-white group-hover:scale-[1.01] transition-transform duration-500" />
-        <div class="w-full bg-card border-t border-border p-3 text-center">
-          <p class="text-xs font-semibold text-foreground">Floor Plan / Detailed Layout Design Drawing</p>
-          <p class="text-[10px] text-muted-foreground mt-0.5">${media.bodyAlt}</p>
-        </div>
-      </div>
-    ` : `
-      <div class="my-8 overflow-hidden rounded-xl border border-border bg-muted shadow-sm relative group">
-        <div class="aspect-[16/9] w-full bg-gradient-to-br from-accent/5 to-primary/5 flex flex-col items-center justify-center p-6 text-center">
-          <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent mb-2 group-hover:scale-110 transition-transform duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-drafting-compass"><path d="m12.7 13.7-2.9-2.9"/><path d="m11.3 12.3-2.9 2.9"/><path d="m14.5 10.5 2.9-2.9"/><path d="m13.1 9.1 2.9-2.9"/><path d="M12 2a10 10 0 0 0-10 10c0 5.5 4.5 10 10 10s10-4.5 10-10A10 10 0 0 0 12 2Z"/></svg>
-          </div>
-          <span class="text-xs font-semibold text-foreground">Floor Plan / Detailed Layout Design Drawing</span>
-          <span class="text-[10px] text-muted-foreground mt-1 max-w-sm">Alt: "${media.bodyAlt}"</span>
-        </div>
-      </div>
-    `;
-
-    const walkthroughImageMap: Record<string, string> = {
-      "3-bhk-luxury-apartments-construction-palampur": project1,
-      "premium-commercial-shop-project-kangra": project2,
-      "student-hostel-construction-dharamshala": project3,
-      "modern-villa-construction-palampur": project4,
-      "mixed-use-building-construction-palampur": project2,
-      "construction-quality-standards-residential-apartments-hp": project1,
-    };
-
-    const walkthroughImgSrc = walkthroughImageMap[slug || ""] || project1;
-
-    const walkthroughImageHtml = `
-      <div class="my-8 overflow-hidden rounded-xl border border-border shadow-md relative group">
-        <img src="${walkthroughImgSrc}" alt="Project Gallery Image" class="w-full aspect-[16/9] object-cover group-hover:scale-[1.02] transition-transform duration-500" />
-        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent z-10 pointer-events-none">
-          <h3 class="text-sm md:text-base font-serif text-white shadow-sm">${media.videoTitle.replace("Walkthrough", "Gallery").replace("Watch project walkthrough and construction progress video", "Project Highlight Image")}</h3>
-        </div>
-      </div>
-    `;
-
-    parsed = parsed.replace("<!-- HERO_IMAGE_PLACEHOLDER -->", heroHtml);
-    parsed = parsed.replace("<!-- BODY_IMAGE_1_PLACEHOLDER -->", bodyHtml);
-    parsed = parsed.replace("<!-- WALKTHROUGH_VIDEO_PLACEHOLDER -->", walkthroughImageHtml);
-
-    return parsed;
-  };
 
   if (!post) {
     return (
@@ -216,20 +275,7 @@ const BlogPost = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             {/* Main Content */}
             <article className="lg:col-span-8">
-              <div 
-                className="prose prose-slate max-w-none 
-                  prose-headings:font-serif prose-headings:text-foreground prose-headings:mt-8 prose-headings:mb-4
-                  prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6
-                  prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:text-muted-foreground prose-ul:space-y-2
-                  prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6 prose-ol:text-muted-foreground prose-ol:space-y-2
-                  prose-li:text-sm md:prose-li:text-base
-                  prose-strong:text-foreground prose-strong:font-semibold
-                  prose-table:w-full prose-table:border-collapse prose-table:my-6
-                  prose-th:border-b prose-th:border-border prose-th:p-3 prose-th:font-semibold prose-th:bg-muted/50 prose-th:text-foreground
-                  prose-td:border-b prose-td:border-border prose-td:p-3 prose-td:text-muted-foreground
-                  "
-                dangerouslySetInnerHTML={{ __html: renderContent(post.content) }}
-              />
+              <BlogContent content={post.content} slug={slug ?? ""} />
               
               {/* Internal CTAs */}
               <div className="mt-12 p-8 rounded-xl border border-primary/20 bg-primary/5 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
