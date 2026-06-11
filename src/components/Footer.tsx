@@ -95,6 +95,7 @@ const Footer = () => (
               { label: "CSR", to: "/csr" },
               { label: "Careers", to: "/careers" },
               { label: "Blog", to: "/blog" },
+              { label: "FAQ", to: "/faq" },
               { label: "Contact", to: "/contact" },
             ].map((l) => (
               <Link key={l.label} to={l.to} className="text-sm opacity-70 hover:opacity-100 transition-opacity">

@@ -23,6 +23,7 @@ const ProjectDetail     = lazy(() => import("./pages/ProjectDetail"));
 const Leadership        = lazy(() => import("./pages/Leadership"));
 const Careers           = lazy(() => import("./pages/Careers"));
 const CSR               = lazy(() => import("./pages/CSR"));
+const FAQ               = lazy(() => import("./pages/FAQ"));
 const NotFound          = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -80,6 +81,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/government-tenders" element={<GovernmentTenders />} />
             <Route path="/sub-contracting" element={<SubContracting />} />
+            <Route path="/faq" element={<FAQ />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

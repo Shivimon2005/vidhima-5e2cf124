@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://vidhima-construction-website.netlify.app/sitemap.xml
