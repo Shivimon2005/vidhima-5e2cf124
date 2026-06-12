@@ -71,7 +71,7 @@ const Projects = () => {
       {/* Stats strip */}
       <section className="relative z-20 -mt-8 mx-auto max-w-4xl px-4">
         <div className="bg-card rounded-xl border border-border/80 shadow-lg p-6">
-          <div className="grid grid-cols-3 gap-6 text-center">
+          <div className="grid grid-cols-3 gap-3 sm:gap-6 text-center">
             {[
               { value: completedCount, label: "Completed", color: "text-emerald-700" },
               { value: ongoingCount, label: "Ongoing", color: "text-blue-700" },
