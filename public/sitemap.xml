@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Core pages -->
-  <url><loc>https://vidhima-construction-website.netlify.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/contact</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/why-choose-us</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/faq</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/</loc><lastmod>2026-06-17</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/about</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/services</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/contact</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/why-choose-us</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/faq</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Business wings -->
-  <url><loc>https://vidhima-construction-website.netlify.app/government-tenders</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/sub-contracting</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/government-tenders</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/sub-contracting</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Projects -->
-  <url><loc>https://vidhima-construction-website.netlify.app/projects</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/projects/neelam-residence-yol</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/projects</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/projects/neelam-residence-yol</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Company -->
-  <url><loc>https://vidhima-construction-website.netlify.app/leadership</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/careers</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/csr</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/leadership</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/careers</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/csr</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
   <!-- Blog -->
-  <url><loc>https://vidhima-construction-website.netlify.app/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/blog/house-construction-cost-kangra-palampur-2025</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/blog/building-on-sloped-plot-himachal-pradesh</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/blog/3-bhk-luxury-apartments-construction-palampur</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/blog/premium-commercial-shop-project-kangra</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/blog/student-hostel-construction-dharamshala</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/blog/modern-villa-construction-palampur</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/blog/mixed-use-building-construction-palampur</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vidhima-construction-website.netlify.app/blog/construction-quality-standards-residential-apartments-hp</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/blog</loc><lastmod>2026-06-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/blog/house-construction-cost-kangra-palampur-2025</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/blog/building-on-sloped-plot-himachal-pradesh</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/blog/3-bhk-luxury-apartments-construction-palampur</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/blog/premium-commercial-shop-project-kangra</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/blog/student-hostel-construction-dharamshala</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/blog/modern-villa-construction-palampur</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/blog/mixed-use-building-construction-palampur</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhima-construction-website.netlify.app/blog/construction-quality-standards-residential-apartments-hp</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
 </urlset>
