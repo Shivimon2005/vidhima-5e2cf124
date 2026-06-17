@@ -27,7 +27,7 @@ const WhyChooseUs = () => (
       <div className="container">
         <div className="max-w-2xl">
           <span className="text-xs uppercase tracking-widest text-accent mb-3 block">Why Choose Us</span>
-          <h1 className="font-serif text-4xl md:text-5xl mb-4">Why Himachal Pradesh Trusts Us to Build</h1>
+                    <h1 className="font-serif text-4xl md:text-5xl mb-4">Best Construction Company in Kangra, Palampur & Himachal Pradesh</h1>h1></h1>
           <p className="opacity-80 text-lg">We're builders who understand Himachal's land, climate, and regulations. Here's how we make construction stress-free.</p>
         </div>
       </div>
