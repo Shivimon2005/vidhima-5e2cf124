@@ -176,7 +176,10 @@ const BlogContent = ({ content, slug }: { content: string; slug: string }) => {
     <>
       {segments.map((seg, i) => {
         if (seg === PLACEHOLDER_HERO) {
-          return heroSrc ? <HeroImageBlock key={i} src={heroSrc} alt={meta.heroAlt} /> : null;
+  useEffect(() => {
+        if (post) {
+                document.title = `${post.seoTitle} — Vidhima Construction`;
+                const wordCount = post.content.replace(/<[^>]*>/g, '').trim().split(/\s+/).length;return heroSrc ? <HeroImageBlock key={i} src={heroSrc} alt={meta.heroAlt} /> : null;
         }
         if (seg === PLACEHOLDER_BODY) {
           return bodySrc
@@ -206,20 +209,61 @@ const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find((p) => p.slug === slug);
 
-  useEffect(() => {
-    if (post) {
-      document.title = `${post.seoTitle} — Vidhima Construction`;
+    useEffect(() => {
+          if (post) {
+                  document.title = `${post.seoTitle} — Vidhima Construction`;
 
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) metaDescription.setAttribute("content", post.seoDescription);
+            // Update meta description and OG tags
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) metaDescription.setAttribute("content", post.seoDescription);
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle) ogTitle.setAttribute("content", post.seoTitle);
+            const ogDescription = document.querySelector('meta[property="og:description"]');
+            if (ogDescription) ogDescription.setAttribute("content", post.seoDescription);
 
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute("content", post.seoTitle);
-
-      const ogDescription = document.querySelector('meta[property="og:description"]');
-      if (ogDescription) ogDescription.setAttribute("content", post.seoDescription);
-    }
-  }, [post]);
+            // Inject / update BlogPosting JSON-LD schema
+            const wordCount = post.content.replace(/<[^>]*>/g, '').trim().split(/\s+/).length;
+                    const dateMap: Record<string, string> = {
+                              "Jun 2026": "2026-06-01",
+                      "May 2026": "2026-05-01",
+                      "Jan 2026": "2026-01-01",
+                      "Dec 2025": "2025-12-01",
+                      "Nov 2025": "2025-11-01",
+                      "Oct 2025": "2025-10-01",
+                      "Aug 2025": "2025-08-01",
+              };
+                    const datePublished = dateMap[post.date] ?? "2025-08-01";
+                    const schema = {
+                              "@context": "https://schema.org",
+                      "@type": "BlogPosting",
+                      "headline": post.seoTitle,
+                      "description": post.seoDescription,
+                      "keywords": `construction in Himachal Pradesh, ${post.title}, Palampur, Kangra, Vidhima Construction`,
+                      "datePublished": datePublished,
+                      "dateModified": datePublished,
+                      "wordCount": wordCount,
+                      "inLanguage": "en-IN",
+                      "author": { "@type": "Person", "name": "Shivam Sharma" },
+                      "publisher": {
+                                  "@type": "Organization",
+                        "name": "Vidhima Construction Private Limited",
+                        "logo": { "@type": "ImageObject", "url": "https://vidhima-construction-website.netlify.app/logo-512.png" }
+              },
+                      "mainEntityOfPage": {
+                                  "@type": "WebPage",
+                        "@id": `https://vidhima-construction-website.netlify.app/blog/${post.slug}`
+              }
+              };
+                    let schemaTag = document.querySelector('script[data-blog-schema]') as HTMLScriptElement | null;
+                    if (!schemaTag) {
+                              schemaTag = document.createElement('script');
+                      schemaTag.type = 'application/ld+json';
+                      schemaTag.setAttribute('data-blog-schema', 'true');
+                      document.head.appendChild(schemaTag);
+              }
+                    schemaTag.textContent = JSON.stringify(schema);
+              }
+              }, [post]);
 
   if (!post) {
     return (
