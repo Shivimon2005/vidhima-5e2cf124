@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import { Home, Building2, CheckCircle2, ArrowRight } from "lucide-react";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const residentialPackages = [
   {
@@ -91,7 +92,8 @@ const Services = () => (
         <section className="py-20 bg-forest-gradient text-primary-foreground">
               <div className="container">
                       <div className="max-w-2xl">
-                                <span className="text-xs uppercase tracking-widest text-accent mb-3 block">Our Services</span>span>
+                                              <Breadcrumb items={[{ label: "Services" }]} className="mb-4" />
+                        <span className="text-xs uppercase tracking-widest text-accent mb-3 block">Our Services</span>span>
                                 <h1 className="font-serif text-4xl md:text-5xl mb-4">Construction Services in Himachal Pradesh</h1>h1>
                                 <p className="opacity-80 text-lg">From your empty plot to a finished building — we handle design, approvals, and construction. Residential homes and commercial spaces, built for Himachal's unique terrain.</p>p>
                       </div>div>
