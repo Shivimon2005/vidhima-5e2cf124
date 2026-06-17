@@ -62,7 +62,7 @@ const Projects = () => {
             <span className="text-xs uppercase tracking-widest text-accent mb-3 block">Portfolio</span>
             <h1 className="font-serif text-4xl md:text-5xl mb-4">Our Projects</h1>
             <p className="opacity-80 text-lg">
-              Real work, real results. {completedCount} completed projects across Himachal Pradesh — residential, commercial, and mixed use.
+                            Real work, real results. {projects.length} active project{projects.length !== 1 ? 's' : ''} across Himachal Pradesh — residential, commercial, and mixed use.
             </p>
           </div>
         </div>
