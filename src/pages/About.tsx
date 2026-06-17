@@ -22,7 +22,7 @@ const About = () => (
       <div className="container">
         <div className="max-w-2xl">
           <span className="text-xs uppercase tracking-widest text-accent mb-3 block">About Us</span>
-          <h1 className="font-serif text-4xl md:text-5xl mb-4">Building India's Infrastructure, One Project at a Time</h1>
+                    <h1 className="font-serif text-4xl md:text-5xl mb-4">Class-I Registered Construction Company in Palampur, Kangra, Himachal Pradesh</h1>h1></h1>
           <p className="opacity-80 text-lg">Vidhima Construction Private Limited — a company built on quality, professionalism, and proven expertise in construction and infrastructure across India.</p>
         </div>
       </div>
