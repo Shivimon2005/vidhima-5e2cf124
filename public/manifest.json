@@ -1,0 +1,12 @@
+{
+  "name": "Vidhima Construction Pvt Ltd",
+  "short_name": "Vidhima",
+  "description": "Class-I registered construction company in Palampur, Kangra — homes, commercial buildings, government contracts across Himachal Pradesh.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a3a2a",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "48x48", "type": "image/x-icon" }
+  ]
+}

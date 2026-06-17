@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "deploy": "vite build && netlify deploy --prod --dir=dist"
+    "deploy": "vite build && netlify deploy --prod --dir=dist && node scripts/indexnow-ping.mjs"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

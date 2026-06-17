@@ -1,0 +1,38 @@
+# Vidhima Construction Private Limited
+
+> Class-I registered construction company in Palampur, Kangra, Himachal Pradesh. Builds homes, commercial buildings, and executes government contracts across Kangra district and HP.
+
+## Company
+
+- Legal name: Vidhima Construction Private Limited
+- Registration: Class-I contractor, Himachal Pradesh
+- Contact: +91 86289 89364 | vidhimaho@gmail.com
+- Address: Near SSB Chowk, Palampur, Kangra, Himachal Pradesh 176061
+- Hours: Mon–Sat 9:00 AM – 6:00 PM
+
+## Services
+
+- Residential house construction (RCC, seismic-safe, hill terrain)
+- Commercial building construction
+- Government contract execution (roads, public buildings, civic works)
+- Sub-contracting for larger contractors
+- Free site visit within 20 km of Palampur office
+
+## Service Area
+
+Palampur, Kangra, Dharamshala, Baijnath, Nurpur, Hamirpur, and across Himachal Pradesh.
+
+## Content
+
+- Blog: construction cost guides, HP hill terrain building tips, project case studies
+- Projects: completed residential and commercial constructions in Kangra district
+- FAQ: construction process, timelines, pricing, seismic standards for HP
+
+## URLs
+
+- Homepage: https://vidhima-construction-website.netlify.app/
+- Services: https://vidhima-construction-website.netlify.app/services
+- Projects: https://vidhima-construction-website.netlify.app/projects
+- Blog: https://vidhima-construction-website.netlify.app/blog
+- Contact: https://vidhima-construction-website.netlify.app/contact
+- Sitemap: https://vidhima-construction-website.netlify.app/sitemap.xml

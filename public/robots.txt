@@ -10,6 +10,29 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# Allow AI search/citation agents (Perplexity, ChatGPT browsing) — helps brand visibility
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Block AI model training crawlers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
 User-agent: *
 Allow: /
 
