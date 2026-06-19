@@ -45,14 +45,14 @@ const Breadcrumb = ({ items, className = "" }: BreadcrumbProps) => {
                                                                                                                                 className="hover:text-foreground transition-colors"
                                                                                                                                 itemProp="item"
                                                                                                                               >
-                                                                                                                              <span itemProp="name">{item.label}</span>span>
-                                                                                                          </Link>Link>
+                                                                                                                              <span itemProp="name">{item.label}</span>
+                                                                                                          </Link>
                                                                                                       ) : (
                                                                                                         <span itemProp="name" aria-current={isLast ? "page" : undefined}>
                                                                                                           {item.label}
-                                                                                                          </span>span>
+                                                                                                          </span>
                                                                                                     )}
-                                                                                  </span>span>
+                                                                                  </span>
                                                                                 ) : (
                                                                                   <>
                                                                                                     <ChevronRight className="w-3 h-3 shrink-0" aria-hidden="true" />
@@ -62,8 +62,8 @@ const Breadcrumb = ({ items, className = "" }: BreadcrumbProps) => {
                                                                                                                                 className="hover:text-foreground transition-colors"
                                                                                                                                 itemProp="item"
                                                                                                                               >
-                                                                                                                              <span itemProp="name">{item.label}</span>span>
-                                                                                                          </Link>Link>
+                                                                                                                              <span itemProp="name">{item.label}</span>
+                                                                                                          </Link>
                                                                                                       ) : (
                                                                                                         <span
                                                                                                                                 className={isLast ? "font-medium text-foreground" : ""}
@@ -71,17 +71,17 @@ const Breadcrumb = ({ items, className = "" }: BreadcrumbProps) => {
                                                                                                                                 aria-current={isLast ? "page" : undefined}
                                                                                                                               >
                                                                                                           {item.label}
-                                                                                                          </span>span>
+                                                                                                          </span>
                                                                                                     )}
-                                                                                  </>>
+                                                                                  </>
                                                                                 )}
                                                                 <meta itemProp="position" content={String(position)} />
-                                                  </li>li>
+                                                  </li>
                                                 );
                         })}
-                </ol>ol>
-          </nav>nav>
+                </ol>
+          </nav>
         );
 };
 
-export default Breadcrumb;</></nav>
+export default Breadcrumb;

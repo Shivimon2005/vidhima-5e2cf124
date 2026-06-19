@@ -92,7 +92,7 @@ const HeroImageBlock = ({ src, alt }: { src: string; alt: string }) => (
                 decoding="async"
                 className="w-full aspect-[16/9] object-cover transition-transform duration-500 hover:scale-[1.02]"
               />
-    </div>div>
+    </div>
   );
 
 const BodyImageBlock = ({ src, alt }: { src: string; alt: string }) => (
@@ -105,10 +105,10 @@ const BodyImageBlock = ({ src, alt }: { src: string; alt: string }) => (
                 className="w-full max-h-[600px] object-contain bg-white transition-transform duration-500 hover:scale-[1.01]"
               />
         <div className="w-full bg-card border-t border-border p-3 text-center">
-              <p className="text-xs font-semibold text-foreground">Floor Plan / Detailed Layout Design Drawing</p>p>
-              <p className="text-[10px] text-muted-foreground mt-0.5">{alt}</p>p>
-        </div>div>
-    </div>div>
+              <p className="text-xs font-semibold text-foreground">Floor Plan / Detailed Layout Design Drawing</p>
+              <p className="text-[10px] text-muted-foreground mt-0.5">{alt}</p>
+        </div>
+    </div>
   );
 
 const BodyImagePlaceholder = ({ alt }: { alt: string }) => (
@@ -116,11 +116,11 @@ const BodyImagePlaceholder = ({ alt }: { alt: string }) => (
         <div className="aspect-[16/9] w-full bg-gradient-to-br from-accent/5 to-primary/5 flex flex-col items-center justify-center p-6 text-center">
               <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent mb-2">
                       <DraftingCompass className="w-5 h-5" />
-              </div>div>
-              <span className="text-xs font-semibold text-foreground">Floor Plan / Detailed Layout Design Drawing</span>span>
-              <span className="text-[10px] text-muted-foreground mt-1 max-w-sm">{alt}</span>span>
-        </div>div>
-    </div>div>
+              </div>
+              <span className="text-xs font-semibold text-foreground">Floor Plan / Detailed Layout Design Drawing</span>
+              <span className="text-[10px] text-muted-foreground mt-1 max-w-sm">{alt}</span>
+        </div>
+    </div>
   );
 
 const GalleryImageBlock = ({ src, caption }: { src: string; caption: string }) => (
@@ -133,9 +133,9 @@ const GalleryImageBlock = ({ src, caption }: { src: string; caption: string }) =
                 className="w-full aspect-[16/9] object-cover transition-transform duration-500 hover:scale-[1.02]"
               />
         <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent pointer-events-none">
-              <p className="text-sm md:text-base font-serif text-white">{caption}</p>p>
-        </div>div>
-    </div>div>
+              <p className="text-sm md:text-base font-serif text-white">{caption}</p>
+        </div>
+    </div>
   );
 
 // ── Content renderer: splits prose on placeholder tokens, injects React nodes ─
@@ -197,7 +197,7 @@ const BlogContent = ({ content, slug }: { content: string; slug: string }) => {
                                             />
                               );
           })}
-          </>>
+          </>
         );
 };
 
@@ -265,15 +265,15 @@ const BlogPost = () => {
           return (
                   <main className="pt-32 pb-20">
                           <div className="container text-center max-w-md mx-auto">
-                                    <h1 className="font-serif text-3xl mb-4 text-foreground">Guide Not Found</h1>h1>
-                                    <p className="text-muted-foreground mb-8">The construction guide you are looking for does not exist or has been relocated.</p>p>
+                                    <h1 className="font-serif text-3xl mb-4 text-foreground">Guide Not Found</h1>
+                                    <p className="text-muted-foreground mb-8">The construction guide you are looking for does not exist or has been relocated.</p>
                                     <Link to="/blog">
                                                 <Button>
                                                               <ArrowLeft className="w-4 h-4 mr-2" /> Back to Guides
-                                                </Button>Button>
-                                    </Link>Link>
-                          </div>div>
-                  </main>main>
+                                                </Button>
+                                    </Link>
+                          </div>
+                  </main>
                 );
     }
   
@@ -293,25 +293,25 @@ const BlogPost = () => {
                                               <div className="flex items-center gap-4 text-xs opacity-80 mb-4 flex-wrap">
                                                             <span className="font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-primary/20 text-accent">
                                                               {post.category}
-                                                            </span>span>
+                                                            </span>
                                                             <span className="flex items-center gap-1.5">
                                                                             <Calendar className="w-3.5 h-3.5" />
                                                               {post.date}
-                                                            </span>span>
+                                                            </span>
                                                             <span className="flex items-center gap-1.5">
                                                                             <User className="w-3.5 h-3.5" />
                                                                             By Shivam Sharma
-                                                            </span>span>
-                                              </div>div>
+                                                            </span>
+                                              </div>
                                               <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight mb-4 text-primary-foreground">
                                                 {post.title}
-                                              </h1>h1>
+                                              </h1>
                                               <p className="text-lg opacity-85 leading-relaxed font-light">
                                                 {post.excerpt}
-                                              </p>p>
-                                  </div>div>
-                        </div>div>
-                </section>section>
+                                              </p>
+                                  </div>
+                        </div>
+                </section>
           
             {/* Article Content & Lead Form */}
                 <section className="py-16 bg-background">
@@ -324,60 +324,60 @@ const BlogPost = () => {
                                                 {/* Internal CTAs */}
                                                             <div className="mt-12 p-8 rounded-xl border border-primary/20 bg-primary/5 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
                                                                             <div>
-                                                                                              <h3 className="font-serif text-xl text-foreground mb-2">Planning a construction project in Himachal Pradesh?</h3>h3>
-                                                                                              <p className="text-sm text-muted-foreground max-w-md">Our local experts can help you estimate costs, check TCP regulations, and prepare structural stability details for your plot.</p>p>
-                                                                            </div>div>
+                                                                                              <h3 className="font-serif text-xl text-foreground mb-2">Planning a construction project in Himachal Pradesh?</h3>
+                                                                                              <p className="text-sm text-muted-foreground max-w-md">Our local experts can help you estimate costs, check TCP regulations, and prepare structural stability details for your plot.</p>
+                                                                            </div>
                                                                             <div className="flex gap-3 shrink-0 flex-wrap justify-center">
                                                                                               <a href="tel:+918628989364">
                                                                                                                   <Button variant="outline" size="sm" className="flex items-center gap-1">
                                                                                                                                         <Phone className="w-4 h-4" /> Call Us
-                                                                                                                    </Button>Button>
-                                                                                                </a>a>
+                                                                                                                    </Button>
+                                                                                                </a>
                                                                                               <a href="https://wa.me/918628989364" target="_blank" rel="noopener noreferrer">
                                                                                                                   <Button variant="whatsapp" size="sm" className="flex items-center gap-1">
                                                                                                                                         <MessageSquare className="w-4 h-4" /> WhatsApp
-                                                                                                                    </Button>Button>
-                                                                                                </a>a>
-                                                                            </div>div>
-                                                            </div>div>
-                                              </article>article>
+                                                                                                                    </Button>
+                                                                                                </a>
+                                                                            </div>
+                                                            </div>
+                                              </article>
                                   
                                     {/* Sidebar with Lead Capture Form */}
                                               <aside className="lg:col-span-4 lg:sticky lg:top-24 h-fit space-y-8">
                                                             <div className="bg-card rounded-xl p-6 md:p-8 shadow-card border border-border">
                                                                             <div className="flex items-center gap-2 mb-4">
                                                                                               <BookOpen className="w-5 h-5 text-primary" />
-                                                                                              <h3 className="font-serif text-xl">Get Free Estimate</h3>h3>
-                                                                            </div>div>
+                                                                                              <h3 className="font-serif text-xl">Get Free Estimate</h3>
+                                                                            </div>
                                                                             <p className="text-xs text-muted-foreground mb-6">
                                                                                               Fill in your project details. We will assess your requirements and soil details for your plot in Himachal Pradesh.
-                                                                            </p>p>
+                                                                            </p>
                                                                             <LeadForm />
-                                                            </div>div>
+                                                            </div>
                                               
                                                             <div className="bg-muted rounded-xl p-6 border border-border">
-                                                                            <h4 className="font-serif text-lg mb-2">Why Vidhima?</h4>h4>
+                                                                            <h4 className="font-serif text-lg mb-2">Why Vidhima?</h4>
                                                                             <ul className="space-y-3 text-xs text-muted-foreground">
                                                                                               <li className="flex gap-2">
-                                                                                                                  <span className="text-primary font-bold">✓</span>span>
-                                                                                                                  <span>State-registered civil construction company in Himachal Pradesh.</span>span>
-                                                                                                </li>li>
+                                                                                                                  <span className="text-primary font-bold">✓</span>
+                                                                                                                  <span>State-registered civil construction company in Himachal Pradesh.</span>
+                                                                                                </li>
                                                                                               <li className="flex gap-2">
-                                                                                                                  <span className="text-primary font-bold">✓</span>span>
-                                                                                                                  <span>100% transparency with itemized bills and contracts.</span>span>
-                                                                                                </li>li>
+                                                                                                                  <span className="text-primary font-bold">✓</span>
+                                                                                                                  <span>100% transparency with itemized bills and contracts.</span>
+                                                                                                </li>
                                                                                               <li className="flex gap-2">
-                                                                                                                  <span className="text-primary font-bold">✓</span>span>
-                                                                                                                  <span>Strict adherence to HP TCP rules and seismic standards.</span>span>
-                                                                                                </li>li>
-                                                                            </ul>ul>
-                                                            </div>div>
-                                              </aside>aside>
-                                  </div>div>
-                        </div>div>
-                </section>section>
-          </main>main>
+                                                                                                                  <span className="text-primary font-bold">✓</span>
+                                                                                                                  <span>Strict adherence to HP TCP rules and seismic standards.</span>
+                                                                                                </li>
+                                                                            </ul>
+                                                            </div>
+                                              </aside>
+                                  </div>
+                        </div>
+                </section>
+          </main>
         );
 };
 
-export default BlogPost;</></div>
+export default BlogPost;

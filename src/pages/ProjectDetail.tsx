@@ -181,8 +181,8 @@ const ProjectDetail = () => {
                                   >
                                   <ArrowLeft className="w-4 h-4" />
                                   Back to Projects
-                        </Link>Link>
-                </div>div>
+                        </Link>
+                </div>
           
             {/* Hero image */}
                 <section className="container pb-8">
@@ -194,8 +194,8 @@ const ProjectDetail = () => {
                                                 decoding="async"
                                                 className="w-full h-full object-cover"
                                               />
-                        </div>div>
-                </section>section>
+                        </div>
+                </section>
           
             {/* Content */}
                 <section className="container pb-20">
@@ -210,52 +210,52 @@ const ProjectDetail = () => {
                                                                                               >
                                                                                               <StatusIcon className="w-3.5 h-3.5" />
                                                                               {cfg.label}
-                                                                            </span>span>
+                                                                            </span>
                                                                             <span className="text-xs font-semibold uppercase tracking-wider text-accent">
                                                                               {project.subType}
-                                                                            </span>span>
-                                                            </div>div>
+                                                                            </span>
+                                                            </div>
                                                             <h1 className="font-serif text-3xl md:text-4xl text-foreground mb-3">
                                                               {project.name}
-                                                            </h1>h1>
+                                                            </h1>
                                                             <div className="flex items-center gap-2 text-sm text-muted-foreground">
                                                                             <MapPin className="w-4 h-4 shrink-0" />
                                                               {project.location}
-                                                            </div>div>
-                                              </div>div>
+                                                            </div>
+                                              </div>
                                   
                                     {/* Result callout */}
                                               <div className="bg-primary/5 border border-primary/20 rounded-xl p-5">
                                                             <p className="text-sm font-medium text-primary leading-relaxed">
                                                               {project.outcome}
-                                                            </p>p>
-                                              </div>div>
+                                                            </p>
+                                              </div>
                                   
                                     {/* Description */}
                                               <div>
-                                                            <h2 className="font-serif text-xl text-foreground mb-3">About This Project</h2>h2>
-                                                            <p className="text-muted-foreground leading-relaxed text-sm">{project.description}</p>p>
-                                              </div>div>
+                                                            <h2 className="font-serif text-xl text-foreground mb-3">About This Project</h2>
+                                                            <p className="text-muted-foreground leading-relaxed text-sm">{project.description}</p>
+                                              </div>
                                   
                                     {/* Highlights */}
                                               <div>
-                                                            <h2 className="font-serif text-xl text-foreground mb-4">Project Highlights</h2>h2>
+                                                            <h2 className="font-serif text-xl text-foreground mb-4">Project Highlights</h2>
                                                             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                                               {project.highlights.map((h, i) => (
                               <li key={i} className="flex items-start gap-3 bg-card rounded-lg p-4 border border-border/60">
                                                   <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
                                                                         <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
-                                                  </div>div>
-                                                  <span className="text-sm text-foreground">{h}</span>span>
-                              </li>li>
+                                                  </div>
+                                                  <span className="text-sm text-foreground">{h}</span>
+                              </li>
                             ))}
-                                                            </ul>ul>
-                                              </div>div>
+                                                            </ul>
+                                              </div>
                                   
                                     {/* Milestone timeline */}
                                     {project.milestones && project.milestones.length > 0 && (
                           <div>
-                                          <h2 className="font-serif text-xl text-foreground mb-6">Construction Progress</h2>h2>
+                                          <h2 className="font-serif text-xl text-foreground mb-6">Construction Progress</h2>
                                           <div className="relative">
                                             {/* Vertical line */}
                                                             <div className="absolute left-[18px] top-2 bottom-2 w-0.5 bg-border" />
@@ -279,37 +279,37 @@ const ProjectDetail = () => {
                                                                                                                                         ? <CircleDot className="w-4 h-4 text-blue-600" />
                                                                                                                                         : <Circle className="w-4 h-4 text-muted-foreground/40" />
                                                                                                           }
-                                                                                                        </div>div>
+                                                                                                        </div>
                                                                                                       <div className="flex-1 pt-1.5">
                                                                                                                                   <span className={`text-sm font-medium ${isDone ? 'text-foreground' : isActive ? 'text-blue-700' : 'text-muted-foreground'}`}>
                                                                                                                                     {m.label}
-                                                                                                                                    </span>span>
+                                                                                                                                    </span>
                                                                                                         {m.note && (
                                                                                                             <span className="ml-2 text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">
                                                                                                               {m.note}
-                                                                                                              </span>span>
+                                                                                                              </span>
                                                                                                                                   )}
-                                                                                                        </div>div>
-                                                                              </li>li>
+                                                                                                        </div>
+                                                                              </li>
                                                                           );
                           })}
-                                                            </ol>ol>
-                                          </div>div>
-                          </div>div>
+                                                            </ol>
+                                          </div>
+                          </div>
                                               )}
                                   
                                     {/* Photo gallery */}
                                     {project.images.length > 1 && (
                           <div className="space-y-4">
                                           <div className="flex items-center justify-between">
-                                                            <h2 className="font-serif text-xl text-foreground">Photo Gallery</h2>h2>
+                                                            <h2 className="font-serif text-xl text-foreground">Photo Gallery</h2>
                                                             <button
                                                                                   onClick={() => setActivePhotoIndex(0)}
                                                                                   className="text-xs font-semibold text-primary hover:underline flex items-center gap-1"
                                                                                 >
                                                                                 View All {project.images.length} Photos
-                                                            </button>button>
-                                          </div>div>
+                                                            </button>
+                                          </div>
                           
                             {project.images.length >= 5 ? (
                                               /* Premium layout for 5+ images */
@@ -327,7 +327,7 @@ const ProjectDetail = () => {
                                                                                                                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                                                                                                                 />
                                                                                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-                                                                  </div>div>
+                                                                  </div>
                                               
                                                 {/* Smaller Images Grid (right side on desktop, bottom on mobile) */}
                                                                   <div className="grid grid-cols-2 md:grid-cols-2 md:col-span-2 gap-3">
@@ -351,17 +351,17 @@ const ProjectDetail = () => {
                                                                                                                                                               />
                                                                                                       {isLastVisible && hasMore ? (
                                                                                                                                                                 <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-white transition-all group-hover:bg-black/70">
-                                                                                                                                                                                                <span className="text-lg md:text-xl font-bold font-serif">+{project.images.length - 4}</span>span>
-                                                                                                                                                                                                <span className="text-[9px] md:text-[10px] tracking-wider uppercase font-semibold">More Photos</span>span>
-                                                                                                                                                                  </div>div>
+                                                                                                                                                                                                <span className="text-lg md:text-xl font-bold font-serif">+{project.images.length - 4}</span>
+                                                                                                                                                                                                <span className="text-[9px] md:text-[10px] tracking-wider uppercase font-semibold">More Photos</span>
+                                                                                                                                                                  </div>
                                                                                                                                                               ) : (
                                                                                                                                                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                                                                                                                                                               )}
-                                                                                                      </div>div>
+                                                                                                      </div>
                                                                                                   );
                                               })}
-                                                                  </div>div>
-                                              </div>div>
+                                                                  </div>
+                                              </div>
                                             ) : (
                                               /* Standard grid layout for 2 to 4 images */
                                               <div className={`grid gap-3 ${
@@ -385,11 +385,11 @@ const ProjectDetail = () => {
                                                                                                                           className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                                                                                                                         />
                                                                                               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-                                                                      </div>div>
+                                                                      </div>
                                                                     ))}
-                                              </div>div>
+                                              </div>
                                           )}
-                          </div>div>
+                          </div>
                                               )}
                                   
                                     {/* Lightbox Dialog */}
@@ -399,17 +399,17 @@ const ProjectDetail = () => {
                                                                             <div className="flex justify-between items-center px-6 py-4 bg-black/40 z-10 w-full shrink-0">
                                                                                               <span className="text-sm font-medium text-gray-300">
                                                                                                 {activePhotoIndex !== null ? activePhotoIndex + 1 : 0} / {project.images.length}
-                                                                                                </span>span>
+                                                                                                </span>
                                                                                               <span className="text-sm font-medium text-gray-200 hidden sm:inline-block max-w-md truncate">
                                                                                                 {project.name}
-                                                                                                </span>span>
+                                                                                                </span>
                                                                                               <button
                                                                                                                     onClick={() => setActivePhotoIndex(null)}
                                                                                                                     className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors cursor-pointer"
                                                                                                                   >
                                                                                                                   <X className="w-5 h-5 text-gray-300 hover:text-white" />
-                                                                                                </button>button>
-                                                                            </div>div>
+                                                                                                </button>
+                                                                            </div>
                                                             
                                                               {/* Main image slide area */}
                                                                             <div className="relative flex-1 flex items-center justify-center w-full px-4 min-h-0 select-none">
@@ -422,7 +422,7 @@ const ProjectDetail = () => {
                                                                                                                     className="absolute left-4 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/50 hover:bg-black/80 flex items-center justify-center text-white border border-white/10 transition-all hover:scale-105"
                                                                                                                   >
                                                                                                                   <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
-                                                                                                </button>button>
+                                                                                                </button>
                                                                             
                                                                               {/* Image */}
                                                                               {activePhotoIndex !== null && (
@@ -442,8 +442,8 @@ const ProjectDetail = () => {
                                                                                                                     className="absolute right-4 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/50 hover:bg-black/80 flex items-center justify-center text-white border border-white/10 transition-all hover:scale-105"
                                                                                                                   >
                                                                                                                   <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
-                                                                                                </button>button>
-                                                                            </div>div>
+                                                                                                </button>
+                                                                            </div>
                                                             
                                                               {/* Thumbnail list */}
                                                                             <div className="w-full bg-black/60 py-4 px-6 shrink-0 z-10 overflow-x-auto border-t border-white/5">
@@ -457,46 +457,46 @@ const ProjectDetail = () => {
                                                             }`}
                                                           >
                                                           <img src={img} alt="" className="w-full h-full object-cover" />
-                                  </button>button>
+                                  </button>
                                 ))}
-                                                                                                </div>div>
-                                                                            </div>div>
-                                                            </DialogContent>DialogContent>
-                                              </Dialog>Dialog>
-                                  </div>div>
+                                                                                                </div>
+                                                                            </div>
+                                                            </DialogContent>
+                                              </Dialog>
+                                  </div>
                         
                           {/* Sidebar */}
                                   <div className="space-y-6">
                                     {/* Specs card */}
                                               <div className="bg-card rounded-xl border border-border shadow-card p-6">
-                                                            <h3 className="font-serif text-lg text-foreground mb-4">Project Specs</h3>h3>
+                                                            <h3 className="font-serif text-lg text-foreground mb-4">Project Specs</h3>
                                                             <dl className="space-y-4">
                                                               {specItems.map(({ icon: Icon, label, value }) => (
                               <div key={label} className="flex items-start gap-3">
                                                   <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                                                                         <Icon className="w-4 h-4 text-primary" />
-                                                  </div>div>
+                                                  </div>
                                                   <div>
-                                                                        <dt className="text-xs text-muted-foreground">{label}</dt>dt>
-                                                                        <dd className="text-sm font-semibold text-foreground">{value}</dd>dd>
-                                                  </div>div>
-                              </div>div>
+                                                                        <dt className="text-xs text-muted-foreground">{label}</dt>
+                                                                        <dd className="text-sm font-semibold text-foreground">{value}</dd>
+                                                  </div>
+                              </div>
                             ))}
-                                                            </dl>dl>
-                                              </div>div>
+                                                            </dl>
+                                              </div>
                                   
                                     {/* CTA card */}
                                               <div className="bg-forest-gradient rounded-xl p-6 text-primary-foreground">
-                                                            <h3 className="font-serif text-lg mb-2">Like What You See?</h3>h3>
+                                                            <h3 className="font-serif text-lg mb-2">Like What You See?</h3>
                                                             <p className="text-sm opacity-80 mb-5 leading-relaxed">
                                                                             We can build something similar on your plot. Get a free estimate — no obligation.
-                                                            </p>p>
+                                                            </p>
                                                             <div className="flex flex-col gap-3">
                                                                             <Link to="/contact">
                                                                                               <Button variant="hero" size="sm" className="w-full">
                                                                                                                   Get Free Estimate
-                                                                                                </Button>Button>
-                                                                            </Link>Link>
+                                                                                                </Button>
+                                                                            </Link>
                                                                             <a
                                                                                                 href="https://wa.me/918628989364"
                                                                                                 target="_blank"
@@ -504,15 +504,15 @@ const ProjectDetail = () => {
                                                                                               >
                                                                                               <Button variant="hero-outline" size="sm" className="w-full">
                                                                                                                   WhatsApp Us
-                                                                                                </Button>Button>
-                                                                            </a>a>
-                                                            </div>div>
-                                              </div>div>
-                                  </div>div>
-                        </div>div>
-                </section>section>
-          </main>main>
+                                                                                                </Button>
+                                                                            </a>
+                                                            </div>
+                                              </div>
+                                  </div>
+                        </div>
+                </section>
+          </main>
         );
 };
 
-export default ProjectDetail;</main>
+export default ProjectDetail;

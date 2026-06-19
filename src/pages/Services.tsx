@@ -93,12 +93,12 @@ const Services = () => (
               <div className="container">
                       <div className="max-w-2xl">
                                               <Breadcrumb items={[{ label: "Services" }]} className="mb-4" />
-                        <span className="text-xs uppercase tracking-widest text-accent mb-3 block">Our Services</span>span>
-                                <h1 className="font-serif text-4xl md:text-5xl mb-4">Construction Services in Himachal Pradesh</h1>h1>
-                                <p className="opacity-80 text-lg">From your empty plot to a finished building — we handle design, approvals, and construction. Residential homes and commercial spaces, built for Himachal's unique terrain.</p>p>
-                      </div>div>
-              </div>div>
-        </section>section>
+                        <span className="text-xs uppercase tracking-widest text-accent mb-3 block">Our Services</span>
+                                <h1 className="font-serif text-4xl md:text-5xl mb-4">Construction Services in Himachal Pradesh</h1>
+                                <p className="opacity-80 text-lg">From your empty plot to a finished building — we handle design, approvals, and construction. Residential homes and commercial spaces, built for Himachal's unique terrain.</p>
+                      </div>
+              </div>
+        </section>
     
       {/* Residential */}
         <section className="py-20" id="residential">
@@ -106,50 +106,50 @@ const Services = () => (
                       <div className="flex items-center gap-3 mb-6">
                                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                                             <Home className="w-6 h-6 text-primary" />
-                                </div>div>
+                                </div>
                                 <div>
-                                            <span className="text-xs uppercase tracking-widest text-accent">Service A</span>span>
-                                            <h2 className="font-serif text-3xl">Residential Construction</h2>h2>
-                                </div>div>
-                      </div>div>
+                                            <span className="text-xs uppercase tracking-widest text-accent">Service A</span>
+                                            <h2 className="font-serif text-3xl">Residential Construction</h2>
+                                </div>
+                      </div>
                       <p className="text-muted-foreground max-w-3xl mb-12">
                                 We build turnkey homes on your plot across Himachal Pradesh. "Turnkey" means you hand us your land and we handle everything — architectural drawings, structural design, government approvals, and the complete construction — until we hand you the keys. Choose from our packages below or go fully custom.
-                      </p>p>
+                      </p>
               
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {residentialPackages.map((pkg) => (
                   <div key={pkg.name} className={`rounded-xl border p-6 flex flex-col ${pkg.popular ? "border-primary shadow-card-hover ring-2 ring-primary/20 relative" : "border-border shadow-card"}`}>
-                    {pkg.popular && <span className="absolute -top-3 left-6 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">Most Popular</span>span>}
-                                <h3 className="font-serif text-2xl text-foreground mb-1">{pkg.name}</h3>h3>
-                                <p className="text-accent font-semibold text-sm mb-3">{pkg.price}</p>p>
-                                <p className="text-sm text-muted-foreground mb-6">{pkg.desc}</p>p>
+                    {pkg.popular && <span className="absolute -top-3 left-6 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">Most Popular</span>}
+                                <h3 className="font-serif text-2xl text-foreground mb-1">{pkg.name}</h3>
+                                <p className="text-accent font-semibold text-sm mb-3">{pkg.price}</p>
+                                <p className="text-sm text-muted-foreground mb-6">{pkg.desc}</p>
                                 <div className="mb-4">
-                                                <span className="text-xs font-semibold uppercase text-foreground">Included:</span>span>
+                                                <span className="text-xs font-semibold uppercase text-foreground">Included:</span>
                                                 <ul className="mt-2 space-y-1.5">
                                                   {pkg.includes.map((item) => (
                                         <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
                                                               <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                                           {item}
-                                        </li>li>
+                                        </li>
                                       ))}
-                                                </ul>ul>
-                                </div>div>
+                                                </ul>
+                                </div>
                                 <div className="mb-6">
-                                                <span className="text-xs font-semibold uppercase text-foreground">Not included:</span>span>
+                                                <span className="text-xs font-semibold uppercase text-foreground">Not included:</span>
                                                 <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
                                                   {pkg.excludes.map((item) => (
-                                        <li key={item}>• {item}</li>li>
+                                        <li key={item}>• {item}</li>
                                       ))}
-                                                </ul>ul>
-                                </div>div>
+                                                </ul>
+                                </div>
                                 <Link to="/contact" className="mt-auto">
-                                                <Button className="w-full" variant={pkg.popular ? "default" : "outline"}>Get Estimate <ArrowRight className="w-4 h-4 ml-1" /></Button>Button>
-                                </Link>Link>
-                  </div>div>
+                                                <Button className="w-full" variant={pkg.popular ? "default" : "outline"}>Get Estimate <ArrowRight className="w-4 h-4 ml-1" /></Button>
+                                </Link>
+                  </div>
                 ))}
-                      </div>div>
-              </div>div>
-        </section>section>
+                      </div>
+              </div>
+        </section>
     
       {/* Commercial */}
         <section className="py-20 bg-muted/50" id="commercial">
@@ -157,15 +157,15 @@ const Services = () => (
                       <div className="flex items-center gap-3 mb-6">
                                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                                             <Building2 className="w-6 h-6 text-primary" />
-                                </div>div>
+                                </div>
                                 <div>
-                                            <span className="text-xs uppercase tracking-widest text-accent">Service B</span>span>
-                                            <h2 className="font-serif text-3xl">Commercial Construction</h2>h2>
-                                </div>div>
-                      </div>div>
+                                            <span className="text-xs uppercase tracking-widest text-accent">Service B</span>
+                                            <h2 className="font-serif text-3xl">Commercial Construction</h2>
+                                </div>
+                      </div>
                       <p className="text-muted-foreground max-w-3xl mb-8">
                                 Building shops, offices, small commercial complexes, or mixed-use buildings on your land? We handle the structural engineering, regulatory approvals, and construction for commercial projects of all sizes across Himachal Pradesh.
-                      </p>p>
+                      </p>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                         {[
       { title: "Structural Safety", desc: "Engineered for hill-region seismic zones with proper soil testing and foundation design." },
@@ -174,17 +174,17 @@ const Services = () => (
                 ].map((item) => (
                               <div key={item.title} className="bg-card rounded-xl p-6 shadow-card">
                                 {/* Fixed: was h4 (skipping h3), now correctly h3 under h2 */}
-                                            <h3 className="font-serif text-lg text-foreground mb-2">{item.title}</h3>h3>
-                                            <p className="text-sm text-muted-foreground">{item.desc}</p>p>
-                              </div>div>
+                                            <h3 className="font-serif text-lg text-foreground mb-2">{item.title}</h3>
+                                            <p className="text-sm text-muted-foreground">{item.desc}</p>
+                              </div>
                             ))}
-                      </div>div>
+                      </div>
                       <Link to="/contact">
-                                <Button size="lg">Discuss Your Commercial Plan <ArrowRight className="w-4 h-4 ml-1" /></Button>Button>
-                      </Link>Link>
-              </div>div>
-        </section>section>
-    </main>main>
+                                <Button size="lg">Discuss Your Commercial Plan <ArrowRight className="w-4 h-4 ml-1" /></Button>
+                      </Link>
+              </div>
+        </section>
+    </main>
   );
 
-export default Services;</main>
+export default Services;
