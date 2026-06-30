@@ -136,7 +136,7 @@ const GovernmentTenders = () => {
               <a href="#inquiry">
                 <Button variant="hero" size="lg">Submit Tender Inquiry</Button>
               </a>
-              <a href="tel:+918628989364">
+              <a href="tel:+916230823269">
                 <Button variant="hero-outline" size="lg">
                   <Phone className="w-4 h-4 mr-2" /> Call Us
                 </Button>
@@ -327,12 +327,12 @@ const GovernmentTenders = () => {
                 ))}
               </div>
               <div className="mt-8 flex flex-col gap-3">
-                <a href="tel:+918628989364" className="flex items-center gap-2 text-sm font-medium text-blue-800 hover:text-blue-900">
+                <a href="tel:+916230823269" className="flex items-center gap-2 text-sm font-medium text-blue-800 hover:text-blue-900">
                   <Phone className="w-4 h-4" />
-                  +91 86289 89364
+                  +91 62308 23269
                 </a>
                 <a
-                  href="https://wa.me/918628989364?text=Hi%2C%20I%20have%20a%20government%20tender%20inquiry%20for%20Vidhima%20Construction."
+                  href="https://wa.me/916230823269?text=Hi%2C%20I%20have%20a%20government%20tender%20inquiry%20for%20Vidhima%20Construction."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-medium text-green-700 hover:text-green-800"
@@ -394,7 +394,7 @@ const GovernmentTenders = () => {
             <a href="#inquiry">
               <Button variant="hero" size="lg">Submit Inquiry</Button>
             </a>
-            <a href="tel:+918628989364">
+            <a href="tel:+916230823269">
               <Button variant="hero-outline" size="lg">
                 <Phone className="w-4 h-4 mr-2" /> Call Now
               </Button>

@@ -28,22 +28,22 @@ const Contact = () => (
             <div>
               <h3 className="font-serif text-xl mb-4">Get in Touch Directly</h3>
               <div className="space-y-4">
-                <a href="tel:+918628989364" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                <a href="tel:+916230823269" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <span className="text-xs text-muted-foreground">Call us</span>
-                    <p className="font-medium">+91 86289 89364</p>
+                    <p className="font-medium">+91 62308 23269</p>
                   </div>
                 </a>
-                <a href="https://wa.me/918628989364" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                <a href="https://wa.me/916230823269" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <div className="w-10 h-10 rounded-lg bg-[hsl(142,70%,40%)]/10 flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5 text-[hsl(142,70%,40%)]" />
                   </div>
                   <div>
                     <span className="text-xs text-muted-foreground">WhatsApp</span>
-                    <p className="font-medium">+91 86289 89364</p>
+                    <p className="font-medium">+91 62308 23269</p>
                   </div>
                 </a>
                 <a href="mailto:vidhimaho@gmail.com" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">

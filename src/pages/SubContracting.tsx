@@ -97,7 +97,7 @@ const SubContracting = () => {
               <a href="#sub-inquiry">
                 <Button variant="hero" size="lg">Discuss a Package</Button>
               </a>
-              <a href="tel:+918628989364">
+              <a href="tel:+916230823269">
                 <Button variant="hero-outline" size="lg">
                   <Phone className="w-4 h-4 mr-2" /> Call Us
                 </Button>
@@ -279,12 +279,12 @@ const SubContracting = () => {
                 ))}
               </div>
               <div className="mt-8 flex flex-col gap-3">
-                <a href="tel:+918628989364" className="flex items-center gap-2 text-sm font-medium text-amber-800 hover:text-amber-900">
+                <a href="tel:+916230823269" className="flex items-center gap-2 text-sm font-medium text-amber-800 hover:text-amber-900">
                   <Phone className="w-4 h-4" />
-                  +91 86289 89364
+                  +91 62308 23269
                 </a>
                 <a
-                  href="https://wa.me/918628989364?text=Hi%2C%20I%20need%20a%20civil%20sub-contractor%20for%20my%20project%20in%20HP."
+                  href="https://wa.me/916230823269?text=Hi%2C%20I%20need%20a%20civil%20sub-contractor%20for%20my%20project%20in%20HP."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-medium text-green-700 hover:text-green-800"
@@ -366,7 +366,7 @@ const SubContracting = () => {
             <a href="#sub-inquiry">
               <Button variant="hero" size="lg">Discuss a Package</Button>
             </a>
-            <a href="tel:+918628989364">
+            <a href="tel:+916230823269">
               <Button variant="hero-outline" size="lg">
                 <Phone className="w-4 h-4 mr-2" /> Call Now
               </Button>

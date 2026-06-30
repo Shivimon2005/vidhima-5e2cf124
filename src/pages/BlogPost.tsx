@@ -328,12 +328,12 @@ const BlogPost = () => {
                                                                                               <p className="text-sm text-muted-foreground max-w-md">Our local experts can help you estimate costs, check TCP regulations, and prepare structural stability details for your plot.</p>
                                                                             </div>
                                                                             <div className="flex gap-3 shrink-0 flex-wrap justify-center">
-                                                                                              <a href="tel:+918628989364">
+                                                                                              <a href="tel:+916230823269">
                                                                                                                   <Button variant="outline" size="sm" className="flex items-center gap-1">
                                                                                                                                         <Phone className="w-4 h-4" /> Call Us
                                                                                                                     </Button>
                                                                                                 </a>
-                                                                                              <a href="https://wa.me/918628989364" target="_blank" rel="noopener noreferrer">
+                                                                                              <a href="https://wa.me/916230823269" target="_blank" rel="noopener noreferrer">
                                                                                                                   <Button variant="whatsapp" size="sm" className="flex items-center gap-1">
                                                                                                                                         <MessageSquare className="w-4 h-4" /> WhatsApp
                                                                                                                     </Button>

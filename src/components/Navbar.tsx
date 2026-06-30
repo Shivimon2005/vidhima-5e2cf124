@@ -214,9 +214,9 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+918628989364" className="flex items-center gap-1.5 text-sm font-medium text-primary">
+          <a href="tel:+916230823269" className="flex items-center gap-1.5 text-sm font-medium text-primary">
             <Phone className="w-4 h-4" />
-            +91 86289 89364
+            +91 62308 23269
           </a>
           <Link to="/contact">
             <Button size="sm">Get Estimate</Button>
@@ -316,9 +316,9 @@ const Navbar = () => {
             ))}
 
             <div className="flex flex-col gap-2 pt-3 border-t border-border mt-2">
-              <a href="tel:+918628989364" className="flex items-center gap-1.5 text-sm font-medium text-primary px-3">
+              <a href="tel:+916230823269" className="flex items-center gap-1.5 text-sm font-medium text-primary px-3">
                 <Phone className="w-4 h-4" />
-                +91 86289 89364
+                +91 62308 23269
               </a>
               <Link to="/contact" onClick={() => setMobileOpen(false)}>
                 <Button className="w-full" size="sm">Get Estimate</Button>

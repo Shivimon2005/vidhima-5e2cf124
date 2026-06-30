@@ -18,7 +18,7 @@ const CRM_ENDPOINT: string =
   "https://script.google.com/macros/s/AKfycbxKCv3-E1n2Ow8hMB2r0wLeZkbZX9F6LsKfFyoTezCMEjLhQ0G9ieysW_SmDprnPArO/exec";
 
 const SUBMIT_TIMEOUT_MS = 8000;
-const WHATSAPP_FALLBACK = "https://wa.me/918628989364";
+const WHATSAPP_FALLBACK = "https://wa.me/916230823269";
 
 async function submitToCrm(payload: object): Promise<void> {
   const controller = new AbortController();

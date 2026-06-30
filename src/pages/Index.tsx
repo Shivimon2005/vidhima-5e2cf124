@@ -525,7 +525,7 @@ const Index = () => {
             <Link to="/contact">
               <Button variant="hero" size="lg">Get Free Estimate</Button>
             </Link>
-            <a href="https://wa.me/918628989364" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/916230823269" target="_blank" rel="noopener noreferrer">
               <Button variant="whatsapp" size="lg">WhatsApp Us</Button>
             </a>
           </div>

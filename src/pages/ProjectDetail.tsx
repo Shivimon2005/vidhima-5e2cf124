@@ -498,7 +498,7 @@ const ProjectDetail = () => {
                                                                                                 </Button>
                                                                             </Link>
                                                                             <a
-                                                                                                href="https://wa.me/918628989364"
+                                                                                                href="https://wa.me/916230823269"
                                                                                                 target="_blank"
                                                                                                 rel="noopener noreferrer"
                                                                                               >

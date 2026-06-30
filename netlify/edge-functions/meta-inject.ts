@@ -174,7 +174,7 @@ const STATIC_META: Record<string, PageMeta> = {
   },
   "/contact": {
     title: "Contact Vidhima Construction — Free Site Visit in Kangra & Palampur",
-    description: "Book a free site visit and estimate with Vidhima Construction in Palampur, Kangra, HP. Call or WhatsApp +91 86289 89364. Serving Kangra, Dharamshala, Baijnath.",
+    description: "Book a free site visit and estimate with Vidhima Construction in Palampur, Kangra, HP. Call or WhatsApp +91 62308 23269. Serving Kangra, Dharamshala, Baijnath.",
   },
   "/why-choose-us": {
     title: "Why Choose Vidhima Construction — Trusted Contractor in Himachal Pradesh",

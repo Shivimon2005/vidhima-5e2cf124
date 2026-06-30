@@ -106,7 +106,7 @@ export const blogPosts: BlogPostData[] = [
       <p>This is a ballpark. Your actual cost depends on soil conditions, slope, design complexity, material grade choices, and site accessibility. Contact us for a free itemised estimate specific to your plot.</p>
 
       <h2>How to Get an Accurate Estimate</h2>
-      <p>A serious contractor will need to see your plot before quoting. Be wary of anyone who gives a firm per-sq-ft quote without a site visit — soil bearing capacity, slope, and access road width all affect cost significantly. At Vidhima Construction, we do a free site visit within 48 hours and provide a written estimate with itemised BOQ. Call or WhatsApp us at <strong>+91 86289 89364</strong> to book.</p>
+      <p>A serious contractor will need to see your plot before quoting. Be wary of anyone who gives a firm per-sq-ft quote without a site visit — soil bearing capacity, slope, and access road width all affect cost significantly. At Vidhima Construction, we do a free site visit within 48 hours and provide a written estimate with itemised BOQ. Call or WhatsApp us at <strong>+91 62308 23269</strong> to book.</p>
     `
   },
   {
@@ -194,7 +194,7 @@ export const blogPosts: BlogPostData[] = [
         <li>Where does monsoon runoff go once the structure is built?</li>
         <li>Does the design comply with IS 1893 seismic zone requirements for Kangra?</li>
       </ul>
-      <p>Vidhima Construction has been building on hill terrain in Kangra district since 2019. If you have a sloped plot and want an honest assessment, call us at <strong>+91 86289 89364</strong> or visit our contact page for a free site visit.</p>
+      <p>Vidhima Construction has been building on hill terrain in Kangra district since 2019. If you have a sloped plot and want an honest assessment, call us at <strong>+91 62308 23269</strong> or visit our contact page for a free site visit.</p>
     `
   },
   {
