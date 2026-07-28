@@ -1,9 +1,23 @@
+import apartmentPalampur from "@/assets/apartment_palampur.png";
+import commercialKangra from "@/assets/commercial_kangra.png";
+import hostelDharamshala from "@/assets/hostel_dharamshala.png";
+import villaPalampur from "@/assets/villa_palampur.png";
+import mixedUseHp from "@/assets/mixed_use_hp.png";
+import constructionQuality from "@/assets/construction_quality.png";
+
 export interface BlogPostData {
   slug: string;
   title: string;
   category: string;
   excerpt: string;
   date: string;
+  readTime: string;
+  coverImage: string;
+  featured?: boolean;
+  author: {
+    name: string;
+    role: string;
+  };
   seoTitle: string;
   seoDescription: string;
   content: string;
@@ -16,6 +30,13 @@ export const blogPosts: BlogPostData[] = [
     category: "Guide",
     excerpt: "A practical breakdown of house construction rates per sq ft in Kangra, Palampur, and Dharamshala — materials, labour, and what drives costs up or down in HP hill terrain.",
     date: "Jun 2026",
+    readTime: "7 min read",
+    coverImage: constructionQuality,
+    featured: true,
+    author: {
+      name: "Shivam Sharma",
+      role: "Managing Director"
+    },
     seoTitle: "House Construction Cost in Kangra & Palampur 2025 — Rate Guide",
     seoDescription: "What does house construction cost in Kangra, Palampur, or Dharamshala in 2025? Rates per sq ft, material costs, labour charges, and hill terrain premiums explained.",
     content: `
@@ -112,9 +133,15 @@ export const blogPosts: BlogPostData[] = [
   {
     slug: "building-on-sloped-plot-himachal-pradesh",
     title: "Building on a Sloped Plot in Himachal Pradesh: What Every Homeowner Must Know",
-    category: "Guide",
+    category: "Engineering",
     excerpt: "Sloped plots in Palampur, Kangra, and Dharamshala are common — and misunderstood. Here is what the site assessment, retaining wall design, and stepped foundation process actually involves.",
     date: "May 2026",
+    readTime: "6 min read",
+    coverImage: villaPalampur,
+    author: {
+      name: "Er. Umesh Sharma",
+      role: "Co-Founder & Chief Engineer"
+    },
     seoTitle: "Building on a Sloped Plot in Himachal Pradesh — Hill Construction Guide",
     seoDescription: "Everything you need to know about building on sloped land in Palampur, Kangra, or Dharamshala. Retaining walls, stepped foundations, soil tests, and slope safety explained.",
     content: `
@@ -200,9 +227,15 @@ export const blogPosts: BlogPostData[] = [
   {
     slug: "3-bhk-luxury-apartments-construction-palampur",
     title: "3 BHK Luxury Apartments in Palampur: Construction Quality & Features",
-    category: "Residential",
+    category: "Case Study",
     excerpt: "Explore the construction quality, structural design, and premium amenities of luxury 3 BHK apartments in Palampur, Himachal Pradesh built by Vidhima.",
     date: "Jan 2026",
+    readTime: "5 min read",
+    coverImage: apartmentPalampur,
+    author: {
+      name: "Shivam Sharma",
+      role: "Managing Director"
+    },
     seoTitle: "3 BHK Apartments in Palampur: Construction Quality & Design",
     seoDescription: "Looking for 3 BHK apartments in Palampur? Discover our luxury apartments with earthquake-resistant structure, premium parking, and modern flat designs.",
     content: `
@@ -265,9 +298,15 @@ export const blogPosts: BlogPostData[] = [
   {
     slug: "premium-commercial-shop-project-kangra",
     title: "Premium Commercial Shop Projects in Kangra: Design & Rental Benefits",
-    category: "Commercial",
+    category: "Case Study",
     excerpt: "Discover design standards, rental yield analysis, and construction features of our premium commercial shop projects in Kangra, Himachal Pradesh.",
     date: "Dec 2025",
+    readTime: "5 min read",
+    coverImage: commercialKangra,
+    author: {
+      name: "Er. Umesh Sharma",
+      role: "Co-Founder & Chief Engineer"
+    },
     seoTitle: "Commercial Shop Project in Kangra: Retail & Office Spaces",
     seoDescription: "Explore our premium commercial shop project in Kangra. High rental yield office spaces, modern retail designs, and secure parking in Himachal Pradesh.",
     content: `
@@ -330,9 +369,15 @@ export const blogPosts: BlogPostData[] = [
   {
     slug: "student-hostel-construction-dharamshala",
     title: "Student Hostel Construction in Dharamshala: Layout & Safety Standards",
-    category: "Commercial",
+    category: "Case Study",
     excerpt: "A detailed guide on student hostel construction standards, room layouts, and safety requirements in Dharamshala and Palampur, Himachal Pradesh.",
     date: "Nov 2025",
+    readTime: "4 min read",
+    coverImage: hostelDharamshala,
+    author: {
+      name: "Shivam Sharma",
+      role: "Managing Director"
+    },
     seoTitle: "Student Hostel Construction in Dharamshala: PG Layouts",
     seoDescription: "Learn about student hostel construction in Dharamshala. Safe PG accommodation layouts, double occupancy designs, and structural safety rules in HP.",
     content: `
@@ -395,9 +440,15 @@ export const blogPosts: BlogPostData[] = [
   {
     slug: "modern-villa-construction-palampur",
     title: "Modern Villa Construction in Palampur: Earthquake-Resistant Design & Hill Elevations",
-    category: "Residential",
+    category: "Case Study",
     excerpt: "Explore modern villa construction in Palampur, featuring premium hill elevations, earthquake-resistant structure design, and custom building layouts by Vidhima.",
     date: "Oct 2025",
+    readTime: "5 min read",
+    coverImage: villaPalampur,
+    author: {
+      name: "Shivam Sharma",
+      role: "Managing Director"
+    },
     seoTitle: "Luxury Villas in Palampur: Custom Modern Construction",
     seoDescription: "Interested in luxury villas in Palampur? Learn about custom villa construction, earthquake-resistant structures, and premium mountain elevations in HP.",
     content: `
@@ -460,9 +511,15 @@ export const blogPosts: BlogPostData[] = [
   {
     slug: "mixed-use-building-construction-palampur",
     title: "Mixed-Use Commercial Building Construction in Palampur-Kangra Corridor",
-    category: "Commercial",
+    category: "Case Study",
     excerpt: "Learn about mixed-use building construction in Palampur and Kangra, detailing layouts for retail shops, office spaces, and residential floors above.",
     date: "Oct 2025",
+    readTime: "5 min read",
+    coverImage: mixedUseHp,
+    author: {
+      name: "Er. Umesh Sharma",
+      role: "Co-Founder & Chief Engineer"
+    },
     seoTitle: "Mixed Use Building Construction in Palampur & Kangra",
     seoDescription: "Explore mixed use building construction in Palampur. Design office spaces, retail shops, and residential floors in one high-yield Himachal property.",
     content: `
@@ -526,9 +583,15 @@ export const blogPosts: BlogPostData[] = [
   {
     slug: "construction-quality-standards-residential-apartments-hp",
     title: "Construction Quality Standards for Residential Apartments in Himachal Pradesh",
-    category: "Residential",
+    category: "Quality Standards",
     excerpt: "Understand the vital construction quality standards, concrete grades, and waterproofing methods used for residential apartments in Himachal Pradesh.",
     date: "Aug 2025",
+    readTime: "6 min read",
+    coverImage: constructionQuality,
+    author: {
+      name: "Shivam Sharma",
+      role: "Managing Director"
+    },
     seoTitle: "Residential Apartments in Palampur Himachal Pradesh: Quality Rules",
     seoDescription: "Learn about construction standards for residential apartments in Palampur Himachal Pradesh. Concrete safety, waterproofing, and ready-to-occupy project details.",
     content: `
