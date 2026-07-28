@@ -4,7 +4,7 @@ import path from "path";
 import fs from "fs";
 import { componentTagger } from "lovable-tagger";
 
-const BASE_URL = "https://vidhima-construction-website.netlify.app";
+const BASE_URL = "https://vidhimaconstruction.com";
 
 const MONTH_MAP: Record<string, string> = {
   Jan: "01", Feb: "02", Mar: "03", Apr: "04", May: "05", Jun: "06",

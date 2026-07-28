@@ -266,11 +266,11 @@ const BlogPost = () => {
         "publisher": {
           "@type": "Organization",
           "name": "Vidhima Construction Private Limited",
-          "logo": { "@type": "ImageObject", "url": "https://vidhima-construction-website.netlify.app/logo-512.png" }
+          "logo": { "@type": "ImageObject", "url": "https://vidhimaconstruction.com/logo-512.png" }
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": `https://vidhima-construction-website.netlify.app/blog/${post.slug}`
+          "@id": `https://vidhimaconstruction.com/blog/${post.slug}`
         }
       };
       let schemaTag = document.querySelector('script[data-blog-schema]') as HTMLScriptElement | null;

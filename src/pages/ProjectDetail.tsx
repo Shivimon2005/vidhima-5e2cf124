@@ -20,7 +20,7 @@ import { Button } from "@/components/ui/button";
 import { getProjectBySlug, type ProjectStatus } from "@/data/projects";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
-const BASE_URL = "https://vidhima-construction-website.netlify.app";
+const BASE_URL = "https://vidhimaconstruction.com";
 
 const statusConfig: Record<
     ProjectStatus,

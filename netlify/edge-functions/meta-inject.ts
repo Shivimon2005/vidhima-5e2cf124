@@ -1,8 +1,8 @@
 import type { Config, Context } from "@netlify/edge-functions";
 
-const BASE_URL = "https://vidhima-construction-website.netlify.app";
+const BASE_URL = "https://vidhimaconstruction.com";
 const ORG_ID  = `${BASE_URL}/#organization`;
-const OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2515e49f-561c-43aa-a057-d176063a00b5/id-preview-08f46529--494e068a-9640-4a2b-809e-25b41a9103e7.lovable.app-1771323277606.png";
+const OG_IMAGE = `${BASE_URL}/og-image.jpg`;
 
 interface PageMeta {
   title: string;

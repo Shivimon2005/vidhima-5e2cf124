@@ -42,7 +42,7 @@ const Services = () => (
                                       "provider": {
                                                     "@type": "LocalBusiness",
                                                     "name": "Vidhima Construction Private Limited",
-                                                    "url": "https://vidhima-construction-website.netlify.app"
+                                                    "url": "https://vidhimaconstruction.com"
                                       },
                                       "areaServed": ["Palampur", "Kangra", "Dharamshala", "Himachal Pradesh"],
                                       "hasOfferCatalog": {

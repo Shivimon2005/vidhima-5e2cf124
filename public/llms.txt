@@ -30,9 +30,9 @@ Palampur, Kangra, Dharamshala, Baijnath, Nurpur, Hamirpur, and across Himachal P
 
 ## URLs
 
-- Homepage: https://vidhima-construction-website.netlify.app/
-- Services: https://vidhima-construction-website.netlify.app/services
-- Projects: https://vidhima-construction-website.netlify.app/projects
-- Blog: https://vidhima-construction-website.netlify.app/blog
-- Contact: https://vidhima-construction-website.netlify.app/contact
-- Sitemap: https://vidhima-construction-website.netlify.app/sitemap.xml
+- Homepage: https://vidhimaconstruction.com/
+- Services: https://vidhimaconstruction.com/services
+- Projects: https://vidhimaconstruction.com/projects
+- Blog: https://vidhimaconstruction.com/blog
+- Contact: https://vidhimaconstruction.com/contact
+- Sitemap: https://vidhimaconstruction.com/sitemap.xml
