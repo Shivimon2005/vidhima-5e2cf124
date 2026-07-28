@@ -92,7 +92,7 @@ import heroImg from "@/assets/hero-construction.jpg";
 import { projects } from "@/data/projects";
 
 const stats = [
-  { icon: Award, value: "1", label: "Turnkey Hill Projects Completed" },
+  { icon: Award, value: "1", label: "Turnkey Hill Project Completed" },
   { icon: Shield, value: "100%", label: "Price-Lock Guarantee" },
   { icon: Eye, value: "0", label: "Hidden Charges — Full Transparency" },
   { icon: FileCheck, value: "100%", label: "Government NOC & Approval Support" }
