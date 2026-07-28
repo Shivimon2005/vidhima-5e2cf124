@@ -9,7 +9,7 @@ Three verticals:
 - **Real Estate Construction** — turnkey residential & commercial builds on client plots
 - **Sub-Contracting** — civil work packages for larger contractors
 
-**Contact:** +91 86289 89364 | vidhimaho@gmail.com  
+**Contact:** +91 86289 89364 | contact@vidhimaconstruction.com  
 **Office:** Near SSB Chowk, Palampur, Kangra, HP 176061
 
 ## Tech stack
