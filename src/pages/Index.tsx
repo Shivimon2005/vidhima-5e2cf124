@@ -1,16 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import LeadForm from "@/components/LeadForm";
 import AnimatedStat from "@/components/AnimatedStat";
 import ClientLogos from "@/components/ClientLogos";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  type CarouselApi,
-} from "@/components/ui/carousel";
 import {
   Shield,
   Clock,
@@ -22,13 +16,13 @@ import {
   Building2,
   ArrowRight,
   CheckCircle2,
-  Star,
   Award,
   ChevronRight,
   TrendingUp,
   FileCheck,
   Landmark,
   HardHat,
+  MessageCircle,
 } from "lucide-react";
 
 const wings = [
@@ -59,7 +53,7 @@ const wings = [
     tagline: "Turnkey Homes & Commercial Spaces",
     desc: "From your empty plot to a finished building across Himachal Pradesh. Residential homes, commercial complexes, and hill-terrain construction with a 100% price-lock guarantee.",
     points: [
-      "15+ turnkey hill projects delivered",
+      "1 turnkey hill project delivered",
       "100% price-lock contract guarantee",
       "A-to-Z: design, NOC, build, handover",
     ],
@@ -95,13 +89,10 @@ const wings = [
   },
 ];
 import heroImg from "@/assets/hero-construction.jpg";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
+import { projects } from "@/data/projects";
 
 const stats = [
-  { icon: Award, value: "15+", label: "Turnkey Hill Projects Completed" },
+  { icon: Award, value: "1", label: "Turnkey Hill Projects Completed" },
   { icon: Shield, value: "100%", label: "Price-Lock Guarantee" },
   { icon: Eye, value: "0", label: "Hidden Charges — Full Transparency" },
   { icon: FileCheck, value: "100%", label: "Government NOC & Approval Support" }
@@ -112,13 +103,6 @@ const whoWeServe = [
   { icon: Building2, label: "Investors building rental units" },
   { icon: Building2, label: "Commercial property owners" },
   { icon: Users, label: "NRIs planning properties in Himachal Pradesh" },
-];
-
-const featuredProjects = [
-  { img: project1, name: "Sharma Residence", type: "G+1 Residential", location: "Near Bundla, Palampur", outcome: "Completed in 10 months — modern family home with mountain views" },
-  { img: project2, name: "Kangra Market Complex", type: "Commercial G+3", location: "Palampur Main Road", outcome: "6 shops + 4 office units — fully leased within 2 months" },
-  { img: project3, name: "Hillside Villa (Ongoing)", type: "G+2 Residential", location: "Maranda, Palampur", outcome: "Slope-adjusted design with retaining walls and full RCC structure" },
-  { img: project4, name: "Thakur Family Home", type: "G+1 Residential", location: "Baijnath Road", outcome: "NRI client — managed entirely remotely with weekly video updates" },
 ];
 
 const features = [
@@ -152,81 +136,6 @@ const processSteps = [
   }
 ];
 
-const testimonials = [
-  {
-    quote: "Vidhima built our commercial building on a complex slope. Their material transparency and engineering capability were top-notch. Absolutely no hidden costs.",
-    author: "Rajesh Kumar",
-    role: "Property Owner, Kangra",
-    rating: 5
-  },
-  {
-    quote: "Building a house in Palampur while residing in the UK was stress-free. They sent weekly video progress reports and handled all structural approvals seamlessly.",
-    author: "Meenakshi Sharma",
-    role: "NRI Client, Palampur",
-    rating: 5
-  },
-  {
-    quote: "Their turnkey contract was a lifesaver. They managed the soil testing, retaining walls, plumbing, and modular kitchen installation with extreme professionalism.",
-    author: "Vikram Katoch",
-    role: "Homeowner, Dharamshala",
-    rating: 5
-  }
-];
-
-const TestimonialCarousel = () => {
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    if (!api) return;
-    setCurrent(api.selectedScrollSnap());
-    api.on("select", () => setCurrent(api.selectedScrollSnap()));
-  }, [api]);
-
-  useEffect(() => {
-    if (!api) return;
-    const id = setInterval(() => api.scrollNext(), 4000);
-    return () => clearInterval(id);
-  }, [api]);
-
-  return (
-    <div className="mt-12">
-      <Carousel setApi={setApi} opts={{ loop: true }} className="w-full">
-        <CarouselContent className="-ml-4">
-          {testimonials.map((t, i) => (
-            <CarouselItem key={i} className="pl-4 md:basis-1/2 lg:basis-1/3">
-              <div className="bg-card rounded-xl p-6 md:p-8 border border-border shadow-card flex flex-col justify-between h-full">
-                <div>
-                  <div className="flex items-center gap-0.5 mb-4">
-                    {[...Array(t.rating)].map((_, si) => (
-                      <Star key={si} className="w-4 h-4 fill-accent text-accent" />
-                    ))}
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed italic mb-6">"{t.quote}"</p>
-                </div>
-                <div>
-                  <h4 className="font-serif text-base text-foreground leading-tight">{t.author}</h4>
-                  <span className="text-xs text-muted-foreground">{t.role}</span>
-                </div>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </Carousel>
-      {/* Dot indicators */}
-      <div className="flex justify-center gap-2 mt-6">
-        {testimonials.map((_, i) => (
-          <span
-            key={i}
-            className={`block rounded-full transition-all duration-300 ${
-              current === i ? "w-6 h-2 bg-primary" : "w-2 h-2 bg-border"
-            }`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
 
 const Index = () => {
   return (
@@ -252,6 +161,18 @@ const Index = () => {
               <Link to="/contact">
                 <Button variant="hero" size="lg">Get Free Construction Estimate</Button>
               </Link>
+              <a
+                href="https://wa.me/916230823269?text=Hi%2C%20I%27m%20interested%20in%20construction%20services%20in%20Himachal%20Pradesh."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  className="bg-[hsl(142,70%,35%)] border border-[hsl(142,70%,35%)] text-white hover:bg-[hsl(142,70%,30%)] transition-all flex items-center gap-2 font-semibold shadow-md"
+                >
+                  <MessageCircle className="w-5 h-5 fill-white text-[hsl(142,70%,35%)]" /> Chat on WhatsApp
+                </Button>
+              </a>
               <Link to="/contact">
                 <Button variant="hero-outline" size="lg">Schedule Site Visit</Button>
               </Link>
@@ -456,21 +377,34 @@ const Index = () => {
       <section className="py-20 bg-muted/40">
         <div className="container">
           <SectionHeading label="Our Work" title="Featured Projects" description="See how we've helped plot owners across Himachal Pradesh turn their land into beautiful, functional buildings." />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            {featuredProjects.map((p, i) => (
-              <div key={i} className="bg-card rounded-xl overflow-hidden border border-border/40 shadow-card hover:shadow-card-hover transition-all duration-300 group">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={p.img} alt={p.name} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            {projects.slice(0, 6).map((p) => (
+              <Link
+                key={p.slug}
+                to={`/projects/${p.slug}`}
+                className="bg-card rounded-xl overflow-hidden border border-border/40 shadow-card hover:shadow-card-hover transition-all duration-300 group flex flex-col"
+              >
+                <div className="aspect-[4/3] overflow-hidden relative">
+                  <img
+                    src={p.coverImage}
+                    alt={p.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary capitalize">
+                    {p.status}
+                  </span>
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-accent">{p.type}</span>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-accent">{p.subType}</span>
                     <span className="text-xs text-muted-foreground">• {p.location}</span>
                   </div>
-                  <h3 className="font-serif text-xl text-foreground mb-2">{p.name}</h3>
-                  <p className="text-sm text-muted-foreground">{p.outcome}</p>
+                  <h3 className="font-serif text-xl text-foreground mb-2 group-hover:text-primary transition-colors">{p.name}</h3>
+                  <p className="text-sm text-muted-foreground line-clamp-3">{p.outcome || p.description}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-12">
@@ -480,18 +414,6 @@ const Index = () => {
               </Button>
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-sand-gradient">
-        <div className="container">
-          <SectionHeading
-            label="Testimonials"
-            title="Real Stories, Real Trust"
-            description="Hear from home and commercial property owners who trusted Vidhima to build on their plots."
-          />
-          <TestimonialCarousel />
         </div>
       </section>
 
