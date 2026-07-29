@@ -26,6 +26,11 @@ const Careers           = lazy(() => import("./pages/Careers"));
 const CSR               = lazy(() => import("./pages/CSR"));
 const FAQ               = lazy(() => import("./pages/FAQ"));
 const NotFound          = lazy(() => import("./pages/NotFound"));
+// Location SEO landing pages
+const LocationPalampur    = lazy(() => import("./pages/LocationPalampur"));
+const LocationDharamshala = lazy(() => import("./pages/LocationDharamshala"));
+const LocationKangra      = lazy(() => import("./pages/LocationKangra"));
+const NRIConstruction     = lazy(() => import("./pages/NRIConstruction"));
 
 const queryClient = new QueryClient();
 
@@ -84,6 +89,11 @@ const App = () => (
             <Route path="/government-tenders" element={<GovernmentTenders />} />
             <Route path="/sub-contracting" element={<SubContracting />} />
             <Route path="/faq" element={<FAQ />} />
+            {/* Location SEO pages */}
+            <Route path="/construction-palampur" element={<LocationPalampur />} />
+            <Route path="/construction-dharamshala" element={<LocationDharamshala />} />
+            <Route path="/construction-kangra" element={<LocationKangra />} />
+            <Route path="/nri-construction-himachal-pradesh" element={<NRIConstruction />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

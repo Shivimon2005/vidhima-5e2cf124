@@ -2,35 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Core pages -->
-  <url><loc>https://vidhimaconstruction.com/</loc><lastmod>2026-07-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://vidhimaconstruction.com/about</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vidhimaconstruction.com/services</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://vidhimaconstruction.com/contact</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://vidhimaconstruction.com/why-choose-us</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vidhimaconstruction.com/faq</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhimaconstruction.com/</loc><lastmod>2026-07-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://vidhimaconstruction.com/about</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhimaconstruction.com/services</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vidhimaconstruction.com/contact</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vidhimaconstruction.com/why-choose-us</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhimaconstruction.com/faq</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Location SEO pages — high priority ranking targets -->
+  <url><loc>https://vidhimaconstruction.com/construction-palampur</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vidhimaconstruction.com/construction-dharamshala</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vidhimaconstruction.com/construction-kangra</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vidhimaconstruction.com/nri-construction-himachal-pradesh</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
   <!-- Business wings -->
-  <url><loc>https://vidhimaconstruction.com/government-tenders</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vidhimaconstruction.com/sub-contracting</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhimaconstruction.com/government-tenders</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhimaconstruction.com/sub-contracting</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Projects -->
-  <url><loc>https://vidhimaconstruction.com/projects</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vidhimaconstruction.com/projects/neelam-residence-yol</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhimaconstruction.com/projects</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhimaconstruction.com/projects/neelam-residence-yol</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Company -->
-  <url><loc>https://vidhimaconstruction.com/leadership</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://vidhimaconstruction.com/careers</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://vidhimaconstruction.com/csr</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://vidhimaconstruction.com/leadership</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vidhimaconstruction.com/careers</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://vidhimaconstruction.com/csr</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
   <!-- Blog -->
-  <url><loc>https://vidhimaconstruction.com/blog</loc><lastmod>2026-07-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vidhimaconstruction.com/blog/house-construction-cost-kangra-palampur-2025</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vidhimaconstruction.com/blog/building-on-sloped-plot-himachal-pradesh</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vidhimaconstruction.com/blog/3-bhk-luxury-apartments-construction-palampur</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vidhimaconstruction.com/blog/premium-commercial-shop-project-kangra</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vidhimaconstruction.com/blog/student-hostel-construction-dharamshala</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vidhimaconstruction.com/blog/modern-villa-construction-palampur</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vidhimaconstruction.com/blog/mixed-use-building-construction-palampur</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vidhimaconstruction.com/blog/construction-quality-standards-residential-apartments-hp</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhimaconstruction.com/blog</loc><lastmod>2026-07-29</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhimaconstruction.com/blog/house-construction-cost-kangra-palampur-2025</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhimaconstruction.com/blog/tcp-noc-approval-palampur-kangra</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhimaconstruction.com/blog/commercial-building-contractor-himachal-pradesh</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhimaconstruction.com/blog/building-on-sloped-plot-himachal-pradesh</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vidhimaconstruction.com/blog/3-bhk-luxury-apartments-construction-palampur</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhimaconstruction.com/blog/premium-commercial-shop-project-kangra</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhimaconstruction.com/blog/student-hostel-construction-dharamshala</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhimaconstruction.com/blog/modern-villa-construction-palampur</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhimaconstruction.com/blog/mixed-use-building-construction-palampur</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vidhimaconstruction.com/blog/construction-quality-standards-residential-apartments-hp</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
 </urlset>
+

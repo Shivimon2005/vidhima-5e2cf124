@@ -26,7 +26,7 @@ export interface BlogPostData {
 export const blogPosts: BlogPostData[] = [
   {
     slug: "house-construction-cost-kangra-palampur-2025",
-    title: "House Construction Cost in Kangra & Palampur, Himachal Pradesh — 2025 Rate Guide",
+    title: "House Construction Cost in Kangra & Palampur, Himachal Pradesh — 2026 Rate Guide",
     category: "Guide",
     excerpt: "A practical breakdown of house construction rates per sq ft in Kangra, Palampur, and Dharamshala — materials, labour, and what drives costs up or down in HP hill terrain.",
     date: "Jun 2026",
@@ -37,8 +37,8 @@ export const blogPosts: BlogPostData[] = [
       name: "Shivam Sharma",
       role: "Managing Director"
     },
-    seoTitle: "House Construction Cost in Kangra & Palampur 2025 — Rate Guide",
-    seoDescription: "What does house construction cost in Kangra, Palampur, or Dharamshala in 2025? Rates per sq ft, material costs, labour charges, and hill terrain premiums explained.",
+    seoTitle: "House Construction Cost in Kangra & Palampur 2026 — Rate Guide",
+    seoDescription: "What does house construction cost in Kangra, Palampur, or Dharamshala in 2026? Updated rates per sq ft, material costs, labour charges, and hill terrain premiums explained.",
     content: `
       <p>One of the most common questions we get: <strong>"How much will it cost to build a house in Palampur or Kangra?"</strong> The honest answer is — it depends. But this guide gives you the real numbers, the factors that push costs up, and how to plan a budget that doesn't blow up mid-construction.</p>
 
@@ -649,6 +649,228 @@ export const blogPosts: BlogPostData[] = [
       <div class="faq-item">
         <h4 class="font-semibold text-foreground">Are these residential apartments ready to occupy?</h4>
         <p class="text-sm text-muted-foreground">Yes. Our residential apartment projects are handed over to buyers only after securing the official Occupancy Certificate from local municipal authorities.</p>
+      </div>
+    `
+  },
+
+  // ── NEW: TCP NOC Guide ─────────────────────────────────────────────────────────
+  {
+    slug: "tcp-noc-approval-palampur-kangra",
+    title: "TCP NOC Approval in Palampur & Kangra — A Complete Guide for Homeowners",
+    category: "Guide",
+    excerpt: "Everything you need to know about getting TCP NOC (Town & Country Planning No Objection Certificate) for construction in Palampur, Kangra, and Dharamshala — documents, timelines, and common mistakes to avoid.",
+    date: "Jul 2026",
+    readTime: "8 min read",
+    coverImage: constructionQuality,
+    featured: false,
+    author: {
+      name: "Shivam Sharma",
+      role: "Managing Director"
+    },
+    seoTitle: "TCP NOC Approval in Palampur & Kangra — Complete Guide 2026",
+    seoDescription: "How to get TCP NOC for construction in Palampur, Kangra & Dharamshala. Documents required, timeline, fees, and expert tips to avoid rejection from HP Town & Country Planning.",
+    content: `
+      <p>If you own a plot in Palampur, Kangra, Dharamshala, or anywhere in Kangra district and want to start construction, you will almost certainly need a <strong>TCP NOC (No Objection Certificate from the Town &amp; Country Planning Department, Himachal Pradesh)</strong>. Skipping this step is the single most common and most expensive mistake homeowners make — it can result in demolition orders, heavy penalties, or a property that cannot be legally sold or mortgaged.</p>
+
+      <!-- HERO_IMAGE_PLACEHOLDER -->
+
+      <h2>What is a TCP NOC?</h2>
+      <p>The Himachal Pradesh Town &amp; Country Planning (TCP) Act regulates construction in notified areas across the state. A TCP NOC confirms that your planned construction complies with the approved land use, setback rules, Floor Area Ratio (FAR), and height limits set by the TCP Department for your specific zone.</p>
+      <p>The key question: <strong>Is your plot inside a TCP-regulated area?</strong> If your plot falls within the development plan boundary of Palampur, Dharamshala, Kangra, Baijnath, Nurpur, or the Palampur-Shahpur corridor, a TCP NOC is mandatory before foundation work begins.</p>
+
+      <h2>Do You Need a TCP NOC? Check These Triggers</h2>
+      <ul>
+        <li>Your plot is within 1 km of a Municipal Area in Kangra district</li>
+        <li>Your plot falls within any Notified Planning Area (NPA) under the HP TCP Act</li>
+        <li>You are building a structure more than one storey high</li>
+        <li>Your building footprint covers more than 50 sq metres</li>
+        <li>You are constructing a commercial building anywhere in Kangra district</li>
+        <li>Your plot is on a forest-adjacent or sensitive zone boundary</li>
+      </ul>
+
+      <h2>TCP NOC Application — Documents Required</h2>
+      <table>
+        <thead><tr><th>Document</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Jamabandi (land record)</td><td>Latest copy, not older than 6 months</td></tr>
+          <tr><td>Site Plan</td><td>Prepared by a licensed architect or civil engineer, showing setbacks, access road, building footprint</td></tr>
+          <tr><td>Building Plan</td><td>Floor plans, elevation, sections — signed by licensed architect</td></tr>
+          <tr><td>NOC from Revenue Dept.</td><td>Required if plot abuts a khud or water body</td></tr>
+          <tr><td>Ownership proof</td><td>Sale deed or gift deed</td></tr>
+          <tr><td>Affidavit</td><td>Declaring compliance with TCP rules</td></tr>
+          <tr><td>Application fee challan</td><td>₹5–₹25 per sq ft depending on building category</td></tr>
+        </tbody>
+      </table>
+
+      <h2>TCP NOC Process — Step by Step</h2>
+      <ol>
+        <li><strong>Verify your zone:</strong> Visit the TCP office in Dharamshala or check the HP TCP website to confirm whether your plot falls in a regulated area and which zone (residential/commercial/mixed).</li>
+        <li><strong>Get a licensed architect:</strong> Building plans must be certified by an HP Council of Architecture-registered architect. Using an unlicensed draughtsman is a common reason for rejection.</li>
+        <li><strong>Prepare the plan set:</strong> Site plan, floor plans, elevations, and sections per TCP drawing standards (including setbacks from road edge, side boundaries, and rear boundary).</li>
+        <li><strong>Submit the application:</strong> Submit physically at the TCP District Office, Dharamshala, along with all documents. Online submission is available on the eDistrict HP portal for some categories.</li>
+        <li><strong>Site inspection:</strong> A TCP official visits your site to verify the plan matches the actual plot dimensions and access road width.</li>
+        <li><strong>Approval / queries:</strong> TCP may raise queries (deficiency letters) within 30–45 days. Respond within the specified time to avoid reapplication.</li>
+        <li><strong>NOC issuance:</strong> Once approved, you receive the TCP sanction letter. Keep certified copies — your bank, your future buyer, and your contractor will all need it.</li>
+      </ol>
+
+      <h2>Typical Timeline in Kangra District</h2>
+      <table>
+        <thead><tr><th>Stage</th><th>Time Required</th></tr></thead>
+        <tbody>
+          <tr><td>Document preparation (plans, affidavits)</td><td>2–4 weeks</td></tr>
+          <tr><td>TCP application submission to first response</td><td>30–45 days</td></tr>
+          <tr><td>Site inspection scheduling</td><td>7–15 days after submission</td></tr>
+          <tr><td>Query resolution (if raised)</td><td>15–30 days</td></tr>
+          <tr><td>Final NOC issuance after inspection</td><td>15–30 days</td></tr>
+          <tr><td><strong>Total expected timeline</strong></td><td><strong>2–4 months</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Important:</strong> Do not start any excavation or foundation work while TCP approval is pending. Even preliminary earthwork without TCP sanction can trigger penalties.</p>
+
+      <h2>Common Reasons for TCP NOC Rejection in Kangra</h2>
+      <ul>
+        <li>Setback violations — building too close to the road or boundary wall</li>
+        <li>FAR (Floor Area Ratio) exceeded — too much built-up area for the plot size</li>
+        <li>Height violations — exceeding the permissible height for the zone</li>
+        <li>Missing revenue department NOC for plots near khuds or water bodies</li>
+        <li>Unsigned or unstamped architectural drawings</li>
+        <li>Mismatch between jamabandi area and site plan dimensions</li>
+      </ul>
+
+      <!-- BODY_IMAGE_1_PLACEHOLDER -->
+
+      <h2>Setback Rules for Kangra District (General Reference)</h2>
+      <table>
+        <thead><tr><th>Road Width in Front</th><th>Front Setback Required</th><th>Side Setback</th></tr></thead>
+        <tbody>
+          <tr><td>Less than 6 metres</td><td>1.5 metres</td><td>1 metre each side</td></tr>
+          <tr><td>6–9 metres</td><td>3 metres</td><td>1.5 metres each side</td></tr>
+          <tr><td>9–18 metres (major road)</td><td>4.5 metres</td><td>2 metres each side</td></tr>
+          <tr><td>More than 18 metres (state highway)</td><td>6 metres</td><td>3 metres each side</td></tr>
+        </tbody>
+      </table>
+      <p><em>Note: These are general TCP rules for residential zones. Commercial zones and hill-specific regulations may differ. Always verify with the TCP office for your specific plot before finalising your building plan.</em></p>
+
+      <h2>How Vidhima Construction Handles TCP NOC for Clients</h2>
+      <p>We handle TCP documentation as part of our <strong>turnkey construction service</strong>. You do not need to visit the TCP office yourself — our team manages the entire approval process:</p>
+      <ul>
+        <li>Prepare all architectural drawings to TCP standards</li>
+        <li>Compile and submit the full document set</li>
+        <li>Coordinate the site inspection appointment</li>
+        <li>Respond to any queries or deficiency letters</li>
+        <li>Obtain final sanction and hand you certified copies</li>
+      </ul>
+
+      <!-- WALKTHROUGH_VIDEO_PLACEHOLDER -->
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h4 class="font-semibold text-foreground">Can I start construction before getting the TCP NOC?</h4>
+        <p class="text-sm text-muted-foreground">No. Starting construction — even excavation — before receiving TCP sanction is illegal under the HP TCP Act. Penalties include demolition orders, fines up to ₹2 lakh, and potential criminal liability for the owner and contractor.</p>
+      </div>
+      <div class="faq-item">
+        <h4 class="font-semibold text-foreground">Is TCP NOC required for villages in Kangra district?</h4>
+        <p class="text-sm text-muted-foreground">Not always. Plots clearly outside Notified Planning Areas and more than 2 km from any Municipal boundary may fall under Panchayat jurisdiction instead. However, many villages around Palampur, Baijnath, and Nurpur have been notified. Always verify with the TCP office before assuming Panchayat rules apply.</p>
+      </div>
+      <div class="faq-item">
+        <h4 class="font-semibold text-foreground">How much does TCP NOC cost in Kangra?</h4>
+        <p class="text-sm text-muted-foreground">Government fees vary by built-up area and building category. For a typical 1,500–2,000 sq ft residential home, expect ₹15,000–₹50,000 in TCP fees. Architect fees and documentation charges are separate and typically range from ₹20,000–₹60,000 depending on plan complexity.</p>
+      </div>
+      <div class="faq-item">
+        <h4 class="font-semibold text-foreground">My plot is on a slope — does that affect TCP approval?</h4>
+        <p class="text-sm text-muted-foreground">Yes. Sloped plots require additional documentation: a slope stability assessment and retaining wall design may be mandatory. The TCP office may also restrict FAR further on steep slopes (greater than 30 degree gradient) to prevent landslide risk.</p>
+      </div>
+    `
+  },
+
+  // ── NEW: Commercial Contractor HP ──────────────────────────────────────────────
+  {
+    slug: "commercial-building-contractor-himachal-pradesh",
+    title: "How to Choose a Commercial Building Contractor in Himachal Pradesh",
+    category: "Guide",
+    excerpt: "Building shops, offices, hotels, or mixed-use buildings in Himachal Pradesh? This guide covers how to evaluate commercial contractors, understand cost structures, and avoid the pitfalls that derail most commercial projects in hill terrain.",
+    date: "Jul 2026",
+    readTime: "6 min read",
+    coverImage: constructionQuality,
+    featured: false,
+    author: {
+      name: "Shivam Sharma",
+      role: "Managing Director"
+    },
+    seoTitle: "Commercial Building Contractor in Himachal Pradesh — How to Choose",
+    seoDescription: "Looking for a commercial building contractor in HP? Learn how to evaluate contractors, understand commercial construction costs per sq ft in Kangra & Dharamshala, and avoid costly mistakes.",
+    content: `
+      <p>Commercial construction in Himachal Pradesh — whether you're building a row of shops, a hotel, an office block, or a mixed-use complex — is fundamentally different from residential construction. The structural loads are higher, the regulatory requirements are stricter, the timelines are tighter (because your rental income depends on them), and the consequences of choosing the wrong contractor are far more expensive.</p>
+
+      <!-- HERO_IMAGE_PLACEHOLDER -->
+
+      <h2>Why Commercial Construction in HP is Different</h2>
+      <p>Himachal Pradesh adds layers of complexity that don't exist on the plains:</p>
+      <ul>
+        <li><strong>Seismic Zone IV:</strong> All of Kangra district sits in Seismic Zone IV — one of the highest-risk zones in India. Commercial buildings, which carry heavier live loads, need more rigorous structural engineering than basic residential homes.</li>
+        <li><strong>Hill terrain access:</strong> Material delivery to sloped sites adds 15–25% to logistics costs compared to flat-land projects. A contractor without their own equipment fleet will pass these costs — and delays — on to you.</li>
+        <li><strong>Multiple NOCs:</strong> Commercial buildings in Kangra, Dharamshala, or Palampur need TCP sanction, sometimes a fire NOC, and in tourist zones, HPTDC/tourism department clearances. An inexperienced contractor often underestimates this timeline.</li>
+        <li><strong>Monsoon construction windows:</strong> Himachal's 4-month monsoon (July–October) limits when concrete work can proceed without expensive weatherproofing measures. Poor scheduling by a contractor can cost you an entire season.</li>
+      </ul>
+
+      <h2>Commercial Construction Cost Per Sq Ft in Kangra (2026)</h2>
+      <table>
+        <thead><tr><th>Building Type</th><th>Rate per Sq Ft (₹)</th><th>What's Included</th></tr></thead>
+        <tbody>
+          <tr><td>Basic commercial (ground floor shops)</td><td>₹1,600–₹2,000</td><td>RCC frame, masonry, basic flooring, electrical rough-in</td></tr>
+          <tr><td>Multi-storey office/mixed-use</td><td>₹2,200–₹2,800</td><td>Structural engineering, lifts provision, fire-rated materials</td></tr>
+          <tr><td>Hotel / hospitality</td><td>₹2,800–₹3,800+</td><td>Premium finishes, HVAC provision, fire NOC compliance</td></tr>
+          <tr><td>Institutional (hostel, school, clinic)</td><td>₹2,000–₹2,600</td><td>Compliant room layouts, fire exits, accessible design</td></tr>
+        </tbody>
+      </table>
+
+      <h2>6 Things to Check Before Hiring a Commercial Contractor in HP</h2>
+      <ol>
+        <li><strong>HPPWD Registration Class:</strong> For commercial buildings above a certain value, the contractor must be empanelled with HPPWD (HP Public Works Department). Class-I registration indicates the highest-tier capability and financial capacity. Always ask for the registration certificate.</li>
+        <li><strong>Structural engineer on team:</strong> Commercial buildings need a licensed structural engineer, not just an architect. Ask specifically: "Who will design and certify the structural frame?" A contractor who can't answer this clearly is a red flag.</li>
+        <li><strong>Own equipment vs. rented:</strong> In hill terrain, a contractor with their own JCB, transit mixers, and tipper trucks can maintain schedule far better than one who relies on rented equipment that may not be available during peak seasons.</li>
+        <li><strong>Past commercial projects:</strong> Ask for at least 2–3 references for completed commercial projects — not residential homes. Commercial construction has completely different structural, plumbing, and electrical demands. Visit completed sites if possible.</li>
+        <li><strong>Fixed-price vs. rate-contract:</strong> For commercial projects, always prefer a fixed-price (lump sum) contract with a detailed Bill of Quantities (BOQ). Rate contracts expose private clients to significant cost overruns.</li>
+        <li><strong>Payment milestones tied to physical progress:</strong> Never pay on a time-based schedule. Pay against verified physical milestones: foundation complete, plinth level reached, first floor slab complete, etc.</li>
+      </ol>
+
+      <!-- BODY_IMAGE_1_PLACEHOLDER -->
+
+      <h2>Common Commercial Construction Mistakes in HP</h2>
+      <ul>
+        <li><strong>Underestimating parking requirements:</strong> TCP rules in Kangra specify minimum parking per sq ft of commercial space. Many owners discover mid-construction that their design doesn't meet parking norms — forcing costly redesign.</li>
+        <li><strong>Ignoring water drainage on slopes:</strong> Commercial buildings on hill slopes need engineered surface drainage. Without it, runoff damages the road, neighbour's property, and eventually your own foundation.</li>
+        <li><strong>Starting without fire NOC plan:</strong> If your building will be used for hospitality, retail above 500 sq metres, or institutional use, a fire NOC from the HP Fire Department is mandatory before occupancy.</li>
+        <li><strong>No construction schedule milestones in contract:</strong> Vague contracts with no milestone dates let contractors stretch timelines indefinitely. Every month of delay is a month of lost rental income.</li>
+      </ul>
+
+      <h2>Vidhima Construction — Commercial Projects in Kangra &amp; Dharamshala</h2>
+      <p>Vidhima Construction is a <strong>HPPWD Class-I registered</strong> contractor with experience in commercial and mixed-use buildings across Kangra district. We offer:</p>
+      <ul>
+        <li>Structural engineering and TCP NOC management in-house</li>
+        <li>Fixed-price lump sum contracts with milestone-linked payments</li>
+        <li>Own JCB, transit mixers, and tipper fleet for uninterrupted hill-terrain delivery</li>
+        <li>Commercial projects from ₹50 lakh to ₹5 crore+</li>
+      </ul>
+
+      <!-- WALKTHROUGH_VIDEO_PLACEHOLDER -->
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h4 class="font-semibold text-foreground">What is the minimum plot size for a commercial building in Kangra?</h4>
+        <p class="text-sm text-muted-foreground">For most commercial zones in Kangra district, the minimum is 100 sq metres with an 8-metre road frontage. However, your specific zone rules may differ — verify with the TCP office before purchasing a commercial plot.</p>
+      </div>
+      <div class="faq-item">
+        <h4 class="font-semibold text-foreground">How long does a typical commercial building take to build in HP?</h4>
+        <p class="text-sm text-muted-foreground">A G+2 commercial building (3 floors) in Kangra district typically takes 18–24 months from approved plan to handover, accounting for monsoon delays and TCP approval time.</p>
+      </div>
+      <div class="faq-item">
+        <h4 class="font-semibold text-foreground">Can I take a bank loan for commercial construction in HP?</h4>
+        <p class="text-sm text-muted-foreground">Yes. Most nationalised banks offer construction loans for commercial projects. You will need an approved TCP plan, clear land title, and a detailed project report (DPR). We assist clients in preparing bank-ready DPRs.</p>
+      </div>
+      <div class="faq-item">
+        <h4 class="font-semibold text-foreground">Do I need a separate NOC for a hotel or homestay in Himachal Pradesh?</h4>
+        <p class="text-sm text-muted-foreground">Yes. Hotels and homestays in HP need TCP sanction plus registration with the HP Tourism Development Corporation and, in some cases, a fire NOC. We can advise on the full regulatory path for hospitality projects.</p>
       </div>
     `
   }

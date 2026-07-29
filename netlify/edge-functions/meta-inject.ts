@@ -19,9 +19,21 @@ interface BlogData {
 
 const BLOG_DATA: Record<string, BlogData> = {
   "house-construction-cost-kangra-palampur-2025": {
-    headline: "House Construction Cost in Kangra & Palampur 2025 — Rate Guide",
-    description: "Realistic construction rates per sq ft in Kangra, Palampur, and Dharamshala — materials, labour, and hill terrain cost factors.",
+    headline: "House Construction Cost in Kangra & Palampur 2026 — Rate Guide",
+    description: "Updated 2026 construction rates per sq ft in Kangra, Palampur, and Dharamshala — materials, labour, and hill terrain cost factors.",
     datePublished: "2026-06-01",
+    category: "Guide",
+  },
+  "tcp-noc-approval-palampur-kangra": {
+    headline: "TCP NOC Approval in Palampur & Kangra — Complete Guide 2026",
+    description: "How to get TCP NOC for construction in Palampur, Kangra & Dharamshala. Documents required, timeline, fees, and expert tips to avoid rejection.",
+    datePublished: "2026-07-01",
+    category: "Guide",
+  },
+  "commercial-building-contractor-himachal-pradesh": {
+    headline: "Commercial Building Contractor in Himachal Pradesh — How to Choose",
+    description: "How to evaluate commercial contractors in HP. Commercial construction costs per sq ft in Kangra & Dharamshala, and key mistakes to avoid.",
+    datePublished: "2026-07-01",
     category: "Guide",
   },
   "building-on-sloped-plot-himachal-pradesh": {
@@ -89,6 +101,10 @@ const BREADCRUMBS: Record<string, Crumb[]> = {
   "/careers":    [{ name: "Home", url: BASE_URL }, { name: "Careers", url: `${BASE_URL}/careers` }],
   "/csr":        [{ name: "Home", url: BASE_URL }, { name: "CSR", url: `${BASE_URL}/csr` }],
   "/blog":       [{ name: "Home", url: BASE_URL }, { name: "Blog", url: `${BASE_URL}/blog` }],
+  "/construction-palampur":           [{ name: "Home", url: BASE_URL }, { name: "Construction in Palampur", url: `${BASE_URL}/construction-palampur` }],
+  "/construction-dharamshala":        [{ name: "Home", url: BASE_URL }, { name: "Construction in Dharamshala", url: `${BASE_URL}/construction-dharamshala` }],
+  "/construction-kangra":             [{ name: "Home", url: BASE_URL }, { name: "Construction in Kangra", url: `${BASE_URL}/construction-kangra` }],
+  "/nri-construction-himachal-pradesh": [{ name: "Home", url: BASE_URL }, { name: "NRI Construction Himachal Pradesh", url: `${BASE_URL}/nri-construction-himachal-pradesh` }],
 };
 
 // ── Schema builders ────────────────────────────────────────────────────────────
@@ -161,16 +177,16 @@ function buildExtraSchemas(pathname: string, canonicalUrl: string): string {
 
 const STATIC_META: Record<string, PageMeta> = {
   "/": {
-    title: "Vidhima Construction Pvt Ltd — House & Commercial Construction in Palampur, Kangra, Himachal Pradesh",
-    description: "Class-I registered construction company in Palampur, Kangra. Builds homes, commercial buildings, and government contracts across Kangra, Dharamshala, HP. Transparent pricing, seismic-safe RCC, free site visit.",
+    title: "Turnkey Builder in Palampur & Kangra | Vidhima Construction",
+    description: "Build your home or commercial space in Himachal Pradesh. HPPWD Class-I registered. 100% price-lock guarantee. Free site visit in 48 hours. Serving Palampur, Kangra, Dharamshala.",
   },
   "/about": {
     title: "About Vidhima Construction — Class-I Contractor in Palampur, Kangra, HP",
     description: "Learn about Vidhima Construction Pvt Ltd — Class-I registered civil contractor in Palampur, Kangra. Building earthquake-safe homes and commercial structures in Himachal Pradesh since 2019.",
   },
   "/services": {
-    title: "Construction Services in Palampur & Kangra | Vidhima Construction",
-    description: "Residential house construction, commercial building, and government contract services in Kangra, Palampur, and Dharamshala. Turnkey RCC construction in Himachal Pradesh.",
+    title: "House Construction Cost Palampur | ₹1,400–2,500/sq ft | Vidhima",
+    description: "Turnkey residential & commercial construction in Kangra. Fixed-price contracts, ₹1,400–2,500/sq ft. HPPWD Class-I registered. Design, NOC, build — all in one place.",
   },
   "/contact": {
     title: "Contact Vidhima Construction — Free Site Visit in Kangra & Palampur",
@@ -213,15 +229,39 @@ const STATIC_META: Record<string, PageMeta> = {
     description: "Vidhima Construction's commitment to community development, local employment, and sustainable construction practices in Himachal Pradesh.",
   },
   "/blog": {
-    title: "Construction Guides & Tips for Himachal Pradesh | Vidhima Blog",
-    description: "Expert construction guides for Palampur, Kangra, and Himachal Pradesh — house construction costs, hill terrain advice, seismic compliance, and contractor tips.",
+    title: "Hill Construction Guides — Palampur, Kangra, Dharamshala | Vidhima",
+    description: "Expert guides on construction costs, TCP NOC, slope engineering, and contractor selection in Himachal Pradesh. Written by HPPWD Class-I registered builders.",
+  },
+  "/construction-palampur": {
+    title: "Construction Company in Palampur | Turnkey Home Builder | Vidhima",
+    description: "Looking for a construction company in Palampur? Vidhima Construction builds homes and commercial spaces in Palampur. Class-I registered, fixed price, free site visit.",
+  },
+  "/construction-dharamshala": {
+    title: "Construction Company in Dharamshala | Home Builder HP | Vidhima",
+    description: "Trusted construction company in Dharamshala. Vidhima Construction builds seismic-safe homes and commercial buildings in Dharamshala & McLeod Ganj. Free estimate.",
+  },
+  "/construction-kangra": {
+    title: "Home Builder Kangra | Construction Company Kangra District | Vidhima",
+    description: "Looking for a home builder in Kangra? Vidhima Construction delivers turnkey residential & commercial construction across Kangra district. HPPWD Class-I registered.",
+  },
+  "/nri-construction-himachal-pradesh": {
+    title: "NRI Home Construction Himachal Pradesh | Vidhima Construction",
+    description: "Build your dream home in Himachal Pradesh from abroad. NRI-friendly turnkey construction in Palampur, Kangra & Dharamshala. Remote management, transparent pricing, legal support.",
   },
 };
 
 const BLOG_META: Record<string, PageMeta> = {
   "house-construction-cost-kangra-palampur-2025": {
-    title: "House Construction Cost in Kangra & Palampur 2025 — Rate Guide | Vidhima",
-    description: "What does house construction cost in Kangra, Palampur, or Dharamshala in 2025? Rates per sq ft, material costs, labour charges, and hill terrain premiums explained.",
+    title: "House Construction Cost in Kangra & Palampur 2026 — Rate Guide | Vidhima",
+    description: "What does house construction cost in Kangra, Palampur, or Dharamshala in 2026? Updated rates per sq ft, material costs, labour charges, and hill terrain premiums explained.",
+  },
+  "tcp-noc-approval-palampur-kangra": {
+    title: "TCP NOC Approval in Palampur & Kangra — Complete Guide 2026 | Vidhima",
+    description: "How to get TCP NOC for construction in Palampur, Kangra & Dharamshala. Documents, timeline, fees, and expert tips to avoid rejection from HP Town & Country Planning.",
+  },
+  "commercial-building-contractor-himachal-pradesh": {
+    title: "Commercial Building Contractor in Himachal Pradesh — How to Choose | Vidhima",
+    description: "Looking for a commercial building contractor in HP? Evaluate contractors, understand commercial construction costs in Kangra & Dharamshala, and avoid costly mistakes.",
   },
   "building-on-sloped-plot-himachal-pradesh": {
     title: "Building on a Sloped Plot in Himachal Pradesh — Hill Construction Guide",

@@ -71,9 +71,26 @@
           "longitude": "76.5254"
         },
         "areaServed": [
-          "Palampur", "Kangra", "Dharamshala", "Baijnath", "Nurpur", "Hamirpur", "Himachal Pradesh"
+          { "@type": "City", "name": "Palampur" },
+          { "@type": "City", "name": "Kangra" },
+          { "@type": "City", "name": "Dharamshala" },
+          { "@type": "City", "name": "Baijnath" },
+          { "@type": "City", "name": "Nurpur" },
+          { "@type": "City", "name": "Hamirpur" },
+          { "@type": "AdministrativeArea", "name": "Himachal Pradesh" }
         ],
-        "openingHours": "Mo-Sa 09:00-18:00",
+        "serviceArea": {
+          "@type": "AdministrativeArea",
+          "name": "Kangra District, Himachal Pradesh, India"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
         "priceRange": "₹₹",
         "hasMap": "https://maps.google.com/maps?q=32.1160157,76.5254",
         "sameAs": [
