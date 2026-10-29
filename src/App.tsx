@@ -59,7 +59,7 @@ const ScrollToTop = () => {
 };
 
 const PageFallback = () => (
-  <div className="min-h-[60vh] flex items-center justify-center text-muted-foreground text-sm">
+  <div className="min-h-[110vh] flex items-center justify-center text-muted-foreground text-sm">
     Loading…
   </div>
 );
