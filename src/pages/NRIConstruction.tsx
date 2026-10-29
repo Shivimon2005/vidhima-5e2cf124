@@ -84,7 +84,7 @@ const NRIConstruction = () => {
                 </Button>
               </Link>
               <a href="https://wa.me/916230823269?text=Hi%2C%20I%20am%20an%20NRI%20and%20interested%20in%20construction%20in%20Himachal%20Pradesh." target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-[hsl(142,70%,35%)] hover:bg-[hsl(142,70%,30%)] text-white font-semibold">
+                <Button size="lg" className="bg-[hsl(142,72%,29%)] hover:bg-[hsl(142,72%,24%)] text-white font-semibold">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   WhatsApp Us
                 </Button>

@@ -293,7 +293,7 @@ const Blog = () => {
                 >
                   <Button
                     size="lg"
-                    className="w-full bg-[hsl(142,70%,35%)] hover:bg-[hsl(142,70%,30%)] text-white font-semibold flex items-center justify-center gap-2"
+                    className="w-full bg-[hsl(142,72%,29%)] hover:bg-[hsl(142,72%,24%)] text-white font-semibold flex items-center justify-center gap-2"
                   >
                     <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
                   </Button>

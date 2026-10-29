@@ -31,6 +31,7 @@ const LocationPalampur    = lazy(() => import("./pages/LocationPalampur"));
 const LocationDharamshala = lazy(() => import("./pages/LocationDharamshala"));
 const LocationKangra      = lazy(() => import("./pages/LocationKangra"));
 const NRIConstruction     = lazy(() => import("./pages/NRIConstruction"));
+const DesignStudio        = lazy(() => import("./pages/DesignStudio"));
 
 const queryClient = new QueryClient();
 
@@ -94,6 +95,7 @@ const App = () => (
             <Route path="/construction-dharamshala" element={<LocationDharamshala />} />
             <Route path="/construction-kangra" element={<LocationKangra />} />
             <Route path="/nri-construction-himachal-pradesh" element={<NRIConstruction />} />
+            <Route path="/design-studio" element={<DesignStudio />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

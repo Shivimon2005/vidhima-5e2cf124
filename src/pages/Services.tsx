@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
-import { Home, Building2, CheckCircle2, ArrowRight } from "lucide-react";
+import { Home, Building2, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 
 const residentialPackages = [
@@ -182,6 +182,68 @@ const Services = () => (
                       <Link to="/contact">
                                 <Button size="lg">Discuss Your Commercial Plan <ArrowRight className="w-4 h-4 ml-1" /></Button>
                       </Link>
+              </div>
+        </section>
+
+      {/* Service C: Design Studio */}
+        <section className="py-20" id="design-studio">
+              <div className="container">
+                      <div className="flex items-center gap-3 mb-6">
+                                <div className="w-12 h-12 rounded-xl bg-violet-100 flex items-center justify-center">
+                                            <Sparkles className="w-6 h-6 text-violet-700" />
+                                </div>
+                                <div>
+                                            <span className="text-xs uppercase tracking-widest text-violet-700 font-semibold">Service C</span>
+                                            <h2 className="font-serif text-3xl">Vidhima Design Studio</h2>
+                                </div>
+                      </div>
+                      <p className="text-muted-foreground max-w-3xl mb-8">
+                                Looking for certified architectural drawings, municipal approval sets, or complete interior design? Our in-house licensed studio (License No: RP2956/2025) offers transparent, per-sq.ft. itemized rates for both residential and commercial projects.
+                      </p>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                                <div className="rounded-xl border border-border bg-card p-6 shadow-card flex flex-col justify-between">
+                                            <div>
+                                                        <span className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Full Architectural Package</span>
+                                                        <h3 className="font-serif text-2xl text-foreground mt-1 mb-2">Architecture Design</h3>
+                                                        <div className="flex items-baseline gap-1 text-primary font-bold text-3xl mb-3">
+                                                                    ₹35 <span className="text-sm font-normal text-muted-foreground">/ sq.ft</span>
+                                                        </div>
+                                                        <p className="text-sm text-muted-foreground mb-4">
+                                                                    Includes concept drawings, detailed floor plans, door/window schedules, constructible elevations & sections, 3-side views, and complete electrical & plumbing MEP layouts.
+                                                        </p>
+                                            </div>
+                                            <Link to="/design-studio#quotation-tables">
+                                                        <Button variant="outline" className="w-full">View Architecture Rate Card <ArrowRight className="w-4 h-4 ml-1" /></Button>
+                                            </Link>
+                                </div>
+
+                                <div className="rounded-xl border-2 border-primary/20 bg-card p-6 shadow-card flex flex-col justify-between">
+                                            <div>
+                                                        <span className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Turnkey Interior Package</span>
+                                                        <h3 className="font-serif text-2xl text-foreground mt-1 mb-2">Interior Design</h3>
+                                                        <div className="flex items-baseline gap-1 text-primary font-bold text-3xl mb-3">
+                                                                    ₹60 <span className="text-sm font-normal text-muted-foreground">/ sq.ft</span>
+                                                        </div>
+                                                        <p className="text-sm text-muted-foreground mb-4">
+                                                                    Includes interior concept drawings, GFC floor plans with furniture zoning, custom carpentry and wall elevations, wall finishes & wallpaper detailing, and HD photorealistic 3D renders.
+                                                        </p>
+                                            </div>
+                                            <Link to="/design-studio#quotation-tables">
+                                                        <Button className="w-full">View Interior Rate Card <ArrowRight className="w-4 h-4 ml-1" /></Button>
+                                            </Link>
+                                </div>
+                      </div>
+
+                      <div className="p-6 rounded-xl bg-muted flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div>
+                                            <h4 className="font-serif text-lg font-semibold text-foreground">Need a custom design quotation or calculation?</h4>
+                                            <p className="text-sm text-muted-foreground">Use our interactive design cost calculator or consult our licensed architect at Differ Patt, SSB Chowk, Palampur.</p>
+                                </div>
+                                <Link to="/design-studio">
+                                            <Button size="lg" className="shrink-0">Explore Design Studio <ArrowRight className="w-4 h-4 ml-1" /></Button>
+                                </Link>
+                      </div>
               </div>
         </section>
     </main>

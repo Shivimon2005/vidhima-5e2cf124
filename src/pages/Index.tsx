@@ -168,9 +168,9 @@ const Index = () => {
               >
                 <Button
                   size="lg"
-                  className="bg-[hsl(142,70%,35%)] border border-[hsl(142,70%,35%)] text-white hover:bg-[hsl(142,70%,30%)] transition-all flex items-center gap-2 font-semibold shadow-md"
+                  className="bg-[hsl(142,72%,29%)] border border-[hsl(142,72%,29%)] text-white hover:bg-[hsl(142,72%,24%)] transition-all flex items-center gap-2 font-semibold shadow-md"
                 >
-                  <MessageCircle className="w-5 h-5 fill-white text-[hsl(142,70%,35%)]" /> Chat on WhatsApp
+                  <MessageCircle className="w-5 h-5 fill-white text-[hsl(142,72%,29%)]" /> Chat on WhatsApp
                 </Button>
               </a>
               <Link to="/contact">

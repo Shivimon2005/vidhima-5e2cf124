@@ -31,7 +31,7 @@ const YouTubeIcon = () => (
   );
 
 const Footer = () => (
-    <footer className="bg-forest-dark text-primary-foreground">
+    <footer className="pb-16 sm:pb-0 bg-forest-dark text-primary-foreground">
         <div className="container py-16">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
                 {/* Brand */}
@@ -132,6 +132,7 @@ const Footer = () => (
                                 <div className="flex flex-col gap-2">
                                   {[
       { label: "Construction Services", to: "/services" },
+      { label: "Design Studio (Architecture & Interior)", to: "/design-studio" },
       { label: "Our Projects", to: "/projects" },
       { label: "Why Choose Us", to: "/why-choose-us" },
       { label: "Get Free Estimate", to: "/contact" },

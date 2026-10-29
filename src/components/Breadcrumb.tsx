@@ -9,15 +9,21 @@ export interface BreadcrumbItem {
 interface BreadcrumbProps {
     items: BreadcrumbItem[];
     className?: string;
+    /** "dark" = rendered over a dark hero background */
+    tone?: "light" | "dark";
 }
 
-const Breadcrumb = ({ items, className = "" }: BreadcrumbProps) => {
+const Breadcrumb = ({ items, className = "", tone = "light" }: BreadcrumbProps) => {
     const allItems = [{ label: "Home", href: "/" }, ...items];
+    const dark = tone === "dark";
+    const baseText = dark ? "text-primary-foreground/80" : "text-muted-foreground";
+    const hoverText = dark ? "hover:text-primary-foreground" : "hover:text-foreground";
+    const currentText = dark ? "font-medium text-primary-foreground" : "font-medium text-foreground";
 
     return (
           <nav
                   aria-label="Breadcrumb"
-                  className={`flex items-center gap-1 text-xs text-muted-foreground ${className}`}
+                  className={`flex items-center gap-1 text-xs ${baseText} ${className}`}
                 >
                 <ol
                           className="flex flex-wrap items-center gap-1"
@@ -42,7 +48,7 @@ const Breadcrumb = ({ items, className = "" }: BreadcrumbProps) => {
                                                                                     {item.href && !isLast ? (
                                                                                                         <Link
                                                                                                                                 to={item.href}
-                                                                                                                                className="hover:text-foreground transition-colors"
+                                                                                                                                className={`${hoverText} transition-colors`}
                                                                                                                                 itemProp="item"
                                                                                                                               >
                                                                                                                               <span itemProp="name">{item.label}</span>
@@ -59,14 +65,14 @@ const Breadcrumb = ({ items, className = "" }: BreadcrumbProps) => {
                                                                                     {item.href && !isLast ? (
                                                                                                         <Link
                                                                                                                                 to={item.href}
-                                                                                                                                className="hover:text-foreground transition-colors"
+                                                                                                                                className={`${hoverText} transition-colors`}
                                                                                                                                 itemProp="item"
                                                                                                                               >
                                                                                                                               <span itemProp="name">{item.label}</span>
                                                                                                           </Link>
                                                                                                       ) : (
                                                                                                         <span
-                                                                                                                                className={isLast ? "font-medium text-foreground" : ""}
+                                                                                                                                className={isLast ? currentText : ""}
                                                                                                                                 itemProp="name"
                                                                                                                                 aria-current={isLast ? "page" : undefined}
                                                                                                                               >

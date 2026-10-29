@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, Landmark, Home, HardHat, Users, Heart, Briefcase, Info, MessageCircle } from "lucide-react";
+import { getContact, waLink } from "@/lib/contact";
+import { Menu, X, Phone, ChevronDown, Landmark, Home, HardHat, Users, Heart, Briefcase, Info, MessageCircle, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const wingItems = [
@@ -34,6 +35,16 @@ const wingItems = [
     badgeBg: "bg-amber-100",
     badgeText: "text-amber-800",
   },
+  {
+    label: "Design Studio",
+    to: "/design-studio",
+    Icon: Sparkles,
+    desc: "Architecture, interiors & 3D renders",
+    textColor: "text-violet-700",
+    hoverBg: "hover:bg-violet-50",
+    badgeBg: "bg-violet-100",
+    badgeText: "text-violet-700",
+  },
 ];
 
 const companyItems = [
@@ -57,6 +68,7 @@ const Navbar = () => {
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const companyCloseTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
+  const contact = getContact(location.pathname);
 
   const isWingActive = wingItems.some((w) => location.pathname.startsWith(w.to));
   const isCompanyActive = companyItems.some((c) => location.pathname.startsWith(c.to));
@@ -79,15 +91,30 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
-      <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+      <a
+        href="#main-content"
+        onClick={(e) => {
+          const main = document.querySelector("main");
+          if (main) {
+            e.preventDefault();
+            main.setAttribute("tabindex", "-1");
+            main.focus();
+            main.scrollIntoView();
+          }
+        }}
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-2 focus:z-[60] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
+      >
+        Skip to main content
+      </a>
+      <nav aria-label="Primary" className="container flex items-center justify-between h-16 md:h-20">
+        <Link to="/" className="flex items-center gap-2 shrink-0">
           <div className="w-9 h-9 rounded-md bg-forest-gradient flex items-center justify-center">
             <span className="text-primary-foreground font-serif text-lg font-bold">V</span>
           </div>
           <div className="leading-tight">
             <span className="font-serif text-lg text-foreground block leading-none">Vidhima</span>
-            <span className="text-xs text-muted-foreground tracking-wider uppercase">Construction Pvt Ltd</span>
+            <span className="text-xs text-muted-foreground tracking-wider uppercase whitespace-nowrap">Construction Pvt Ltd</span>
           </div>
         </Link>
 
@@ -202,9 +229,10 @@ const Navbar = () => {
             <Link
               key={l.to}
               to={l.to}
+              aria-current={location.pathname === l.to ? "page" : undefined}
               className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 location.pathname === l.to
-                  ? "text-primary bg-primary/5"
+                  ? "text-primary bg-primary/5 underline decoration-2 underline-offset-8"
                   : "text-muted-foreground hover:text-foreground hover:bg-muted"
               }`}
             >
@@ -214,28 +242,26 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+916230823269" className="flex items-center gap-1.5 text-sm font-medium text-primary hover:underline">
+          <a href={contact.telHref} aria-label={`Call ${contact.displayPhone}`} className="flex items-center gap-1.5 text-sm font-medium text-primary hover:underline whitespace-nowrap">
             <Phone className="w-4 h-4" />
-            +91 62308 23269
+            <span className="hidden xl:inline">{contact.displayPhone}</span>
           </a>
           <a
-            href="https://wa.me/916230823269?text=Hi%2C%20I%27m%20interested%20in%20construction%20services%20in%20Himachal%20Pradesh."
+            href={waLink(contact)}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[hsl(142,70%,35%)] text-white hover:bg-[hsl(142,70%,30%)] font-medium text-xs transition-colors shadow-sm"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[hsl(142,72%,29%)] text-white hover:bg-[hsl(142,72%,24%)] font-medium text-sm transition-colors shadow-sm whitespace-nowrap"
           >
             <MessageCircle className="w-3.5 h-3.5" />
             <span>WhatsApp</span>
           </a>
-          <Link to="/contact">
-            <Button size="sm">Get Estimate</Button>
-          </Link>
+          <Button size="sm" asChild><Link to="/contact">Get Estimate</Link></Button>
         </div>
 
-        <button className="lg:hidden p-2" onClick={() => setMobileOpen(!mobileOpen)}>
+        <button className="lg:hidden p-2.5" aria-label={mobileOpen ? "Close menu" : "Open menu"} aria-expanded={mobileOpen} onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
-      </div>
+      </nav>
 
       {mobileOpen && (
         <div className="lg:hidden border-t border-border bg-background animate-fade-in">
@@ -326,28 +352,26 @@ const Navbar = () => {
 
             <div className="flex flex-col gap-2 pt-3 border-t border-border mt-2">
               <div className="flex items-center justify-between px-3">
-                <a href="tel:+916230823269" className="flex items-center gap-1.5 text-sm font-medium text-primary">
+                <a href={contact.telHref} className="flex items-center gap-1.5 text-sm font-medium text-primary">
                   <Phone className="w-4 h-4" />
-                  +91 62308 23269
+                  {contact.displayPhone}
                 </a>
                 <a
-                  href="https://wa.me/916230823269?text=Hi%2C%20I%27m%20interested%20in%20construction%20services%20in%20Himachal%20Pradesh."
+                  href={waLink(contact)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[hsl(142,70%,35%)] text-white text-xs font-semibold"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[hsl(142,72%,29%)] text-white text-xs font-semibold"
                 >
                   <MessageCircle className="w-3.5 h-3.5" />
                   WhatsApp
                 </a>
               </div>
-              <Link to="/contact" onClick={() => setMobileOpen(false)}>
-                <Button className="w-full" size="sm">Get Estimate</Button>
-              </Link>
+              <Button className="w-full" size="sm" asChild><Link to="/contact" onClick={() => setMobileOpen(false)}>Get Estimate</Link></Button>
             </div>
           </div>
         </div>
       )}
-    </nav>
+    </header>
   );
 };
 

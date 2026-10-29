@@ -409,7 +409,7 @@ const BlogPost = () => {
                     </Button>
                   </a>
                   <a href="https://wa.me/916230823269?text=Hi%2C%20I%20have%20a%20question%20about%20my%20construction%20project." target="_blank" rel="noopener noreferrer">
-                    <Button size="sm" className="bg-[hsl(142,70%,35%)] hover:bg-[hsl(142,70%,30%)] text-white flex items-center gap-1.5 font-semibold">
+                    <Button size="sm" className="bg-[hsl(142,72%,29%)] hover:bg-[hsl(142,72%,24%)] text-white flex items-center gap-1.5 font-semibold">
                       <MessageSquare className="w-4 h-4" /> WhatsApp
                     </Button>
                   </a>
