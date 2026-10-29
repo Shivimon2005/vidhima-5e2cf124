@@ -78,7 +78,7 @@ const Footer = () => (
                                                     rel="noopener noreferrer"
                                                     aria-label={`Vidhima Construction on ${label}`}
                                                     title={`Vidhima Construction on ${label}`}
-                                                    className="w-8 h-8 rounded-lg bg-primary-foreground/10 flex items-center justify-center opacity-60 hover:opacity-100 hover:bg-primary-foreground/20 transition-all"
+                                                    className="w-11 h-11 rounded-lg bg-primary-foreground/10 flex items-center justify-center opacity-80 hover:opacity-100 hover:bg-primary-foreground/20 transition-all"
                                                   >
                                                   <Icon />
                                                   <span className="sr-only">Vidhima Construction on {label}</span>

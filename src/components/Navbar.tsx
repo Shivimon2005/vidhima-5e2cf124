@@ -114,7 +114,7 @@ const Navbar = () => {
           </div>
           <div className="leading-tight">
             <span className="font-serif text-lg text-foreground block leading-none">Vidhima</span>
-            <span className="text-xs text-muted-foreground tracking-wider uppercase whitespace-nowrap">Construction Pvt Ltd</span>
+            <span className="text-xs text-muted-foreground tracking-wider uppercase whitespace-nowrap">{location.pathname.startsWith("/design-studio") ? "Design Studio" : "Construction Pvt Ltd"}</span>
           </div>
         </Link>
 

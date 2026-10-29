@@ -375,7 +375,7 @@ const DesignStudio = () => {
               <span>₹35 / sq.ft · 7 drawings included</span>
               <span className="font-semibold text-accent hidden sm:inline">·</span>
               <span className="font-semibold text-accent">Interior Design</span>
-              <span>₹60 / sq.ft · Full GFC set</span>
+              <span>₹60 / sq.ft · Full site-ready (GFC) set</span>
             </div>
           </div>
         </div>
@@ -405,7 +405,7 @@ const DesignStudio = () => {
               </div>
               <h3 className="font-serif text-2xl text-foreground mb-1">Architecture Design</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Concept, Floor Plans, Openings, Elevations, 3D Views & Full MEP
+                Concept, Floor Plans, Openings, Elevations, 3D Views & Electrical/Plumbing (MEP)
               </p>
               <div className="mb-6 p-4 rounded-xl bg-primary/5 border border-primary/10">
                 <div className="flex items-baseline gap-1">
@@ -413,7 +413,7 @@ const DesignStudio = () => {
                   <span className="text-muted-foreground text-sm font-medium">/ sq.ft.</span>
                 </div>
                 <span className="text-sm text-muted-foreground block mt-1">
-                  All 7 fundamental architectural & MEP drawings included
+                  All 7 fundamental architectural, electrical & plumbing (MEP) drawings included
                 </span>
               </div>
               <ul className="space-y-2.5 text-sm text-muted-foreground mb-6 flex-1">
@@ -590,6 +590,16 @@ const DesignStudio = () => {
           </div>
           <p className="text-muted-foreground max-w-3xl mb-8">
             Below is the comprehensive scope of work for each category as defined in our official Vidhima Design Studio quotation document.
+          </p>
+
+          <p className="text-sm text-muted-foreground max-w-3xl mb-8 rounded-lg bg-muted/50 border border-border px-4 py-3">
+            <span className="font-semibold text-foreground">Terms explained: </span>
+            <abbr title="Good For Construction">GFC</abbr> = site-ready drawings a contractor can build from ·{" "}
+            <abbr title="Mechanical, Electrical and Plumbing">MEP</abbr> = electrical &amp; plumbing layouts ·{" "}
+            <abbr title="Finished Floor Level">FFL</abbr> = finished floor level ·{" "}
+            <abbr title="National Building Code">NBC</abbr> = National Building Code ·{" "}
+            <abbr title="Himachal Pradesh Town and Country Planning">HP TCP</abbr> = state planning bye-laws ·{" "}
+            <abbr title="No Objection Certificate">NOC</abbr> = official clearance.
           </p>
 
           <Tabs defaultValue="architecture" className="w-full">
