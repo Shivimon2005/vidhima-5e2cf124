@@ -161,7 +161,7 @@ const Footer = () => (
                       </div>
               </div>
         
-              <div className="border-t border-primary-foreground/10 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm opacity-50">
+              <div className="border-t border-primary-foreground/10 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm opacity-75">
                       <span>© 2026 Vidhima Construction Private Limited. All rights reserved.</span>
                       <div className="flex items-center gap-4">
                                 <Link to="/about" className="hover:opacity-80 transition-opacity">About</Link>

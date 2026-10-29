@@ -269,7 +269,7 @@ const DesignStudio = () => {
   );
 
   return (
-    <main className="pt-20">
+    <main id="main-content" className="pt-20">
       {/* Schema markup for SEO */}
       <script
         type="application/ld+json"
@@ -582,7 +582,7 @@ const DesignStudio = () => {
               <FileText className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <span className="text-xs uppercase tracking-widest text-accent font-semibold">
+              <span className="text-xs uppercase tracking-widest text-primary font-semibold">
                 Official Rate Card
               </span>
               <h2 className="font-serif text-3xl md:text-4xl">Complete Quotation Breakdown</h2>
