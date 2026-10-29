@@ -103,7 +103,7 @@ const Navbar = () => {
             main.scrollIntoView();
           }
         }}
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-2 focus:z-[60] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
+        className="absolute left-4 top-2 z-[60] -translate-y-[200%] rounded-md bg-primary px-4 py-2 text-primary-foreground transition-transform focus:translate-y-0"
       >
         Skip to main content
       </a>
