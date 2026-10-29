@@ -416,7 +416,40 @@ const DesignStudio = () => {
                   All 7 fundamental architectural, electrical & plumbing (MEP) drawings included
                 </span>
               </div>
-              <ul className="space-y-2.5 text-sm text-muted-foreground mb-6 flex-1">
+              <details className="md:hidden mb-6 rounded-lg border border-border px-4 py-3 group">
+                <summary className="cursor-pointer text-sm font-semibold text-foreground min-h-11 flex items-center">What's included</summary>
+                <ul className="space-y-2.5 text-sm text-muted-foreground mt-2">
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span>Concept drawings & spatial analysis (₹5/sq.ft)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span>Detailed floor plans & basic furniture layout (₹6/sq.ft)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span>Door & window schedule with FFL heights (₹4/sq.ft)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span>2 Elevations & 2 Sections with levels (₹5/sq.ft)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span>3-Side exterior visualization views (₹5/sq.ft)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span>MEP: Electrical layout & wiring routes (₹5/sq.ft)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span>MEP: Plumbing & piping fixture routes (₹5/sq.ft)</span>
+                </li>
+              </ul>
+              </details>
+              <ul className="hidden md:block space-y-2.5 text-sm text-muted-foreground mb-6 flex-1">
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                   <span>Concept drawings & spatial analysis (₹5/sq.ft)</span>
@@ -475,7 +508,32 @@ const DesignStudio = () => {
                   Complete Good For Construction (GFC) interior set
                 </span>
               </div>
-              <ul className="space-y-2.5 text-sm text-muted-foreground mb-6 flex-1">
+              <details className="md:hidden mb-6 rounded-lg border border-border px-4 py-3 group">
+                <summary className="cursor-pointer text-sm font-semibold text-foreground min-h-11 flex items-center">What's included</summary>
+                <ul className="space-y-2.5 text-sm text-muted-foreground mt-2">
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span>Interior concept drawings & mood boards (₹5/sq.ft)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span>Detailed floor plan with furniture layout (₹10/sq.ft)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span>Custom furniture details, elevations & sections (₹20/sq.ft)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span>Wall panelling, finishes & texture detailing (₹10/sq.ft)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span>Photorealistic HD 3D interior renders (₹15/sq.ft)</span>
+                </li>
+              </ul>
+              </details>
+              <ul className="hidden md:block space-y-2.5 text-sm text-muted-foreground mb-6 flex-1">
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                   <span>Interior concept drawings & mood boards (₹5/sq.ft)</span>
@@ -522,7 +580,40 @@ const DesignStudio = () => {
                   Select individually based on your site & regulatory needs
                 </span>
               </div>
-              <ul className="space-y-3 text-sm text-muted-foreground mb-6 flex-1">
+              <details className="md:hidden mb-6 rounded-lg border border-border px-4 py-3 group">
+                <summary className="cursor-pointer text-sm font-semibold text-foreground min-h-11 flex items-center">What's included</summary>
+                <ul className="space-y-3 text-sm text-muted-foreground mt-2">
+                <li className="flex items-start justify-between border-b border-border/50 pb-2">
+                  <div>
+                    <span className="font-medium text-foreground block">Structure Design (GFC)</span>
+                    <span className="text-sm text-muted-foreground">Foundation & structural drawings</span>
+                  </div>
+                  <span className="font-semibold text-primary">₹6 / sq.ft</span>
+                </li>
+                <li className="flex items-start justify-between border-b border-border/50 pb-2">
+                  <div>
+                    <span className="font-medium text-foreground block">Fire NOC Drawings</span>
+                    <span className="text-sm text-muted-foreground">NBC & HP TCP bye-law compliance</span>
+                  </div>
+                  <span className="font-semibold text-primary">₹6 / sq.ft</span>
+                </li>
+                <li className="flex items-start justify-between border-b border-border/50 pb-2">
+                  <div>
+                    <span className="font-medium text-foreground block">Landscape Design</span>
+                    <span className="text-sm text-muted-foreground">Hardscape & softscape GFC</span>
+                  </div>
+                  <span className="font-semibold text-primary">₹4 / sq.ft</span>
+                </li>
+                <li className="flex items-start justify-between">
+                  <div>
+                    <span className="font-medium text-foreground block">Detailed 3D Renders (4 Views)</span>
+                    <span className="text-sm text-muted-foreground">HD 4-side exterior visualization</span>
+                  </div>
+                  <span className="font-semibold text-primary">₹8 / sq.ft</span>
+                </li>
+              </ul>
+              </details>
+              <ul className="hidden md:block space-y-3 text-sm text-muted-foreground mb-6 flex-1">
                 <li className="flex items-start justify-between border-b border-border/50 pb-2">
                   <div>
                     <span className="font-medium text-foreground block">Structure Design (GFC)</span>
