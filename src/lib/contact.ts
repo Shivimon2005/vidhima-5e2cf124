@@ -6,9 +6,9 @@ export interface SiteContact {
 }
 
 const construction: SiteContact = {
-  displayPhone: "+91 62308 23269",
-  telHref: "tel:+916230823269",
-  waNumber: "916230823269",
+  displayPhone: "+91 80913 66650",
+  telHref: "tel:+918091366650",
+  waNumber: "918091366650",
   waText: "Hi, I'm interested in construction services in Himachal Pradesh.",
 };
 
