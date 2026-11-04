@@ -162,7 +162,7 @@ const Index = () => {
                 <Button variant="hero" size="lg">Get Free Construction Estimate</Button>
               </Link>
               <a
-                href="https://wa.me/916230823269?text=Hi%2C%20I%27m%20interested%20in%20construction%20services%20in%20Himachal%20Pradesh."
+                href="https://wa.me/918091366650?text=Hi%2C%20I%27m%20interested%20in%20construction%20services%20in%20Himachal%20Pradesh."
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -447,7 +447,7 @@ const Index = () => {
             <Link to="/contact">
               <Button variant="hero" size="lg">Get Free Estimate</Button>
             </Link>
-            <a href="https://wa.me/916230823269" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/918091366650" target="_blank" rel="noopener noreferrer">
               <Button variant="whatsapp" size="lg">WhatsApp Us</Button>
             </a>
           </div>

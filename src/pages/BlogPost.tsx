@@ -403,12 +403,12 @@ const BlogPost = () => {
                   <p className="text-xs md:text-sm text-muted-foreground max-w-md">Our local civil engineers can help you estimate costs, check TCP regulations, and assess soil stability for your plot.</p>
                 </div>
                 <div className="flex gap-3 shrink-0 flex-wrap justify-center">
-                  <a href="tel:+916230823269">
+                  <a href="tel:+918091366650">
                     <Button variant="outline" size="sm" className="flex items-center gap-1.5">
                       <Phone className="w-4 h-4" /> Call Us
                     </Button>
                   </a>
-                  <a href="https://wa.me/916230823269?text=Hi%2C%20I%20have%20a%20question%20about%20my%20construction%20project." target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/918091366650?text=Hi%2C%20I%20have%20a%20question%20about%20my%20construction%20project." target="_blank" rel="noopener noreferrer">
                     <Button size="sm" className="bg-[hsl(142,72%,29%)] hover:bg-[hsl(142,72%,24%)] text-white flex items-center gap-1.5 font-semibold">
                       <MessageSquare className="w-4 h-4" /> WhatsApp
                     </Button>

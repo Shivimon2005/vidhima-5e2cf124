@@ -174,9 +174,9 @@ const FAQ = () => {
                                                 description="Call or WhatsApp — we respond within a few hours during business hours."
                                               />
                                   <div className="flex flex-wrap justify-center gap-4 mt-8">
-                                              <a href="tel:+916230823269">
+                                              <a href="tel:+918091366650">
                                                             <Button size="lg">
-                                                                            <Phone className="w-4 h-4 mr-2" /> +91 62308 23269
+                                                                            <Phone className="w-4 h-4 mr-2" /> +91 80913 66650
                                                             </Button>
                                               </a>
                                               <Link to="/contact">

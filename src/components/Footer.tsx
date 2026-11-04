@@ -49,9 +49,9 @@ const Footer = () => (
                                             Class-I registered construction company operating across three business verticals — Government Tenders, Real Estate Construction, and Sub-Contracting — serving Kangra district and Himachal Pradesh.
                                 </p>
                                 <div className="flex flex-col gap-2 text-sm">
-                                            <a href="tel:+916230823269" className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+                                            <a href="tel:+918091366650" className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
                                                           <Phone className="w-4 h-4 shrink-0" />
-                                                          +91 62308 23269
+                                                          +91 80913 66650
                                             </a>
                                             <a href="mailto:contact@vidhimaconstruction.com" className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
                                                           <Mail className="w-4 h-4 shrink-0" />
