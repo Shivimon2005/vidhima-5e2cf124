@@ -67,6 +67,32 @@ declare global {
   }
 }
 
+// Configurable via VITE_CRM_ENDPOINT env var (see .env.example).
+// GAS endpoints require mode:"no-cors" — response is always opaque, so server
+// errors are invisible client-side. For confirmed delivery use a CORS proxy.
+const CRM_ENDPOINT: string =
+  (import.meta.env.VITE_CRM_ENDPOINT as string | undefined) ||
+  "https://script.google.com/macros/s/AKfycbxKCv3-E1n2Ow8hMB2r0wLeZkbZX9F6LsKfFyoTezCMEjLhQ0G9ieysW_SmDprnPArO/exec";
+
+const SUBMIT_TIMEOUT_MS = 8000;
+const WHATSAPP_FALLBACK = "https://wa.me/918091366650";
+
+async function submitToCrm(payload: object): Promise<void> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), SUBMIT_TIMEOUT_MS);
+  try {
+    await fetch(CRM_ENDPOINT, {
+      method: "POST",
+      mode: "no-cors",
+      signal: controller.signal,
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload),
+    });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 function useTurnstile(containerId: string) {
   const [token, setToken] = useState<string | null>(null);
   const widgetIdRef = useRef<string | null>(null);
