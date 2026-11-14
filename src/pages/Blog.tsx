@@ -286,7 +286,7 @@ const Blog = () => {
                   </Button>
                 </Link>
                 <a
-                  href="https://wa.me/916230823269?text=Hi%2C%20I%20have%20read%20your%20construction%20guides%20and%20want%20to%20discuss%20my%20plot."
+                  href="https://wa.me/918091366650?text=Hi%2C%20I%20have%20read%20your%20construction%20guides%20and%20want%20to%20discuss%20my%20plot."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full"

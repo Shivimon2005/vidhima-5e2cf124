@@ -42,7 +42,7 @@ const LocationKangra = () => {
             "@id": "https://vidhimaconstruction.com/#organization",
             name: "Vidhima Construction Private Limited",
             description: "Turnkey home builder and construction company serving Kangra district, Himachal Pradesh.",
-            telephone: "+916230823269",
+            telephone: "+918091366650",
             url: "https://vidhimaconstruction.com",
             address: {
               "@type": "PostalAddress",
@@ -79,10 +79,10 @@ const LocationKangra = () => {
                   Get Free Estimate <ArrowRight className="w-4 h-4 ml-1" />
                 </Button>
               </Link>
-              <a href="tel:+916230823269">
+              <a href="tel:+918091366650">
                 <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 font-semibold">
                   <Phone className="w-4 h-4 mr-2" />
-                  Call +91 62308 23269
+                  Call +91 80913 66650
                 </Button>
               </a>
             </div>

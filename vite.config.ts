@@ -68,6 +68,55 @@ function generateSitemapPlugin(): Plugin {
   };
 }
 
+function devApiPlugin(): Plugin {
+  return {
+    name: "dev-api-endpoints",
+    configureServer(server) {
+      server.middlewares.use("/api/submit-lead", (req, res) => {
+        if (req.method !== "POST") {
+          res.statusCode = 405;
+          res.end(JSON.stringify({ error: "Method not allowed" }));
+          return;
+        }
+
+        let bodyRaw = "";
+        req.on("data", (chunk: Buffer) => {
+          bodyRaw += chunk.toString();
+        });
+        req.on("end", async () => {
+          try {
+            const body = JSON.parse(bodyRaw);
+            console.log("[Dev API] Received lead:", body.name, body.phone);
+
+            // Forward to GAS if configured or existing default
+            const gasUrl =
+              process.env.GAS_ENDPOINT ||
+              "https://script.google.com/macros/s/AKfycbxKCv3-E1n2Ow8hMB2r0wLeZkbZX9F6LsKfFyoTezCMEjLhQ0G9ieysW_SmDprnPArO/exec";
+
+            try {
+              await fetch(gasUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(body),
+              });
+            } catch (err) {
+              console.warn("[Dev API] GAS notification:", err);
+            }
+
+            res.setHeader("Content-Type", "application/json");
+            res.statusCode = 200;
+            res.end(JSON.stringify({ success: true }));
+          } catch {
+            res.statusCode = 400;
+            res.setHeader("Content-Type", "application/json");
+            res.end(JSON.stringify({ error: "Invalid JSON" }));
+          }
+        });
+      });
+    },
+  };
+}
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
@@ -77,7 +126,7 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-  plugins: [react(), generateSitemapPlugin(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [react(), generateSitemapPlugin(), devApiPlugin(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
